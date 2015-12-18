@@ -1,0 +1,70 @@
+{
+  "page": 1,
+  "pages": 1,
+  "count": 7,
+  "items": [
+    {
+      "id": 715061,
+      "name": "Unassigned",
+      "type": "open",
+      "userId": 0,
+      "totalCount": 2,
+      "activeCount": 2,
+      "modifiedAt": "2015-12-16T08:23:34Z"
+    },
+    {
+      "id": 715067,
+      "name": "Mine",
+      "type": "mytickets",
+      "userId": 99212,
+      "totalCount": 1,
+      "activeCount": 1,
+      "modifiedAt": "2015-12-16T08:23:22Z"
+    },
+    {
+      "id": 715062,
+      "name": "Needs Attention",
+      "type": "needsattention",
+      "userId": 0,
+      "totalCount": 0,
+      "activeCount": 0,
+      "modifiedAt": "2015-12-16T08:23:21Z"
+    },
+    {
+      "id": 715063,
+      "name": "Drafts",
+      "type": "drafts",
+      "userId": 0,
+      "totalCount": 0,
+      "activeCount": 0,
+      "modifiedAt": "2015-12-16T08:23:21Z"
+    },
+    {
+      "id": 715064,
+      "name": "Assigned",
+      "type": "assigned",
+      "userId": 0,
+      "totalCount": 1,
+      "activeCount": 1,
+      "modifiedAt": "2015-12-16T08:23:22Z"
+    },
+    {
+      "id": 715066,
+      "name": "Closed",
+      "type": "closed",
+      "userId": 0,
+      "totalCount": 0,
+      "activeCount": 0,
+      "modifiedAt": "2015-12-16T08:23:21Z"
+    },
+    {
+      "id": 715065,
+      "name": "Spam",
+      "type": "spam",
+      "userId": 0,
+      "totalCount": 0,
+      "activeCount": 0,
+      "modifiedAt": "2015-12-16T08:23:21Z"
+    }
+  ]
+}
