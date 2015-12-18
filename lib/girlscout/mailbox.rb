@@ -15,5 +15,9 @@ module GirlScout
     def folders
       @folders ||= List.new(resource["/#{id}/folders"].get, Folder)
     end
+
+    def conversations
+      @conversations ||= List.new(resource["/#{id}/conversations"].get, Conversation)
+    end
   end
 end

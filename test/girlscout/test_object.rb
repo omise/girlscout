@@ -18,6 +18,16 @@ module GirlScout
       Config.reset!
     end
 
+    it 'should save attributes with string keys' do
+      h = { }
+      h["id"] = 123
+      assert Object.new(h).id == 123
+    end
+
+    it 'should save attributes with symbolicated keys' do
+      assert Object.new(id: 123).id == 123
+    end
+
     it 'should contains base resource' do
       assert Object.resource.url == 'https://api.helpscout.net/v1.json'
     end
@@ -31,7 +41,7 @@ module GirlScout
       assert Object.resource.is_a?(Resource)
     end
 
-    it 'should allows instance to access resource' do
+    it 'should allows instance to access shared resource' do
       assert Object.resource.url == TestSimpleChild.new.resource.url
     end
 

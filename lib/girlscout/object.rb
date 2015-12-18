@@ -47,6 +47,7 @@ module GirlScout
     end
 
     def initialize(attr={})
+      attr = attr.inject({}) { |h,(k,v)| h[k.to_s] = v; h }
       @attributes = attr
     end
 

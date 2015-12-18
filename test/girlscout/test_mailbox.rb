@@ -3,7 +3,6 @@ require 'support'
 module GirlScout
   describe Mailbox do
     before do
-      Config.reset!
       Mailbox.api_key = TEST_KEY
     end
 
@@ -20,15 +19,6 @@ module GirlScout
 
       assert mailbox.is_a?(Mailbox)
       assert mailbox.email == "test@example.com"
-    end
-
-    it 'should have folders' do
-      folders = Mailbox.find(61187).folders
-
-      assert !folders.nil?
-      assert folders.length
-      assert folders[0].is_a?(Folder)
-      assert folders[0].name == "Unassigned"
     end
   end
 end

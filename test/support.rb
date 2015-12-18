@@ -36,11 +36,12 @@ else
     require 'zlib'
     require 'stringio'
 
-    decompressed_body = Zlib::GzipReader.new(StringIO.new(response.body)).read
-    puts " = = = = = "
+    decompressed_body = Zlib::GzipReader.new(StringIO.new(response.body)).read rescue response.body
+    puts
+    puts "================="
     puts "Should stub request: #{signature}"
-    puts JSON.pretty_generate(JSON.load(decompressed_body))
-    puts " = = = = = "
+    puts decompressed_body
+    puts "================="
   end
 end
 
