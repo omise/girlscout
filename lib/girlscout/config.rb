@@ -3,22 +3,11 @@ module GirlScout
 
   class Config
     class << self
-      def api_key
-        @api_key
-      end
-
-      def api_key=(value)
-        @api_key = value
-        GirlScout::Object.resource = nil
-      end
+      attr_accessor :api_key
+      attr_accessor :api_prefix
 
       def api_prefix
         @api_prefix || DEFAULT_API_PREFIX
-      end
-
-      def api_prefix=(value)
-        @api_prefix = value
-        GirlScout::Object.resource = nil
       end
 
       def reset!
