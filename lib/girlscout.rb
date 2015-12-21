@@ -8,7 +8,8 @@ require 'girlscout/concerns/has_resource'
 require 'girlscout/object'
 
 require 'girlscout/list'
-require 'girlscout/mailbox'
 require 'girlscout/folder'
+require 'girlscout/mailbox'
 require 'girlscout/conversation'
-
+require 'girlscout/attachment'
+require 'girlscout/thread'

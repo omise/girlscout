@@ -13,11 +13,11 @@ module GirlScout
     end
 
     def folders
-      List.new(folder_resource.get, Folder)
+      @folders ||= List.new(folder_resource.get, Folder)
     end
 
     def conversations
-      List.new(conversation_resource.get, Conversation)
+      @conversations ||= List.new(conversation_resource.get, Conversation)
     end
 
     protected

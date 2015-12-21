@@ -30,6 +30,7 @@ WebMock.stub_request(:get, "https://www.example.com").to_return(status: 200, bod
 setup_fixtures
 unless ENV["RECORD"]
   WebMock.disable_net_connect!
+
 else
   WebMock.allow_net_connect!
   WebMock.after_request(real_requests_only: true) do |signature, response|
