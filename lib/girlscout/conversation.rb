@@ -2,9 +2,6 @@ module GirlScout
   class Conversation < GirlScout::Object
     endpoint '/conversations'
 
-    has_many :threads, as: Thread
-    has_one :mailbox, as: Mailbox
-
     class << self
       def find(id)
         Conversation.new(resource["/#{id}"].get["item"])
@@ -12,6 +9,7 @@ module GirlScout
     end
 
     def threads
+      return nil unless key?("threads")
       @threads ||= (self["threads"] || []).map { |attr| Thread.new(attr) }
     end
 
