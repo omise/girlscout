@@ -13,6 +13,10 @@ module GirlScout
         @attributes[attr_key(key)]
       end
 
+      def []=(key, value)
+        @attributes[attr_key(key)] = value
+      end
+
       def key?(key)
         @attributes.key?(attr_key(key))
       end

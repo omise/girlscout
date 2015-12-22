@@ -1,0 +1,55 @@
+{
+  "page": 1,
+  "pages": 1,
+  "count": 3,
+  "items": [
+    {
+      "id": 68344907,
+      "firstName": "Test",
+      "lastName": "Customer",
+      "photoUrl": null,
+      "photoType": null,
+      "gender": "unknown",
+      "age": null,
+      "organization": null,
+      "jobTitle": null,
+      "location": null,
+      "createdAt": "2015-12-21T09:02:14Z",
+      "modifiedAt": "2015-12-21T09:02:14Z",
+      "fullName": "Test Customer",
+      "ticketCount": 1
+    },
+    {
+      "id": 68344790,
+      "firstName": "Test",
+      "lastName": "Customer",
+      "photoUrl": null,
+      "photoType": null,
+      "gender": "unknown",
+      "age": null,
+      "organization": null,
+      "jobTitle": null,
+      "location": null,
+      "createdAt": "2015-12-21T08:59:58Z",
+      "modifiedAt": "2015-12-21T08:59:58Z",
+      "fullName": "Test Customer",
+      "ticketCount": 1
+    },
+    {
+      "id": 67941617,
+      "firstName": "Help",
+      "lastName": "Scout",
+      "photoUrl": "http://1.gravatar.com/avatar/7d599977ec288a9141317b352c04d497",
+      "photoType": "gravatar",
+      "gender": "unknown",
+      "age": null,
+      "organization": null,
+      "jobTitle": null,
+      "location": "Boston, MA",
+      "createdAt": "2015-12-16T08:23:21Z",
+      "modifiedAt": "2015-12-16T08:23:34Z",
+      "fullName": "Help Scout",
+      "ticketCount": 3
+    }
+  ]
+}

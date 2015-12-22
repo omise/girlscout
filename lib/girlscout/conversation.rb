@@ -9,13 +9,11 @@ module GirlScout
     end
 
     def threads
-      return nil unless key?("threads")
       @threads ||= (self["threads"] || []).map { |attr| Thread.new(attr) }
     end
 
     def mailbox
-      return nil unless key?("mailbox")
-      @mailbox ||= Mailbox.new(self["mailbox"])
+      @mailbox ||= Mailbox.new(self["mailbox"] || {})
     end
   end
 end
