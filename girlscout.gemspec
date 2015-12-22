@@ -13,12 +13,12 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://www.omise.co'
   s.license     = 'MIT'
 
-  s.add_runtime_dependency 'rest-client'
-  s.add_runtime_dependency 'json'
+  s.add_runtime_dependency 'rest-client', '~>1.8'
+  s.add_runtime_dependency 'json', '~>1.8'
 
-  s.add_development_dependency 'rake'
-  s.add_development_dependency 'pry'
-  s.add_development_dependency 'webmock'
-  s.add_development_dependency 'bundler'
-  s.add_development_dependency 'minitest'
+  s.add_development_dependency 'rake', '~>10.4'
+  s.add_development_dependency 'pry', '~>0.10'
+  s.add_development_dependency 'webmock', '~>1.22'
+  s.add_development_dependency 'bundler', '~>1.11'
+  s.add_development_dependency 'minitest', '~>5.8'
 end
