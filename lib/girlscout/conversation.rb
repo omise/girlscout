@@ -30,14 +30,9 @@ module GirlScout
     def as_json
       # TODO: Test
       json = super.dup
-      if key?("customer")
-        json["customer"] = customer.as_json
-        json["customer"]["type"] = customer.class.name.downcase.split('::').last
-      end
-
+      json["customer"] = customer.as_json if key?("customer")
       json["threads"] = threads.map(&:as_json) if key?("threads")
       json["mailbox"] = mailbox.as_json if key?("mailbox")
-
       json
     end
   end

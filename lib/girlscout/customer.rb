@@ -11,5 +11,11 @@ module GirlScout
         Customer.new(resource["/#{id}"].get["item"])
       end
     end
+
+    def as_json
+      json = super
+      json["type"] = "customer"
+      json
+    end
   end
 end

@@ -4,17 +4,12 @@ module GirlScout
       @attachments ||= (self["attachments"] || []).map { |attr| Attachment.new(attr) }
     end
 
-    def as_json
-      # TODO: Test
-      json = super.dup
-      if key?("created_by")
-        # HACK: The order of the keys being serialized is important, HelpScout will
-        # complain about missing createdBy:type if we do not send it as the first arg.
-        json["createdBy"] = created_by.as_json
-        json["createdBy"]["type"] = created_by.class.name.downcase.split('::').last
-      end
+    def created_by
+      return @created_by if @created_by
 
-      json
+      attr = @attributes["createdBy"]
+      creator_type = attr["type"].capitalize.constantize rescue User
+      @created_by ||= creator_type.new(attr)
     end
   end
 end

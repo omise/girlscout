@@ -37,20 +37,12 @@ module GirlScout
       payload = resource.post_payload
       assert_equal "ConversationTest.test_create", payload["subject"]
       assert_equal true, payload["reload"]
-
-      assert_instance_of Hash, payload["customer"]
       assert_equal "customer", payload["customer"]["type"]
+      assert_equal 61187, payload["mailbox"]["id"]
 
       thread = payload["threads"][1]
-      assert_instance_of Hash, thread
       assert_equal "this is a test message.", thread["body"]
-
-      thread_creator = thread["createdBy"]
-      assert_instance_of Hash, thread_creator
-      assert_equal 99212, thread_creator["id"]
-
-      assert_instance_of Hash, payload["mailbox"]
-      assert_equal 61187, payload["mailbox"]["id"]
+      assert_equal 99212, thread["createdBy"]["id"]
     end
 
     def test_create
@@ -71,6 +63,20 @@ module GirlScout
       assert_equal 1, threads.length
       assert_instance_of Thread, threads[0]
       assert_equal 388656732, threads[0].id
+    end
+
+    def test_customer
+      customer = @conversation.customer
+      assert_instance_of Customer, customer
+      assert_equal 67941617, customer.id
+    end
+
+    def test_as_json
+      json = build_conversation.as_json
+      assert_instance_of Hash, json["customer"]
+      assert_equal "customer", json["customer"]["type"], '"type" required for customer field.'
+      assert_instance_of Hash, json["threads"][1]
+      assert_instance_of Hash, json["mailbox"]
     end
 
     protected

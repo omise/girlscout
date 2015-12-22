@@ -29,5 +29,10 @@ module GirlScout
       assert_equal 99212, me.id
       assert_equal "Chakrit", me.first_name
     end
+
+    def test_as_json
+      json = User.me.as_json
+      assert_equal "user", json["type"], '"type" field is required."'
+    end
   end
 end

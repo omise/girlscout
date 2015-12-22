@@ -15,5 +15,11 @@ module GirlScout
         find("me")
       end
     end
+
+    def as_json
+      json = super
+      json["type"] = "user"
+      json
+    end
   end
 end

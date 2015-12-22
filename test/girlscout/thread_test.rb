@@ -17,5 +17,10 @@ module GirlScout
       assert_instance_of Attachment, attachments[0]
       assert_equal 30670383, attachments[0].id
     end
+
+    def test_created_by
+      assert_instance_of User, @first_thread.created_by
+      assert_equal 99212, @first_thread.created_by.id
+    end
   end
 end
