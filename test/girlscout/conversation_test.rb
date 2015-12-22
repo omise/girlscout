@@ -7,6 +7,11 @@ module GirlScout
       @conversation = Conversation.find(150312885)
     end
 
+    def teardown
+      super
+      Conversation.resource = nil
+    end
+
     def test_all_via_mailbox
       conversations = Mailbox.new(id: 61187).conversations
       assert conversations.length
@@ -20,6 +25,41 @@ module GirlScout
       assert_equal "We're here for you", @conversation.subject
     end
 
+    def test_create_payload
+      conversation = build_conversation
+      result = { }
+      result["item"] = conversation
+
+      resource = fake_resource_for(Conversation, result) do
+        Conversation.create(conversation)
+      end
+
+      payload = resource.post_payload
+      assert_equal "ConversationTest.test_create", payload["subject"]
+      assert_equal true, payload["reload"]
+
+      assert_instance_of Hash, payload["customer"]
+      assert_equal "customer", payload["customer"]["type"]
+
+      thread = payload["threads"][1]
+      assert_instance_of Hash, thread
+      assert_equal "this is a test message.", thread["body"]
+
+      thread_creator = thread["createdBy"]
+      assert_instance_of Hash, thread_creator
+      assert_equal 99212, thread_creator["id"]
+
+      assert_instance_of Hash, payload["mailbox"]
+      assert_equal 61187, payload["mailbox"]["id"]
+    end
+
+    def test_create
+      conversation = Conversation.create(build_conversation)
+      assert_equal "ConversationTest.test_create", conversation.subject
+      assert_equal "test@example.com", conversation.customer.email
+      assert_equal "this is a test note.", conversation.threads[1].body
+    end
+
     def test_mailbox
       mailbox = @conversation.mailbox
       assert_instance_of Mailbox, mailbox
@@ -31,6 +71,36 @@ module GirlScout
       assert_equal 1, threads.length
       assert_instance_of Thread, threads[0]
       assert_equal 388656732, threads[0].id
+    end
+
+    protected
+
+    def build_conversation
+      user = User.new(id: 99212)
+      mailbox = Mailbox.new(id: 61187)
+      customer = Customer.new(
+        first_name: "noitasrevnoC",
+        last_name: "tseT",
+        email: "test@example.com"
+      )
+      note_thread = Thread.new(
+        type: "note",
+        created_by: user,
+        body: "this is a test note."
+      )
+      message_thread = Thread.new(
+        type: "message",
+        created_by: user,
+        body: "this is a test message."
+      )
+
+      Conversation.new(
+        type: :email,
+        subject: "ConversationTest.test_create",
+        mailbox: mailbox,
+        customer: customer,
+        threads: [note_thread, message_thread]
+      )
     end
   end
 end

@@ -1,0 +1,137 @@
+{
+  "item": {
+    "id": 152618373,
+    "type": "email",
+    "folderId": 715061,
+    "isDraft": false,
+    "number": 10,
+    "owner": null,
+    "mailbox": {
+      "id": 61187,
+      "name": "Support"
+    },
+    "customer": {
+      "id": 68344790,
+      "firstName": "Test",
+      "lastName": "Customer",
+      "email": "test@example.com",
+      "phone": null,
+      "type": "customer"
+    },
+    "threadCount": 2,
+    "status": "active",
+    "subject": "ConversationTest.test_create",
+    "preview": null,
+    "createdBy": {
+      "id": 99212,
+      "firstName": "Chakrit",
+      "lastName": "Wichian",
+      "email": "helpscout@chakrit.net",
+      "phone": null,
+      "type": "user"
+    },
+    "createdAt": "2015-12-22T06:30:41Z",
+    "modifiedAt": "2015-12-22T06:30:41Z",
+    "closedAt": null,
+    "closedBy": null,
+    "source": {
+      "type": "api",
+      "via": "user"
+    },
+    "cc": [
+
+    ],
+    "bcc": [
+
+    ],
+    "tags": null,
+    "threads": [
+      {
+        "id": 394417230,
+        "type": "message",
+        "assignedTo": null,
+        "status": "active",
+        "createdAt": "2015-12-22T06:30:41Z",
+        "openedAt": null,
+        "createdBy": {
+          "id": 99212,
+          "firstName": "Chakrit",
+          "lastName": "Wichian",
+          "email": "helpscout@chakrit.net",
+          "phone": null,
+          "type": "user"
+        },
+        "source": {
+          "type": "api",
+          "via": "user"
+        },
+        "actionType": null,
+        "actionSourceId": null,
+        "fromMailbox": null,
+        "state": "published",
+        "customer": {
+          "id": 68344790,
+          "firstName": "Test",
+          "lastName": "Customer",
+          "email": "test@example.com",
+          "phone": null,
+          "type": "customer"
+        },
+        "body": "this is a test message.",
+        "to": null,
+        "cc": [
+
+        ],
+        "bcc": [
+
+        ],
+        "attachments": null,
+        "savedReplyId": null,
+        "createdByCustomer": false
+      },
+      {
+        "id": 394417229,
+        "type": "note",
+        "assignedTo": null,
+        "status": "active",
+        "createdAt": "2015-12-22T06:30:41Z",
+        "openedAt": null,
+        "createdBy": {
+          "id": 99212,
+          "firstName": "Chakrit",
+          "lastName": "Wichian",
+          "email": "helpscout@chakrit.net",
+          "phone": null,
+          "type": "user"
+        },
+        "source": {
+          "type": "api",
+          "via": "user"
+        },
+        "actionType": null,
+        "actionSourceId": null,
+        "fromMailbox": null,
+        "state": "published",
+        "customer": {
+          "id": 68344790,
+          "firstName": "Test",
+          "lastName": "Customer",
+          "email": "test@example.com",
+          "phone": null,
+          "type": "customer"
+        },
+        "body": "this is a test note.",
+        "to": null,
+        "cc": [
+
+        ],
+        "bcc": [
+
+        ],
+        "attachments": null,
+        "savedReplyId": null,
+        "createdByCustomer": false
+      }
+    ]
+  }
+}

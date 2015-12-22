@@ -12,6 +12,20 @@ module GirlScout
 
     protected
 
+    def fake_resource_for(object, result=nil)
+      original_resource = object.resource
+
+      fake_resource = FakeRestResource.new(object.resource_url)
+      fake_resource.result = result
+
+      object.resource = fake_resource
+      yield
+      fake_resource
+
+    ensure
+      object.resource = original_resource
+    end
+
     def record_to(path, klass)
       Config.api_key = TEST_KEY
       original_resource = klass.resource
