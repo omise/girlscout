@@ -26,25 +26,8 @@ end
 
 WebMock.enable!
 WebMock.stub_request(:get, "https://www.example.com").to_return(status: 200, body: "hello")
-
+WebMock.disable_net_connect!
 setup_fixtures
-unless ENV["RECORD"]
-  WebMock.disable_net_connect!
-
-else
-  WebMock.allow_net_connect!
-  WebMock.after_request(real_requests_only: true) do |signature, response|
-    require 'zlib'
-    require 'stringio'
-
-    decompressed_body = Zlib::GzipReader.new(StringIO.new(response.body)).read rescue response.body
-    puts
-    puts "================="
-    puts "Should stub request: #{signature}"
-    puts decompressed_body
-    puts "================="
-  end
-end
 
 require 'fake_rest_resource'
 require 'girlscout_test'
