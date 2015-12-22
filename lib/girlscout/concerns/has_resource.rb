@@ -27,9 +27,7 @@ module GirlScout
 
         Resource.new(resource_url, {
           user: Config.api_key,
-          password: 'X',
-          content_type: :json,
-          accept: :json
+          password: 'X'
         })
       end
     end

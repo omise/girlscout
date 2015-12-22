@@ -33,7 +33,7 @@ module GirlScout
     [:put, :post, :patch, :delete].each do |method|
       define_method(method.to_s) do |payload=nil|
         payload = serialize(payload) if payload
-        parse(rest_resource.send(method, payload))
+        parse(rest_resource.send(method, payload, content_type: :json))
       end
     end
 
