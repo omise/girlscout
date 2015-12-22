@@ -32,7 +32,7 @@ module GirlScout
         @attributes[key]
       end
 
-      private
+      protected
 
       def attr_key(sym)
         parts = sym.to_s.split('_') # camelize w/o active support

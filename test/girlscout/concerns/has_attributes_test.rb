@@ -14,6 +14,7 @@ module GirlScout::Concerns
       hash = @dummy.attributes
       assert_instance_of Hash, hash
       assert_equal "world", hash["hello"]
+      assert_equal "Value", hash["camelKey"]
     end
 
     def test_as_json
