@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    girlscout (0.1.0)
+    girlscout (0.1.2)
       json (~> 1.8)
       rest-client (~> 1.8)
 
