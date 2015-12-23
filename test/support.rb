@@ -9,7 +9,7 @@ require 'minitest/autorun'
 require 'webmock'
 
 FIXTURES_PATH = File.absolute_path("#{File.dirname(__FILE__)}/fixtures")
-TEST_KEY = "04f46582b440fc579d96fa50294131940158b089"
+TEST_KEY = "f26dbbb12d15cacd73150c119ba7b31a54f83b59"
 
 def setup_fixtures
   Find.find(FIXTURES_PATH).select { |f| File.file?(f) }.each do |path|
