@@ -11,5 +11,11 @@ module GirlScout
       creator_type = attr["type"].capitalize.constantize rescue User
       @created_by ||= creator_type.new(attr)
     end
+
+    def as_json
+      json = super
+      json["createdBy"] = created_by.as_json if key?("created_by")
+      json
+    end
   end
 end

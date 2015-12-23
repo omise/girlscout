@@ -33,6 +33,11 @@ module GirlScout
     def test_as_json
       json = User.me.as_json
       assert_equal "user", json["type"], '"type" field is required."'
+      assert_equal 99212, json["id"]
+
+      json = User.new(id: 123).as_json
+      assert_equal "user", json["type"], '"type" field is required."'
+      assert_equal 123, json["id"]
     end
   end
 end
