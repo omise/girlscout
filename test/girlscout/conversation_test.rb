@@ -27,14 +27,12 @@ module GirlScout
 
     def test_create_payload
       conversation = build_conversation
-      result = { }
-      result["item"] = conversation
 
-      resource = fake_resource_for(Conversation, result) do
+      rest_resource = fake_resource_for(Conversation) do
         Conversation.create(conversation)
       end
 
-      payload = resource.post_payload
+      payload = JSON.load(rest_resource.post_payload)
       assert_equal "ConversationTest.test_create", payload["subject"]
       assert_equal true, payload["reload"]
       assert_equal "customer", payload["customer"]["type"]

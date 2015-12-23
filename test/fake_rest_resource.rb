@@ -1,16 +1,14 @@
 class FakeRestResource
   attr_accessor :url
-  attr_accessor :options
   attr_accessor :result
   attr_accessor :get_params
 
   def initialize(url, options={})
     @url = url
-    @options = options
   end
 
   def [](path)
-    FakeRestResource.new("#{@url}#{path}", @options)
+    FakeRestResource.new("#{@url}#{path}", parent: self)
   end
 
   def get(options=nil)

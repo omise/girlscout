@@ -9,7 +9,7 @@ module GirlScout
 
     def rest_resource
       return @rest_resource if @rest_resource
-      return @rest_resource = @options[:resource] if @options[:resource]
+      return @rest_resource = @options[:rest_resource] if @options[:rest_resource]
 
       resource_class = @options[:resource_class] || RestClient::Resource
       @rest_resource = resource_class.new("#{@url}.json", @options)

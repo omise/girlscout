@@ -1,5 +1,10 @@
 module GirlScout
   class GirlScoutTest < Minitest::Test
+    FAKE_RESULT = JSON.generate({ # this structure satisfy most API
+      item: { },
+      items: { }
+    })
+
     def setup
       super
       Config.reset!
@@ -12,15 +17,14 @@ module GirlScout
 
     protected
 
-    def fake_resource_for(object, result=nil)
+    def fake_resource_for(object, result=FAKE_RESULT)
+      rest_resource = FakeRestResource.new(object.resource_url)
+      rest_resource.result = result
+
       original_resource = object.resource
-
-      fake_resource = FakeRestResource.new(object.resource_url)
-      fake_resource.result = result
-
-      object.resource = fake_resource
+      object.resource = Resource.new(object.resource_url, rest_resource: rest_resource)
       yield
-      fake_resource
+      rest_resource
 
     ensure
       object.resource = original_resource
