@@ -1,5 +1,9 @@
 module GirlScout
+  require 'json'
+
   class GirlScoutTest < Minitest::Test
+    parallelize_me!
+
     FAKE_RESULT = JSON.generate({ # this structure satisfy most API
       item: { },
       items: { }

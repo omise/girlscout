@@ -5,6 +5,8 @@ Bundler.require(:default, :test)
 require 'pry'
 require 'find'
 require 'girlscout'
+require 'minitest/hell'
+require 'minitest/pride'
 require 'minitest/autorun'
 require 'webmock'
 

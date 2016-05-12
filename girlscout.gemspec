@@ -21,6 +21,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake', '~>10.4'
   s.add_development_dependency 'pry', '~>0.10'
   s.add_development_dependency 'webmock', '~>1.22'
-  s.add_development_dependency 'bundler', '~>1.11'
+  s.add_development_dependency 'bundler', '~>1.12'
   s.add_development_dependency 'minitest', '~>5.8'
+  s.add_development_dependency 'guard', '~>2.13'
+  s.add_development_dependency 'guard-minitest', '~>2.4'
 end
