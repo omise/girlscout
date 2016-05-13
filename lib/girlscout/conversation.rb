@@ -15,7 +15,6 @@ module GirlScout
     end
 
     def customer
-      # TODO: Test
       @customer ||= Customer.new(self["customer"] || {})
     end
 

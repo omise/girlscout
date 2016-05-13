@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
   s.name        = 'girlscout'
-  s.version     = '0.1.3'
+  s.version     = '0.1.4'
   s.date        = '2015-12-16'
   s.summary     = 'Integrate your support tooling with HelpScout API.'
   s.description = 'Provides integration with HelpScout REST API.'
