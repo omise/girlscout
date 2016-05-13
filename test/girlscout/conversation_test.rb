@@ -2,45 +2,34 @@ require 'support'
 
 module GirlScout
   class ConversationTest < GirlScoutTest
-    def setup
-      super
-      @conversation = Conversation.find(150312885)
-    end
-
-    def teardown
-      super
-      Conversation.resource = nil
-    end
-
     def test_all_via_mailbox
-      conversations = Mailbox.new(id: 61187).conversations
+      conversations = Mailbox.new(id: MAILBOX_ID).conversations
       assert conversations.length
       assert_instance_of Conversation, conversations[0]
-      assert_equal 150312885, conversations[0].id
+      assert_equal CONVERSATION_ID, conversations[0].id
     end
 
     def test_find
-      assert_instance_of Conversation, @conversation
-      assert_equal 150312885, @conversation.id
-      assert_equal "We're here for you", @conversation.subject
+      conversation = find_conversation
+      assert_instance_of Conversation, conversation
+      assert_equal CONVERSATION_ID, conversation.id
+      assert_equal "We're here for you", conversation.subject
     end
 
     def test_create_payload
-      conversation = build_conversation
-
-      rest_resource = fake_resource_for(Conversation) do
-        Conversation.create(conversation)
+      payload = spy_on(Conversation) do |spy|
+        Conversation.create(build_conversation)
+        spy.post_payload
       end
 
-      payload = JSON.load(rest_resource.post_payload)
       assert_equal "ConversationTest.test_create", payload["subject"]
       assert_equal true, payload["reload"]
       assert_equal "customer", payload["customer"]["type"]
-      assert_equal 61187, payload["mailbox"]["id"]
+      assert_equal MAILBOX_ID, payload["mailbox"]["id"]
 
       thread = payload["threads"][1]
       assert_equal "this is a test message.", thread["body"]
-      assert_equal 99212, thread["createdBy"]["id"]
+      assert_equal USER_ID, thread["createdBy"]["id"]
     end
 
     def test_create
@@ -51,22 +40,22 @@ module GirlScout
     end
 
     def test_mailbox
-      mailbox = @conversation.mailbox
+      mailbox = find_conversation.mailbox
       assert_instance_of Mailbox, mailbox
-      assert_equal 61187, mailbox.id
+      assert_equal MAILBOX_ID, mailbox.id
     end
 
     def test_threads
-      threads = @conversation.threads
+      threads = find_conversation.threads
       assert_equal 1, threads.length
       assert_instance_of Thread, threads[0]
-      assert_equal 388656732, threads[0].id
+      assert_equal THREAD_ID, threads[0].id
     end
 
     def test_customer
-      customer = @conversation.customer
+      customer = find_conversation.customer
       assert_instance_of Customer, customer
-      assert_equal 67941617, customer.id
+      assert_equal CUSTOMER_ID, customer.id
     end
 
     def test_as_json
@@ -77,21 +66,28 @@ module GirlScout
       assert_instance_of Hash, json["mailbox"]
     end
 
-    protected
+    private
+
+    def find_conversation
+      Conversation.find(CONVERSATION_ID)
+    end
 
     def build_conversation
-      user = User.new(id: 99212)
-      mailbox = Mailbox.new(id: 61187)
+      user    = User.new(id: USER_ID)
+      mailbox = Mailbox.new(id: MAILBOX_ID)
+
       customer = Customer.new(
         first_name: "noitasrevnoC",
         last_name: "tseT",
         email: "test@example.com"
       )
+
       note_thread = Thread.new(
         type: "note",
         created_by: user,
         body: "this is a test note."
       )
+
       message_thread = Thread.new(
         type: "message",
         created_by: user,

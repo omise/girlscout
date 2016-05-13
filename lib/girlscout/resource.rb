@@ -2,40 +2,54 @@ require 'json'
 
 module GirlScout
   class Resource
-    def initialize(url="", options={})
+    METHODS = [:get, :put, :post, :patch, :delete]
+
+    def initialize(url: "")
       @url = url
-      @options = options
-    end
-
-    def rest_resource
-      return @rest_resource if @rest_resource
-      return @rest_resource = @options[:rest_resource] if @options[:rest_resource]
-
-      resource_class = @options[:resource_class] || RestClient::Resource
-      @rest_resource = resource_class.new("#{@url}.json", @options)
     end
 
     def url
-      rest_resource.url
+      "#{@url}.json"
     end
 
     def [](path)
-      Resource.new("#{@url}#{path}", @options)
+      Resource.new(url: "#{@url}#{path}")
     end
 
-    def get(query=nil)
-      opts = { }
-      opts[:headers] = { params: query } if query
+    METHODS.each do |method|
+      define_method(method) do |payload: nil, query: nil, &block|
+        options = { method: method }
+        if payload
+          options[:body] = JSON.generate(payload)
+          options[:headers] ||= {}
+          options[:headers]["Content-Type"] = "application/json"
+        end
+        if query
+          options[:query] = query
+        end
 
-      parse(rest_resource.get(opts))
-    end
-
-    [:put, :post, :patch, :delete].each do |method|
-      define_method(method.to_s) do |payload=nil|
-        payload = serialize(payload) if payload
-        parse(rest_resource.send(method, payload, content_type: :json))
+        request(options)
       end
     end
+
+    def request(options={})
+      auth = { user: Config.api_key, password: 'X' }
+      JSON.parse(Excon.new(url, auth).request(options).body)
+    end
+
+    # def get(query=nil)
+    #   opts = { }
+    #   opts[:headers] = { params: query } if query
+
+    #   parse(rest_resource.get(opts))
+    # end
+
+    # [:put, :post, :patch, :delete].each do |method|
+    #   define_method(method.to_s) do |payload=nil|
+    #     payload = serialize(payload) if payload
+    #     parse(rest_resource.send(method, payload, content_type: :json))
+    #   end
+    # end
 
     private
 
@@ -45,6 +59,9 @@ module GirlScout
 
     def serialize(payload)
       payload.to_json
+    end
+
+    def call
     end
   end
 end

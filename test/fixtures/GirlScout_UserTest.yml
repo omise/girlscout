@@ -1,0 +1,203 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.helpscout.net/v1/users/me.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.49.0
+      Authorization:
+      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 13 May 2016 10:07:31 GMT
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains;
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '286'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"item":{"id":120780,"firstName":"Chakrit","lastName":"Wichian","fullName":"Chakrit
+        Wichian","email":"helpscout@chakrit.net","role":"owner","timezone":"Asia/Bangkok","photoUrl":null,"type":"user","companyId":46155,"createdAt":"2016-05-12T09:52:30Z","modifiedAt":"2016-05-13T10:01:10Z"}}'
+    http_version: 
+  recorded_at: Fri, 13 May 2016 10:07:30 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v1/users/120780.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.49.0
+      Authorization:
+      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 13 May 2016 10:07:32 GMT
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains;
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '268'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"item":{"id":120780,"firstName":"Chakrit","lastName":"Wichian","fullName":"Chakrit
+        Wichian","email":"helpscout@chakrit.net","role":"owner","timezone":"Asia/Bangkok","photoUrl":null,"createdAt":"2016-05-12T09:52:30Z","modifiedAt":"2016-05-13T10:01:10Z","type":"user"}}'
+    http_version: 
+  recorded_at: Fri, 13 May 2016 10:07:31 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v1/users.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.49.0
+      Authorization:
+      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 13 May 2016 10:07:34 GMT
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains;
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '300'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"page":1,"pages":1,"count":1,"items":[{"id":120780,"firstName":"Chakrit","lastName":"Wichian","fullName":"Chakrit
+        Wichian","email":"helpscout@chakrit.net","role":"owner","timezone":"Asia/Bangkok","photoUrl":null,"createdAt":"2016-05-12T09:52:30Z","modifiedAt":"2016-05-13T10:01:10Z","type":"user"}]}'
+    http_version: 
+  recorded_at: Fri, 13 May 2016 10:07:33 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v1/mailboxes/74251/users.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.49.0
+      Authorization:
+      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 13 May 2016 10:07:36 GMT
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains;
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '300'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"page":1,"pages":1,"count":1,"items":[{"id":120780,"firstName":"Chakrit","lastName":"Wichian","fullName":"Chakrit
+        Wichian","email":"helpscout@chakrit.net","role":"owner","timezone":"Asia/Bangkok","photoUrl":null,"createdAt":"2016-05-12T09:52:30Z","modifiedAt":"2016-05-13T10:01:10Z","type":"user"}]}'
+    http_version: 
+  recorded_at: Fri, 13 May 2016 10:07:35 GMT
+recorded_with: VCR 3.0.1

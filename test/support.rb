@@ -4,33 +4,22 @@ require 'bundler/setup'
 Bundler.require(:default, :test)
 require 'pry'
 require 'find'
+require 'excon'
+require 'vcr'
 require 'girlscout'
 require 'minitest/hell'
 require 'minitest/pride'
 require 'minitest/autorun'
-require 'webmock'
 
 FIXTURES_PATH = File.absolute_path("#{File.dirname(__FILE__)}/fixtures")
-TEST_KEY = "f26dbbb12d15cacd73150c119ba7b31a54f83b59"
+TEST_KEY      = "2dbb68cac6683f7528996c0b613ca71b6876970f"
 
-def setup_fixtures
-  Find.find(FIXTURES_PATH).select { |f| File.file?(f) }.each do |path|
-    body = File.read(path)
-
-    relpath = path.slice(FIXTURES_PATH.length + 1, 999)
-    method, basename = File.basename(relpath).split('-')
-
-    url = relpath.sub("/#{method}-", "/")
-    url = "https://#{url}"
-    WebMock.stub_request(method.to_sym, url).to_return(status: 200, body: body)
-  end
+VCR.configure do |c|
+  c.cassette_library_dir = FIXTURES_PATH
+  c.default_cassette_options = { record: :new_episodes }
+  c.hook_into :excon
 end
 
-WebMock.enable!
-WebMock.stub_request(:get, "https://www.example.com").to_return(status: 200, body: "hello")
-WebMock.disable_net_connect!
-setup_fixtures
-
-require 'fake_rest_resource'
 require 'girlscout_test'
+require 'resource_spy'
 

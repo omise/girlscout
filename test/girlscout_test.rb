@@ -2,16 +2,22 @@ module GirlScout
   require 'json'
 
   class GirlScoutTest < Minitest::Test
-    parallelize_me!
-
-    FAKE_RESULT = JSON.generate({ # this structure satisfy most API
-      item: { },
-      items: { }
-    })
+    MAILBOX_ID      = 74251
+    USER_ID         = 120780
+    CUSTOMER_ID     = 81767317
+    THREAD_ID       = 529102367
+    ATTACHMENT_ID   = 41031124
+    CONVERSATION_ID = 202112521
 
     def setup
       super
-      Config.reset!
+      Config.api_key = TEST_KEY
+    end
+
+    def run
+      VCR.use_cassette(self.class.name.gsub(/::/,'_')) do
+        super
+      end
     end
 
     def teardown
@@ -21,46 +27,14 @@ module GirlScout
 
     protected
 
-    def fake_resource_for(object, result=FAKE_RESULT)
-      rest_resource = FakeRestResource.new(object.resource_url)
-      rest_resource.result = result
-
+    def spy_on(object)
       original_resource = object.resource
-      object.resource = Resource.new(object.resource_url, rest_resource: rest_resource)
-      yield
-      rest_resource
+      spy = ResourceSpy.new(original_resource)
+      object.resource = spy
+      return yield spy
 
     ensure
       object.resource = original_resource
-    end
-
-    def record_to(path, klass)
-      Config.api_key = TEST_KEY
-      original_resource = klass.resource
-      klass.resource = nil
-
-      path = File.absolute_path("#{FIXTURES_PATH}/api.helpscout.net/v1#{path}")
-
-      WebMock.allow_net_connect!
-      WebMock.after_request(real_requests_only: true) do |signature, response|
-        require 'zlib'
-        require 'stringio'
-
-        body = Zlib::GzipReader.new(StringIO.new(response.body)).read rescue response.body
-        body = JSON.pretty_generate(JSON.load(body)) rescue body
-        File.write(path, body)
-      end
-
-      puts
-      puts "RECORDING REQUEST FOR #{klass}"
-      puts "TO: #{path}"
-      puts
-      yield
-
-    ensure
-      Config.reset!
-      WebMock.disable_net_connect!
-      klass.resource = original_resource
     end
   end
 end

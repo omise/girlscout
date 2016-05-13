@@ -10,7 +10,7 @@ module GirlScout
       def create(attributes)
         attributes = attributes.as_json if attributes.respond_to?(:as_json)
         attributes["reload"] ||= true
-        Conversation.new(resource.post(attributes)["item"])
+        Conversation.new(resource.post(payload: attributes)["item"])
       end
     end
 

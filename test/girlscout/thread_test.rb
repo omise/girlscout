@@ -2,25 +2,16 @@ require 'support'
 
 module GirlScout
   class ThreadTest < GirlScoutTest
-    def setup
-      super
-      @conversation = Conversation.find(152205902)
-      @first_thread = @conversation.threads.first
-      @second_thread = @conversation.threads.last
-    end
-
     def test_attachments
-      assert_equal 0, @first_thread.attachments.count
-
-      attachments = @second_thread.attachments
-      assert attachments.length
+      attachments = find_thread.attachments
+      assert attachments.length > 0
       assert_instance_of Attachment, attachments[0]
-      assert_equal 30670383, attachments[0].id
+      assert_equal ATTACHMENT_ID, attachments[0].id
     end
 
     def test_created_by
-      assert_instance_of User, @first_thread.created_by
-      assert_equal 99212, @first_thread.created_by.id
+      assert_instance_of User, find_thread.created_by
+      assert_equal USER_ID, find_thread.created_by.id
     end
 
     def test_as_json
@@ -31,6 +22,16 @@ module GirlScout
       assert_equal thread.id, json["id"]
       assert_equal "user", json["createdBy"]["type"]
       assert_equal user.id, json["createdBy"]["id"]
+    end
+
+    private
+
+    def find_conversation
+      @conversation ||= Conversation.find(CONVERSATION_ID)
+    end
+
+    def find_thread
+      find_conversation.threads.first
     end
   end
 end

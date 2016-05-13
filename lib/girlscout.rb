@@ -1,4 +1,4 @@
-require 'rest-client'
+require 'excon'
 
 require 'girlscout/resource'
 require 'girlscout/config'

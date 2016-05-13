@@ -8,13 +8,13 @@ module GirlScout
       refute_nil mailboxes
       assert mailboxes.length
       assert_instance_of Mailbox, mailboxes[0]
-      assert_equal 61187, mailboxes[0].id
+      assert_equal MAILBOX_ID, mailboxes[0].id
     end
 
     def test_find
-      mailbox = Mailbox.find(61187)
+      mailbox = Mailbox.find(MAILBOX_ID)
       assert_instance_of Mailbox, mailbox
-      assert_equal 61187, mailbox.id
+      assert_equal MAILBOX_ID, mailbox.id
       assert_equal "Support", mailbox.name
     end
   end

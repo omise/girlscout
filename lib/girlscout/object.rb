@@ -11,7 +11,7 @@ module GirlScout
       end
 
       @attributes = attr
-      @resource = options[:resource] if options[:resource]
+      @resource   = options[:resource] if options[:resource]
     end
   end
 end

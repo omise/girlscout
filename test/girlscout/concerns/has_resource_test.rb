@@ -16,6 +16,11 @@ module GirlScout::Concerns
       assert_instance_of GirlScout::Resource, resource
     end
 
+    def test_resource_path
+      assert_equal '/dummy', Dummy.resource_path
+      assert_equal '/dummy', dummy.resource_path
+    end
+
     def test_resource_fallback
       instance = dummy
       resource = Dummy.resource
@@ -23,16 +28,13 @@ module GirlScout::Concerns
     end
 
     def test_endpoint
-      resource = dummy.resource
-      dummy_url = "#{GirlScout::DEFAULT_API_PREFIX}/dummy.json"
-      assert_equal dummy_url, resource.url
+      assert_equal "#{GirlScout::DEFAULT_API_PREFIX}/dummy.json", dummy.resource.url
     end
 
     private
 
     class Dummy
       include HasResource
-
       endpoint '/dummy'
     end
 

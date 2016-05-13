@@ -4,11 +4,18 @@ module GirlScout
 
     class << self
       def conversations(query)
-        List.new(resource['/conversations'].get(query: query), Conversation)
+        search(Conversation, query)
       end
 
       def customers(query)
-        List.new(resource['/customers'].get(query: query), Customer)
+        search(Customer, query)
+      end
+
+      private
+
+      def search(klass, query)
+        result = resource[klass.resource_path].get(query: { query: query })
+        List.new(result, klass)
       end
     end
   end

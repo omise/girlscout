@@ -2,16 +2,16 @@ require 'support'
 
 module GirlScout
   class SearchTest < GirlScoutTest
-    CONVERSATION_QUERY = 'ConversationTest.test_create'
-    CUSTOMER_QUERY = 'Test Customer'
+    CONVERSATION_QUERY = "We're here for you"
+    CUSTOMER_QUERY     = "Help Scout"
 
     def test_conversations_params
-      rest_resource = fake_resource_for(Search) do
+      query = spy_on(Search) do |spy|
         Search.conversations(CONVERSATION_QUERY)
+        spy.get_query
       end
 
-      params = rest_resource.get_params
-      assert_equal CONVERSATION_QUERY, params[:query]
+      assert_equal CONVERSATION_QUERY, query[:query]
     end
 
     def test_conversations
@@ -19,25 +19,24 @@ module GirlScout
 
       assert conversations.length
       assert_instance_of Conversation, conversations[0]
-      assert_equal 150312845, conversations[0].id
-      assert_equal "Learning the basics", conversations[0].subject
+      assert_equal CONVERSATION_ID, conversations[0].id
+      assert_equal "We're here for you", conversations[0].subject
     end
 
     def test_customers_params
-      rest_resource = fake_resource_for(Search) do
+      query = spy_on(Search) do |spy|
         Search.customers(CUSTOMER_QUERY)
+        spy.get_query
       end
 
-      params = rest_resource.get_params
-      assert_equal CUSTOMER_QUERY, params[:query]
+      assert_equal CUSTOMER_QUERY, query[:query]
     end
 
     def test_customers
       customers = Search.customers(CUSTOMER_QUERY)
-
       assert customers.length
       assert_instance_of Customer, customers[0]
-      assert_equal 67941617, customers[0].id
+      assert_equal CUSTOMER_ID, customers[0].id
       assert_equal "Help Scout", customers[0].full_name
     end
   end

@@ -1,0 +1,100 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.helpscout.net/v1/mailboxes.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.49.0
+      Authorization:
+      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 13 May 2016 10:06:51 GMT
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains;
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '197'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"page":1,"pages":1,"count":1,"items":[{"id":74251,"slug":"43cee9558b79f5c2","name":"Support","email":"support@chakrit.net","createdAt":"2016-05-12T09:53:06Z","modifiedAt":"2016-05-12T09:53:25Z"}]}'
+    http_version: 
+  recorded_at: Fri, 13 May 2016 10:06:51 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v1/mailboxes/74251.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.49.0
+      Authorization:
+      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 13 May 2016 10:06:54 GMT
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains;
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1065'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"item":{"id":74251,"slug":"43cee9558b79f5c2","name":"Support","email":"support@chakrit.net","folders":[{"id":890431,"name":"Unassigned","type":"open","userId":0,"totalCount":2,"activeCount":2,"modifiedAt":"2016-05-12T09:53:25Z"},{"id":890437,"name":"Mine","type":"mine","userId":120780,"totalCount":1,"activeCount":1,"modifiedAt":"2016-05-12T09:53:06Z"},{"id":890432,"name":"Needs
+        Attention","type":"needsattention","userId":0,"totalCount":0,"activeCount":0,"modifiedAt":"2016-05-12T09:53:06Z"},{"id":890433,"name":"Drafts","type":"drafts","userId":0,"totalCount":0,"activeCount":0,"modifiedAt":"2016-05-12T09:53:06Z"},{"id":890434,"name":"Assigned","type":"assigned","userId":0,"totalCount":1,"activeCount":1,"modifiedAt":"2016-05-12T09:53:06Z"},{"id":890436,"name":"Closed","type":"closed","userId":0,"totalCount":0,"activeCount":0,"modifiedAt":"2016-05-12T09:53:06Z"},{"id":890435,"name":"Spam","type":"spam","userId":0,"totalCount":0,"activeCount":0,"modifiedAt":"2016-05-12T09:53:06Z"}],"createdAt":"2016-05-12T09:53:06Z","modifiedAt":"2016-05-12T09:53:25Z"}}'
+    http_version: 
+  recorded_at: Fri, 13 May 2016 10:06:53 GMT
+recorded_with: VCR 3.0.1

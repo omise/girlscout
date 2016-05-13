@@ -1,0 +1,156 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.helpscout.net/v1/mailboxes/74251/customers.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.49.0
+      Authorization:
+      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 13 May 2016 10:14:37 GMT
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains;
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '393'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"page":1,"pages":1,"count":1,"items":[{"id":81767317,"firstName":"Help","lastName":"Scout","photoUrl":"http://1.gravatar.com/avatar/7d599977ec288a9141317b352c04d497","photoType":"gravatar","gender":"unknown","age":null,"organization":null,"jobTitle":null,"location":"Boston,
+        MA","createdAt":"2016-05-12T09:53:06Z","modifiedAt":"2016-05-12T09:53:25Z","fullName":"Help
+        Scout","ticketCount":3}]}'
+    http_version: 
+  recorded_at: Fri, 13 May 2016 10:14:36 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v1/customers.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.49.0
+      Authorization:
+      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 13 May 2016 10:14:42 GMT
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains;
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '369'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"page":1,"pages":1,"count":1,"items":[{"id":81767317,"firstName":"Help","lastName":"Scout","fullName":"Help
+        Scout","photoUrl":"http://1.gravatar.com/avatar/7d599977ec288a9141317b352c04d497","photoType":"gravatar","gender":"unknown","age":null,"organization":null,"jobTitle":null,"location":null,"createdAt":"2016-05-12T09:53:06Z","modifiedAt":"2016-05-12T09:53:25Z"}]}'
+    http_version: 
+  recorded_at: Fri, 13 May 2016 10:14:41 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v1/customers/81767317.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.49.0
+      Authorization:
+      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 13 May 2016 10:15:01 GMT
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains;
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1185'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"item":{"id":81767317,"firstName":"Help","lastName":"Scout","fullName":"Help
+        Scout","photoUrl":"http://1.gravatar.com/avatar/7d599977ec288a9141317b352c04d497","photoType":"gravatar","gender":"unknown","age":null,"organization":null,"jobTitle":null,"location":"Boston,
+        MA","createdAt":"2016-05-12T09:53:06Z","modifiedAt":"2016-05-12T09:53:25Z","background":null,"address":{"id":2208509,"lines":["131
+        Tremont Street","3rd Floor"],"city":"Boston","state":"MA","postalCode":"02111-1338","country":"US","createdAt":"2016-05-12T09:53:06Z","modifiedAt":null},"socialProfiles":[{"id":103956540,"value":"http://twitter.com/helpscout","type":"twitter"},{"id":103956536,"value":"https://twitter.com/helpscout","type":"twitter"},{"id":103956537,"value":"https://twitter.com/HelpScoutDev","type":"twitter"}],"emails":[{"id":103956535,"value":"help@helpscout.net","location":"work"}],"phones":[{"id":103956541,"value":"855-435-7726","location":"work"}],"chats":null,"websites":[{"id":103956544,"value":"http://developer.helpscout.net"},{"id":103956538,"value":"http://status.helpscout.net/"},{"id":103956539,"value":"http://www.helpscout.com"},{"id":103956545,"value":"http://www.helpscout.net"}]}}'
+    http_version: 
+  recorded_at: Fri, 13 May 2016 10:15:00 GMT
+recorded_with: VCR 3.0.1

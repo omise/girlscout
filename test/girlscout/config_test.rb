@@ -2,9 +2,12 @@ require 'support'
 
 module GirlScout
   class ConfigTest < GirlScoutTest
+    def setup
+      # don't setup the keys!
+    end
+
     def test_api_key
-      assert Config.api_key.nil?,
-        'should defaults to nil'
+      assert Config.api_key.nil?, 'should defaults to nil'
     end
 
     def test_api_prefix

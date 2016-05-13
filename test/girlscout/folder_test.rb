@@ -3,7 +3,7 @@ require 'support'
 module GirlScout
   class FolderTest < GirlScoutTest
     def test_all_via_mailbox
-      folders = Mailbox.new(id: 61187).folders
+      folders = Mailbox.new(id: MAILBOX_ID).folders
 
       refute_nil folders.nil?
       assert folders.length
