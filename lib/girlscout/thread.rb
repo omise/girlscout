@@ -8,7 +8,7 @@ module GirlScout
       return @created_by if @created_by
 
       attr = @attributes["createdBy"]
-      creator_type = attr["type"].capitalize.constantize rescue User
+      creator_type = "GirlScout::#{attr["type"].capitalize}".constantize rescue User
       @created_by ||= creator_type.new(attr)
     end
 
