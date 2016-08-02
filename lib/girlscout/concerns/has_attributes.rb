@@ -36,7 +36,7 @@ module GirlScout
 
       def attr_key(sym)
         parts = sym.to_s.split('_') # camelize w/o active support
-        key = parts[0] + parts[1..-1].map(&:capitalize).join('')
+        parts[0] + parts[1..-1].map(&:capitalize).join('')
       end
     end
   end

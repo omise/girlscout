@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    girlscout (0.2.0)
+    girlscout (0.2.1)
       excon (~> 0.49)
       faraday (~> 0.9)
       json (~> 1.8)
@@ -10,14 +10,14 @@ GEM
   remote: https://rubygems.org/
   specs:
     coderay (1.1.1)
-    excon (0.49.0)
+    excon (0.51.0)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.10)
+    ffi (1.9.14)
     formatador (0.2.5)
-    guard (2.13.0)
+    guard (2.14.0)
       formatador (>= 0.2.4)
-      listen (>= 2.7, <= 4.0)
+      listen (>= 2.7, < 4.0)
       lumberjack (~> 1.0)
       nenv (~> 0.1)
       notiffany (~> 0.0)
@@ -25,27 +25,27 @@ GEM
       shellany (~> 0.0)
       thor (>= 0.18.1)
     guard-compat (1.2.1)
-    guard-minitest (2.4.4)
+    guard-minitest (2.4.6)
       guard-compat (~> 1.2)
       minitest (>= 3.0)
     json (1.8.3)
-    listen (3.1.4)
+    listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
     lumberjack (1.0.10)
     method_source (0.8.2)
-    minitest (5.8.4)
+    minitest (5.9.0)
     multipart-post (2.0.0)
     nenv (0.3.0)
-    notiffany (0.0.8)
+    notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
-    pry (0.10.3)
+    pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    rake (11.1.2)
+    rake (11.2.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -53,7 +53,7 @@ GEM
     shellany (0.0.1)
     slop (3.6.0)
     thor (0.19.1)
-    vcr (3.0.1)
+    vcr (3.0.3)
 
 PLATFORMS
   ruby
@@ -61,12 +61,12 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.12)
   girlscout!
-  guard (~> 2.13)
+  guard (~> 2.14)
   guard-minitest (~> 2.4)
-  minitest (~> 5.8)
+  minitest (~> 5.9)
   pry (~> 0.10)
-  rake (~> 11.1)
+  rake (~> 11.2)
   vcr (~> 3.0)
 
 BUNDLED WITH
-   1.12.1
+   1.12.5

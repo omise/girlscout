@@ -20,10 +20,10 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'json', '~>1.8'
 
   s.add_development_dependency 'bundler', '~>1.12'
-  s.add_development_dependency 'guard', '~>2.13'
+  s.add_development_dependency 'guard', '~>2.14'
   s.add_development_dependency 'guard-minitest', '~>2.4'
-  s.add_development_dependency 'minitest', '~>5.8'
+  s.add_development_dependency 'minitest', '~>5.9'
   s.add_development_dependency 'pry', '~>0.10'
-  s.add_development_dependency 'rake', '~>11.1'
+  s.add_development_dependency 'rake', '~>11.2'
   s.add_development_dependency 'vcr', '~>3.0'
 end

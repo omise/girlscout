@@ -28,7 +28,7 @@ module GirlScout
       assert_equal MAILBOX_ID, payload["mailbox"]["id"]
 
       thread = payload["threads"][1]
-      assert_equal "this is a test message.", thread["body"]
+      assert_equal "this is a <strong>test</strong> message.", thread["body"]
       assert_equal USER_ID, thread["createdBy"]["id"]
     end
 
@@ -91,7 +91,7 @@ module GirlScout
       message_thread = Thread.new(
         type: "message",
         created_by: user,
-        body: "this is a test message."
+        body: "this is a <strong>test</strong> message."
       )
 
       Conversation.new(
