@@ -7,6 +7,8 @@ require 'find'
 require 'excon'
 require 'vcr'
 require 'girlscout'
+
+require 'minitest'
 require 'minitest/hell'
 require 'minitest/pride'
 require 'minitest/autorun'

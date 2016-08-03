@@ -5,7 +5,7 @@ module GirlScout
     end
 
     def created_by
-      return @created_by if @created_by
+      return @created_by if defined? @created_by and @created_by
 
       attr = @attributes["createdBy"]
       creator_type = "GirlScout::#{attr["type"].capitalize}".constantize rescue User

@@ -9,7 +9,7 @@ module GirlScout
 
     def [](path)
       @parent_resource = @parent_resource[path]
-      @url = "#{@url}#{path}" if @url
+      @url = "#{@url}#{path}" if defined? @url and @url
       self
     end
 

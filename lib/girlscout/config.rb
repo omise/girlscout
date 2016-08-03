@@ -4,10 +4,10 @@ module GirlScout
   class Config
     class << self
       attr_accessor :api_key
-      attr_accessor :api_prefix
+      attr_writer :api_prefix
 
       def api_prefix
-        @api_prefix || DEFAULT_API_PREFIX
+        @api_prefix ||= DEFAULT_API_PREFIX
       end
 
       def reset!
