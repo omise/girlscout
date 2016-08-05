@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    girlscout (0.2.3)
+    girlscout (0.3.0)
       excon (~> 0.49)
       faraday (~> 0.9)
       json (~> 2.0)
