@@ -6,6 +6,7 @@ require 'girlscout/config'
 require 'girlscout/concerns/has_attributes'
 require 'girlscout/concerns/has_resource'
 require 'girlscout/object'
+require 'girlscout/error'
 
 require 'girlscout/list'
 require 'girlscout/folder'

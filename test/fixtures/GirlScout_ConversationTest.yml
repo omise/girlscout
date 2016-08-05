@@ -279,4 +279,4 @@ http_interactions:
         reply, add a note, assign to someone and more. Hover your mou","createdBy":{"id":81767317,"firstName":"Help","lastName":"Scout","email":"help@helpscout.net","phone":"855-435-7726","type":"customer","emails":["help@helpscout.net"]},"createdAt":"2016-05-12T09:53:06Z","userModifiedAt":"2016-05-12T09:53:06Z","closedAt":null,"closedBy":null,"source":{"type":"web","via":"customer"},"createdByType":"customer","cc":null,"bcc":null,"tags":["samples"],"draft":false,"spam":false}]}'
     http_version: 
   recorded_at: Fri, 13 May 2016 10:52:18 GMT
-recorded_with: VCR 3.0.1
+recorded_with: VCR 3.0.3

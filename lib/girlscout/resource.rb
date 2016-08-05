@@ -34,22 +34,13 @@ module GirlScout
 
     def request(options={})
       auth = { user: Config.api_key, password: 'X' }
-      JSON.parse(Excon.new(url, auth).request(options).body)
+      response = Excon.new(url, auth).request(options)
+      if response.status != 200
+        raise GirlScout::Error.new(JSON.parse(response.body))
+      end
+
+      JSON.parse(response.body)
     end
-
-    # def get(query=nil)
-    #   opts = { }
-    #   opts[:headers] = { params: query } if query
-
-    #   parse(rest_resource.get(opts))
-    # end
-
-    # [:put, :post, :patch, :delete].each do |method|
-    #   define_method(method.to_s) do |payload=nil|
-    #     payload = serialize(payload) if payload
-    #     parse(rest_resource.send(method, payload, content_type: :json))
-    #   end
-    # end
 
     private
 
