@@ -4,13 +4,7 @@ module GirlScout
     include GirlScout::Concerns::HasResource
 
     def initialize(attr={}, options={})
-      attr = attr.attributes if attr.is_a?(Object)
-      attr = attr.inject({}) do |hash,(k,v)|
-        hash[attr_key(k)] = v
-        hash
-      end
-
-      @attributes = attr
+      @attributes = normalize_attributes(attr)
       @resource   = options[:resource] if options[:resource]
     end
   end

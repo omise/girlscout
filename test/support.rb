@@ -14,7 +14,7 @@ require 'minitest/pride'
 require 'minitest/autorun'
 
 FIXTURES_PATH = File.absolute_path("#{File.dirname(__FILE__)}/fixtures")
-TEST_KEY      = "2dbb68cac6683f7528996c0b613ca71b6876970f"
+TEST_KEY      = "74c608b61192dd78076fc97af82bbe808415355e"
 
 VCR.configure do |c|
   c.cassette_library_dir = FIXTURES_PATH

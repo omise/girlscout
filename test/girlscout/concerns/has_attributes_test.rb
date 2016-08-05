@@ -7,6 +7,7 @@ module GirlScout::Concerns
       h = { }
       h["hello"] = "world"
       h["camelKey"] = "Value"
+      h["snake_key"] = "yey"
       @dummy = Dummy.new(h)
     end
 
@@ -40,6 +41,16 @@ module GirlScout::Concerns
     def test_dynamic_accessor
       assert @dummy.respond_to?(:camel_key)
       assert_equal @dummy.camel_key, "Value"
+    end
+
+    def test_normalize_attributes
+      hash = @dummy.send(:normalize_attributes, @dummy.attributes)
+      assert_equal hash["hello"], "world"
+      assert_equal hash["snakeKey"], "yey"
+
+      hash = @dummy.send(:normalize_attributes, @dummy)
+      assert_equal hash["hello"], "world"
+      assert_equal hash["snakeKey"], "yey"
     end
 
     private

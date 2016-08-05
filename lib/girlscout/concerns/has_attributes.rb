@@ -34,6 +34,16 @@ module GirlScout
 
       protected
 
+      def normalize_attributes(attr)
+        attr = attr || @attributes
+        attr = attr.attributes if attr.respond_to?(:attributes)
+
+        attr.inject({}) do |hash,(k,v)|
+          hash[attr_key(k)] = v
+          hash
+        end
+      end
+
       def attr_key(sym)
         parts = sym.to_s.split('_') # camelize w/o active support
         parts[0] + parts[1..-1].map(&:capitalize).join('')
