@@ -19,15 +19,9 @@ module GirlScout
       assert_equal "#{TEST_URL}/child.json", child.url
     end
 
-    def test_http_methods
-      Resource::METHODS.each do |method|
-        assert @resource.send(method)
-      end
-    end
-
     # Since HelpScout doesn't provide an echo API for testing,
     # actual serialization tests are done as part of endpoint tests.
-    def test_http_methods_result
+    def test_get_methods_result
       assert_equal 120780, @resource.get["item"]["id"]
     end
   end

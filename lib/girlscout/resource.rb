@@ -35,7 +35,7 @@ module GirlScout
     def request(options={})
       auth = { user: Config.api_key, password: 'X' }
       response = Excon.new(url, auth).request(options)
-      if response.status != 200
+      if 400 <= response.status && response.status < 600
         raise GirlScout::Error.new(JSON.parse(response.body))
       end
 

@@ -19,6 +19,17 @@ module GirlScout
       assert_equal "Sym", instance["symbolKey"]
     end
 
+    def test_to_string
+      message = 'Authentication was not provided or was invalid.'
+      attributes = {
+        code:  401,
+        error: message
+      }
+
+      instance = GirlScout::Error.new(attributes)
+      assert_equal message, instance.to_s
+    end
+
     def test_auth_error
       error = capture do
         Conversation.find('40100')
