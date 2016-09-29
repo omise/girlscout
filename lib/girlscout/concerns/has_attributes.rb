@@ -21,7 +21,7 @@ module GirlScout
         @attributes.key?(attr_key(key))
       end
 
-      def respond_to?(method_name)
+      def respond_to?(method_name, include_all=false)
         key?(method_name) || super
       end
 
