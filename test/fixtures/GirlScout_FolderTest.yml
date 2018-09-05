@@ -2,52 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.helpscout.net/v1/mailboxes/61187/folders.json
+    uri: https://api.helpscout.net/v1/mailboxes/158814/folders.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - excon/0.49.0
+      - excon/0.62.0
       Authorization:
-      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
-  response:
-    status:
-      code: 404
-      message: 
-    headers:
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - Origin, X-Requested-With, Content-Type, Accept, Authorization
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE
-      Access-Control-Allow-Origin:
-      - "*"
-      Date:
-      - Fri, 13 May 2016 10:42:19 GMT
-      Server:
-      - nginx
-      Content-Length:
-      - '0'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: ''
-    http_version: 
-  recorded_at: Fri, 13 May 2016 10:42:18 GMT
-- request:
-    method: get
-    uri: https://api.helpscout.net/v1/mailboxes/74251/folders.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - excon/0.49.0
-      Authorization:
-      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
+      - Basic YTIwZjRhZWViN2I3N2MzNzk4MWI2MTE1MzA3NmFjZTVjODg4OTNkYjpY
   response:
     status:
       code: 200
@@ -63,28 +26,40 @@ http_interactions:
       - "*"
       Content-Type:
       - application/json; charset=utf-8
+      Correlation-ID:
+      - a6ee3949-ec16-4b39-92bc-3600adc3f671#7254119
       Date:
-      - Fri, 13 May 2016 10:59:30 GMT
+      - Wed, 05 Sep 2018 13:55:12 GMT
       Server:
       - nginx
       Strict-Transport-Security:
       - max-age=31536000; includeSubdomains;
-      Vary:
-      - Accept-Encoding
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
+      X-RateLimit-Interval-burst:
+      - '5'
+      X-RateLimit-Interval-minute:
+      - '60'
+      X-RateLimit-Limit-burst:
+      - '12'
+      X-RateLimit-Limit-minute:
+      - '200'
+      X-RateLimit-Remaining-burst:
+      - '12'
+      X-RateLimit-Remaining-minute:
+      - '199'
       X-XSS-Protection:
       - 1; mode=block
       Content-Length:
-      - '928'
+      - '935'
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
-      string: '{"page":1,"pages":1,"count":7,"items":[{"id":890431,"name":"Unassigned","type":"open","userId":0,"totalCount":1,"activeCount":1,"modifiedAt":"2016-05-13T10:58:23Z"},{"id":890437,"name":"Mine","type":"mine","userId":120780,"totalCount":1,"activeCount":1,"modifiedAt":"2016-05-12T09:53:06Z"},{"id":890432,"name":"Needs
-        Attention","type":"needsattention","userId":0,"totalCount":0,"activeCount":0,"modifiedAt":"2016-05-12T09:53:06Z"},{"id":890433,"name":"Drafts","type":"drafts","userId":0,"totalCount":0,"activeCount":0,"modifiedAt":"2016-05-13T10:58:24Z"},{"id":890434,"name":"Assigned","type":"assigned","userId":0,"totalCount":1,"activeCount":1,"modifiedAt":"2016-05-12T09:53:06Z"},{"id":890436,"name":"Closed","type":"closed","userId":0,"totalCount":3,"activeCount":0,"modifiedAt":"2016-05-13T10:58:23Z"},{"id":890435,"name":"Spam","type":"spam","userId":0,"totalCount":0,"activeCount":0,"modifiedAt":"2016-05-12T09:53:06Z"}]}'
+      encoding: ASCII-8BIT
+      string: '{"page":1,"pages":1,"count":7,"items":[{"id":2306054,"name":"Unassigned","type":"open","userId":0,"totalCount":0,"activeCount":0,"modifiedAt":"2018-09-05T13:52:01Z"},{"id":2306060,"name":"Mine","type":"mine","userId":308775,"totalCount":1,"activeCount":1,"modifiedAt":"2018-09-05T13:21:12Z"},{"id":2306055,"name":"Needs
+        Attention","type":"needsattention","userId":0,"totalCount":0,"activeCount":0,"modifiedAt":"2018-09-05T13:21:12Z"},{"id":2306056,"name":"Drafts","type":"drafts","userId":0,"totalCount":0,"activeCount":0,"modifiedAt":"2018-09-05T13:52:01Z"},{"id":2306057,"name":"Assigned","type":"assigned","userId":0,"totalCount":1,"activeCount":1,"modifiedAt":"2018-09-05T13:21:12Z"},{"id":2306059,"name":"Closed","type":"closed","userId":0,"totalCount":1,"activeCount":0,"modifiedAt":"2018-09-05T13:52:01Z"},{"id":2306058,"name":"Spam","type":"spam","userId":0,"totalCount":0,"activeCount":0,"modifiedAt":"2018-09-05T13:21:12Z"}]}'
     http_version: 
-  recorded_at: Fri, 13 May 2016 10:59:29 GMT
-recorded_with: VCR 3.0.1
+  recorded_at: Wed, 05 Sep 2018 13:55:12 GMT
+recorded_with: VCR 4.0.0

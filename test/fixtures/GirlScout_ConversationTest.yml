@@ -1,185 +1,20 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://api.helpscout.net/v1/conversations/202112521.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - excon/0.49.0
-      Authorization:
-      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
-  response:
-    status:
-      code: 200
-      message: 
-    headers:
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - Origin, X-Requested-With, Content-Type, Accept, Authorization
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE
-      Access-Control-Allow-Origin:
-      - "*"
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 13 May 2016 10:52:16 GMT
-      Server:
-      - nginx
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains;
-      Vary:
-      - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-XSS-Protection:
-      - 1; mode=block
-      Content-Length:
-      - '5185'
-      Connection:
-      - keep-alive
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJpdGVtIjp7ImlkIjoyMDIxMTI1MjEsInR5cGUiOiJlbWFpbCIsImZvbGRl
-        cklkIjo4OTA0MzEsImlzRHJhZnQiOmZhbHNlLCJudW1iZXIiOjMsIm93bmVy
-        IjpudWxsLCJtYWlsYm94Ijp7ImlkIjo3NDI1MSwibmFtZSI6IlN1cHBvcnQi
-        fSwiY3VzdG9tZXIiOnsiaWQiOjgxNzY3MzE3LCJmaXJzdE5hbWUiOiJIZWxw
-        IiwibGFzdE5hbWUiOiJTY291dCIsImVtYWlsIjoiaGVscEBoZWxwc2NvdXQu
-        bmV0IiwicGhvbmUiOiI4NTUtNDM1LTc3MjYiLCJ0eXBlIjoiY3VzdG9tZXIi
-        LCJlbWFpbHMiOlsiaGVscEBoZWxwc2NvdXQubmV0Il19LCJ0aHJlYWRDb3Vu
-        dCI6MSwic3RhdHVzIjoiYWN0aXZlIiwic3ViamVjdCI6IldlJ3JlIGhlcmUg
-        Zm9yIHlvdSIsInByZXZpZXciOiJBaG95LCBDaGFrcml0ISBXZSdyZSBzbyBo
-        YXBweSB0aGF0IHlvdSdyZSBoZXJlLiBPdXIgZ29hbCBpcyB0byBtYWtlIHN1
-        cmUgdGhhdCB5b3UgbG92ZSB1c2luZyBIZWxwIFNjb3V0IGRheSBpbiBhbmQg
-        ZGF5IG91dC4gICAgICAgICAgICAgQWhveSwgQ2hha3JpdCEgV2UncmUgc28g
-        aGFwcHkgdGhhdCB5b3UncmUgaGVyZS4gSGVyZSBhcmUgYSBmZXcgayIsImNy
-        ZWF0ZWRCeSI6eyJpZCI6ODE3NjczMTcsImZpcnN0TmFtZSI6IkhlbHAiLCJs
-        YXN0TmFtZSI6IlNjb3V0IiwiZW1haWwiOiJoZWxwQGhlbHBzY291dC5uZXQi
-        LCJwaG9uZSI6Ijg1NS00MzUtNzcyNiIsInR5cGUiOiJjdXN0b21lciIsImVt
-        YWlscyI6WyJoZWxwQGhlbHBzY291dC5uZXQiXX0sImNyZWF0ZWRBdCI6IjIw
-        MTYtMDUtMTJUMDk6NTM6MjVaIiwibW9kaWZpZWRBdCI6IjIwMTYtMDUtMTJU
-        MDk6NTM6MjVaIiwiY2xvc2VkQXQiOm51bGwsImNsb3NlZEJ5IjpudWxsLCJz
-        b3VyY2UiOnsidHlwZSI6ImVtYWlsIiwidmlhIjoiY3VzdG9tZXIifSwiY2Mi
-        OltdLCJiY2MiOltdLCJ0YWdzIjpudWxsLCJ0aHJlYWRzIjpbeyJpZCI6NTI5
-        MTAyMzY3LCJ0eXBlIjoiY3VzdG9tZXIiLCJhc3NpZ25lZFRvIjpudWxsLCJz
-        dGF0dXMiOiJhY3RpdmUiLCJjcmVhdGVkQXQiOiIyMDE2LTA1LTEyVDA5OjUz
-        OjI1WiIsIm9wZW5lZEF0IjpudWxsLCJjcmVhdGVkQnkiOnsiaWQiOjgxNzY3
-        MzE3LCJmaXJzdE5hbWUiOiJIZWxwIiwibGFzdE5hbWUiOiJTY291dCIsImVt
-        YWlsIjoiaGVscEBoZWxwc2NvdXQubmV0IiwicGhvbmUiOiI4NTUtNDM1LTc3
-        MjYiLCJ0eXBlIjoiY3VzdG9tZXIiLCJlbWFpbHMiOlsiaGVscEBoZWxwc2Nv
-        dXQubmV0Il19LCJzb3VyY2UiOnsidHlwZSI6ImVtYWlsIiwidmlhIjoiY3Vz
-        dG9tZXIifSwiYWN0aW9uVHlwZSI6bnVsbCwiYWN0aW9uU291cmNlSWQiOm51
-        bGwsImZyb21NYWlsYm94IjpudWxsLCJzdGF0ZSI6InB1Ymxpc2hlZCIsImN1
-        c3RvbWVyIjpudWxsLCJib2R5IjoiPHNwYW4gY2xhc3M9XCJwcmVoZWFkZXJc
-        IiBzdHlsZT1cImRpc3BsYXk6IG5vbmUgIWltcG9ydGFudDsgZm9udC1zaXpl
-        OiAxcHg7IGNvbG9yOiAjZWFlYWVhO1wiPkFob3ksIENoYWtyaXQhIFdlJ3Jl
-        IHNvIGhhcHB5IHRoYXQgeW91J3JlIGhlcmUuIE91ciBnb2FsIGlzIHRvIG1h
-        a2Ugc3VyZSB0aGF0IHlvdSBsb3ZlIHVzaW5nIEhlbHAgU2NvdXQgZGF5IGlu
-        IGFuZCBkYXkgb3V0Ljwvc3Bhbj5cbjx0YWJsZSBzdHlsZT1cImJhY2tncm91
-        bmQtY29sb3I6ICNFQkVCRUJcIiB3aWR0aD1cIjEwMCVcIiBib3JkZXI9XCIw
-        XCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIyMFwiPlxuPHRy
-        PlxuPHRkIHN0eWxlPVwiYmFja2dyb3VuZC1jb2xvcjogI0YxRjNGNFwiIGFs
-        aWduPVwiY2VudGVyXCI+PGltZyBzdHlsZT1cInBhZGRpbmc6MzBweCAwIDEw
-        cHhcIiBzcmM9XCJodHRwczovL2QxMndxYXM5aGNraTN6LmNsb3VkZnJvbnQu
-        bmV0L2ltYWdlcy9lbWFpbHMvbG9nbzMucG5nXCIgYWx0PVwiSGVscCBTY291
-        dCBMb2dvXCIgd2lkdGg9XCIxOTZcIiBoZWlnaHQ9XCIzOFwiIC8+PGJyPlxu
-        PGJyPlxuPHRhYmxlIHN0eWxlPVwiZm9udC1zaXplOjE0cHg7XCIgY2VsbHNw
-        YWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCIgYm9yZGVyPVwiMFwiIHdp
-        ZHRoPVwiNjAwXCI+XG48dHI+XG48dGQgYWxpZ249XCJsZWZ0XCIgc3R5bGU9
-        XCJiYWNrZ3JvdW5kLWNvbG9yOiAjRkZGOyBjb2xvcjogIzdjN2M3YzsgZm9u
-        dC1mYW1pbHk6ICdIZWx2ZXRpY2EgTmV1ZScsIEhlbHZldGljYSwgQXJpYWws
-        IHNhbnMtc2VyaWY7IGxpbmUtaGVpZ2h0OiAyMnB4OyBwYWRkaW5nOiA0MHB4
-        IDc1cHggMjVweCA3NXB4XCI+XG48dGFibGUgY2VsbHBhZGRpbmc9XCIwXCIg
-        Y2VsbHNwYWNpbmc9XCIwXCIgYm9yZGVyPVwiMFwiIHN0eWxlPVwicGFkZGlu
-        Zy1ib3R0b206MzBweDtcIj5cbjx0cj5cbjx0ZCB2YWxpZ249XCJ0b3BcIj5c
-        bjxoMSBzdHlsZT1cIm1hcmdpbjogNXB4IDAgMjBweCAwOyBjb2xvcjogIzJm
-        MmYyZjsgZm9udC1zaXplOiAyNnB4OyBsaW5lLWhlaWdodDogMzVweDsgZm9u
-        dC1mYW1pbHk6J0hlbHZldGljYSBOZXVlJywgSGVsdmV0aWNhLCBBcmlhbCwg
-        c2Fucy1zZXJpZjsgZm9udC13ZWlnaHQ6bm9ybWFsO1wiPkFob3ksIENoYWty
-        aXQhPC9oMT5cbjxwIHN0eWxlPVwiZm9udC1mYW1pbHk6J0hlbHZldGljYSBO
-        ZXVlJywgSGVsdmV0aWNhLCBBcmlhbCwgc2Fucy1zZXJpZjsgY29sb3I6Izdj
-        N2M3YzsgZm9udC1zaXplOjE0cHg7IGxpbmUtaGVpZ2h0OiAyMHB4OyBtYXJn
-        aW4tYm90dG9tOjIwcHg7XCI+V2UncmUgc28gaGFwcHkgdGhhdCB5b3UncmUg
-        aGVyZS4gSGVyZSBhcmUgYSBmZXcga2V5IHJlc291cmNlcyB0byBoZWxwIHlv
-        dSBnZXQgc3RhcnRlZDo8L3A+XG48aDMgc3R5bGU9XCJmb250LWZhbWlseTon
-        SGVsdmV0aWNhIE5ldWUnLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlm
-        OyBjb2xvcjogIzJmMmYyZjsgZm9udC1zaXplOiAxNnB4OyBsaW5lLWhlaWdo
-        dDogMTZweDsgbWFyZ2luLWJvdHRvbTowO1wiPkZpbmQgYW5zd2VycyBpbiBE
-        b2NzPC9oMz5cbjxwIHN0eWxlPVwiZm9udC1mYW1pbHk6J0hlbHZldGljYSBO
-        ZXVlJywgSGVsdmV0aWNhLCBBcmlhbCwgc2Fucy1zZXJpZjsgY29sb3I6Izdj
-        N2M3YzsgZm9udC1zaXplOjE0cHg7IGxpbmUtaGVpZ2h0OiAyMHB4OyBtYXJn
-        aW4tYm90dG9tOjIwcHg7XCI+PGEgc3R5bGU9XCJjb2xvcjojNTk4YWIyOyB0
-        ZXh0LWRlY29yYXRpb246bm9uZTtcIiBocmVmPVwiaHR0cDovL2RvY3MuaGVs
-        cHNjb3V0Lm5ldFwiPk91ciBrbm93bGVkZ2UgYmFzZTwvYT4gY292ZXJzIGV2
-        ZXJ5dGhpbmcgZnJvbSByZXNwb25kaW5nIHRvIGNvbnZlcnNhdGlvbnMsIHRv
-        IGFjY291bnQgbWFuYWdlbWVudCwgYW5kIGJleW9uZC48L3A+XG48aDMgc3R5
-        bGU9XCJmb250LWZhbWlseTonSGVsdmV0aWNhIE5ldWUnLCBIZWx2ZXRpY2Es
-        IEFyaWFsLCBzYW5zLXNlcmlmOyBjb2xvcjogIzJmMmYyZjsgZm9udC1zaXpl
-        OiAxNnB4OyBsaW5lLWhlaWdodDogMTZweDsgbWFyZ2luLWJvdHRvbTowO1wi
-        PldhdGNoIGEgZmV3IHZpZGVvczwvaDM+XG48cCBzdHlsZT1cImZvbnQtZmFt
-        aWx5OidIZWx2ZXRpY2EgTmV1ZScsIEhlbHZldGljYSwgQXJpYWwsIHNhbnMt
-        c2VyaWY7IGNvbG9yOiM3YzdjN2M7IGZvbnQtc2l6ZToxNHB4OyBsaW5lLWhl
-        aWdodDogMjBweDsgbWFyZ2luLWJvdHRvbToyMHB4O1wiPkZseSB0aHJvdWdo
-        IGEgY291cGxlIG9mIG91ciA8YSBzdHlsZT1cImNvbG9yOiM1OThhYjI7IHRl
-        eHQtZGVjb3JhdGlvbjpub25lO1wiIGhyZWY9XCJodHRwOi8vc2VjdXJlLmhl
-        bHBzY291dC5uZXQvZ2V0dGluZy1zdGFydGVkLXZpZHMvXCI+R2V0dGluZyBT
-        dGFydGVkIHZpZGVvczwvYT4gdG8gaGl0IHRoZSBncm91bmQgcnVubmluZy4g
-        VGhleSdyZSBxdWljayBhbmQgdG8gdGhlIHBvaW50ITwvcD5cbjxoMyBzdHls
-        ZT1cImZvbnQtZmFtaWx5OidIZWx2ZXRpY2EgTmV1ZScsIEhlbHZldGljYSwg
-        QXJpYWwsIHNhbnMtc2VyaWY7IGNvbG9yOiAjMmYyZjJmOyBmb250LXNpemU6
-        IDE2cHg7IGxpbmUtaGVpZ2h0OiAxNnB4OyBtYXJnaW4tYm90dG9tOjA7XCI+
-        U2NoZWR1bGUgYSB0b3VyPC9oMz5cbjxwIHN0eWxlPVwiZm9udC1mYW1pbHk6
-        J0hlbHZldGljYSBOZXVlJywgSGVsdmV0aWNhLCBBcmlhbCwgc2Fucy1zZXJp
-        ZjsgY29sb3I6IzdjN2M3YzsgZm9udC1zaXplOjE0cHg7IGxpbmUtaGVpZ2h0
-        OiAyMHB4OyBtYXJnaW4tYm90dG9tOjIwcHg7XCI+V2FudCB0byBzZWUgSGVs
-        cCBTY291dCBpbiBhY3Rpb24/IDxhIHN0eWxlPVwiY29sb3I6IzU5OGFiMjsg
-        dGV4dC1kZWNvcmF0aW9uOm5vbmU7XCIgaHJlZj1cImh0dHA6Ly93d3cuaGVs
-        cHNjb3V0Lm5ldC9kZW1vL1wiPlNpZ24gdXAgZm9yIGEgcGVyc29uYWwgdG91
-        cjwvYT4gYW5kIHdlJ2xsIHRha2UgeW91IHRocm91Z2ggSGVscCBTY291dCBm
-        cm9tIHRvcCB0byBib3R0b20uPC9wPlxuPC90ZD5cbjwvdHI+XG48L3RhYmxl
-        PlxuPC90ZD5cbjwvdHI+XG48dHI+XG48dGQgYWxpZ249XCJjZW50ZXJcIj48
-        aW1nIHNyYz1cImh0dHBzOi8vZDEyd3FhczloY2tpM3ouY2xvdWRmcm9udC5u
-        ZXQvaW1hZ2VzL2VtYWlscy90ZWFtLmpwZ1wiIGFsdD1cIkZyaWVuZGx5IHRl
-        YW0gZmFjZXNcIiB3aWR0aD1cIjU5OFwiIGhlaWdodD1cIjE1NlwiIHN0eWxl
-        PVwiZGlzcGxheTpibG9jaztcIiAvPjwvdGQ+XG48L3RyPlxuPC90YWJsZT5c
-        bjxicj5cbjx0YWJsZSBib3JkZXI9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCIg
-        Y2VsbHNwYWNpbmc9XCIwXCIgd2lkdGg9XCI2MDBcIj5cbjx0ciBzdHlsZT1c
-        ImJhY2tncm91bmQtY29sb3I6ICNGMUYzRjRcIj5cbjx0ZD5cbjxwIHN0eWxl
-        PVwiY29sb3I6ICM3RDdEN0Q7IGZvbnQtZmFtaWx5OiAnSGVsdmV0aWNhIE5l
-        dWUnLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmOyBmb250LXNpemU6
-        IDExcHg7IHRleHQtYWxpZ246IGNlbnRlclwiPsKpIDIwMTYgPGEgaHJlZj1c
-        Imh0dHA6Ly93d3cuaGVscHNjb3V0Lm5ldC9cIiBzdHlsZT1cImNvbG9yOiMz
-        NDQzNTE7IHRleHQtZGVjb3JhdGlvbjpub25lO1wiPjxzdHJvbmc+SGVscCBT
-        Y291dDwvc3Ryb25nPjwvYT4uIDEzMSBUcmVtb250IFN0cmVldCAzcmQgRmxv
-        b3IgQm9zdG9uLCBNQSAwMjExMS0xMzM4PC9wPlxuPC90ZD5cbjwvdHI+XG48
-        L3RhYmxlPlxuPC90ZD5cbjwvdHI+XG48L3RhYmxlPiIsInRvIjpudWxsLCJj
-        YyI6WyJzdXBwb3J0QGNoYWtyaXQubmV0Il0sImJjYyI6W10sImF0dGFjaG1l
-        bnRzIjpudWxsLCJzYXZlZFJlcGx5SWQiOjAsImNyZWF0ZWRCeUN1c3RvbWVy
-        Ijp0cnVlfV19fQ==
-    http_version: 
-  recorded_at: Fri, 13 May 2016 10:52:15 GMT
-- request:
     method: post
     uri: https://api.helpscout.net/v1/conversations.json
     body:
       encoding: UTF-8
-      string: '{"type":"email","subject":"ConversationTest.test_create","mailbox":{"id":74251},"customer":{"firstName":"noitasrevnoC","lastName":"tseT","email":"test@example.com","type":"customer"},"threads":[{"type":"note","createdBy":{"id":120780,"type":"user"},"body":"this
-        is a test note."},{"type":"message","createdBy":{"id":120780,"type":"user"},"body":"this
-        is a test message."}],"reload":true}'
+      string: '{"type":"email","subject":"ConversationTest.test_create","mailbox":{"id":158814},"customer":{"firstName":"noitasrevnoC","lastName":"tseT","email":"test@example.com","type":"customer"},"threads":[{"type":"note","createdBy":{"id":308775,"type":"user"},"body":"this
+        is a test note."},{"type":"message","createdBy":{"id":308775,"type":"user"},"body":"this
+        is a <strong>test</strong> message."}],"reload":true}'
     headers:
       User-Agent:
-      - excon/0.49.0
-      Authorization:
-      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
+      - excon/0.62.0
       Content-Type:
       - application/json
+      Authorization:
+      - Basic YTIwZjRhZWViN2I3N2MzNzk4MWI2MTE1MzA3NmFjZTVjODg4OTNkYjpY
   response:
     status:
       code: 201
@@ -195,10 +30,12 @@ http_interactions:
       - "*"
       Content-Type:
       - application/json; charset=utf-8
+      Correlation-ID:
+      - a6ee3949-ec16-4b39-92bc-3600adc3f671#7243598
       Date:
-      - Fri, 13 May 2016 10:52:17 GMT
+      - Wed, 05 Sep 2018 13:45:26 GMT
       Location:
-      - https://api.helpscout.net/v1/conversations/202527237.json
+      - https://api.helpscout.net/v1/conversations/656940444.json
       Server:
       - nginx
       Strict-Transport-Security:
@@ -207,30 +44,42 @@ http_interactions:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
+      X-RateLimit-Interval-burst:
+      - '5'
+      X-RateLimit-Interval-minute:
+      - '60'
+      X-RateLimit-Limit-burst:
+      - '12'
+      X-RateLimit-Limit-minute:
+      - '200'
+      X-RateLimit-Remaining-burst:
+      - '11'
+      X-RateLimit-Remaining-minute:
+      - '195'
       X-XSS-Protection:
       - 1; mode=block
       Content-Length:
-      - '1991'
+      - '2393'
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
-      string: '{"item":{"id":202527237,"type":"email","folderId":890431,"isDraft":false,"number":5,"owner":null,"mailbox":{"id":74251,"name":"Support"},"customer":{"id":81876656,"firstName":"noitasrevnoC","lastName":"tseT","email":"test@example.com","phone":null,"type":"customer","emails":["test@example.com"]},"threadCount":2,"status":"active","subject":"ConversationTest.test_create","preview":null,"createdBy":{"id":120780,"firstName":"Chakrit","lastName":"Wichian","email":"helpscout@chakrit.net","phone":null,"type":"user"},"createdAt":"2016-05-13T10:52:18Z","modifiedAt":"2016-05-13T10:52:18Z","closedAt":null,"closedBy":null,"source":{"type":"api","via":"user"},"cc":[],"bcc":[],"tags":null,"threads":[{"id":530252585,"type":"message","assignedTo":null,"status":"active","createdAt":"2016-05-13T10:52:18Z","openedAt":null,"createdBy":{"id":120780,"firstName":"Chakrit","lastName":"Wichian","email":"helpscout@chakrit.net","phone":null,"type":"user"},"source":{"type":"api","via":"user"},"actionType":null,"actionSourceId":null,"fromMailbox":null,"state":"published","customer":{"id":81876656,"firstName":"noitasrevnoC","lastName":"tseT","email":"test@example.com","phone":null,"type":"customer","emails":["test@example.com"]},"body":"this
-        is a test message.","to":null,"cc":[],"bcc":[],"attachments":null,"savedReplyId":null,"createdByCustomer":false},{"id":530252584,"type":"note","assignedTo":null,"status":"active","createdAt":"2016-05-13T10:52:18Z","openedAt":null,"createdBy":{"id":120780,"firstName":"Chakrit","lastName":"Wichian","email":"helpscout@chakrit.net","phone":null,"type":"user"},"source":{"type":"api","via":"user"},"actionType":null,"actionSourceId":null,"fromMailbox":null,"state":"published","customer":{"id":81876656,"firstName":"noitasrevnoC","lastName":"tseT","email":"test@example.com","phone":null,"type":"customer","emails":["test@example.com"]},"body":"this
-        is a test note.","to":null,"cc":[],"bcc":[],"attachments":null,"savedReplyId":null,"createdByCustomer":false}]}}'
+      encoding: ASCII-8BIT
+      string: '{"item":{"id":656940444,"type":"email","folderId":2306054,"isDraft":false,"number":158,"owner":null,"mailbox":{"id":158814,"name":"Support"},"customer":{"id":203786875,"firstName":"noitasrevnoC","lastName":"tseT","email":"test@example.com","phone":null,"type":"customer","emails":["test@example.com"],"photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/02.png","customerPersonType":true},"threadCount":2,"status":"active","subject":"ConversationTest.test_create","preview":null,"createdBy":{"id":308775,"firstName":"chakrit","lastName":"wichian","email":"helpscouttest@chakrit.net","phone":null,"type":"user","photoUrl":null},"createdAt":"2018-09-05T13:45:26Z","modifiedAt":"2018-09-05T13:45:26Z","closedAt":null,"closedBy":null,"source":{"type":"api","via":"user"},"cc":[],"bcc":[],"tags":null,"threads":[{"id":1812702195,"type":"message","assignedTo":null,"status":"active","createdAt":"2018-09-05T13:45:26Z","openedAt":null,"createdBy":{"id":308775,"firstName":"chakrit","lastName":"wichian","email":"helpscouttest@chakrit.net","phone":null,"type":"user","photoUrl":null},"source":{"type":"api","via":"user"},"actionType":null,"actionSourceId":null,"fromMailbox":null,"state":"published","customer":{"id":203786875,"firstName":"noitasrevnoC","lastName":"tseT","email":"test@example.com","phone":null,"type":"customer","emails":["test@example.com"],"photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/02.png","customerPersonType":true},"body":"this
+        is a \n<strong>test</strong> message.","to":[],"cc":[],"bcc":[],"attachments":null,"savedReplyId":null,"createdByCustomer":false},{"id":1812702194,"type":"note","assignedTo":null,"status":"active","createdAt":"2018-09-05T13:45:26Z","openedAt":null,"createdBy":{"id":308775,"firstName":"chakrit","lastName":"wichian","email":"helpscouttest@chakrit.net","phone":null,"type":"user","photoUrl":null},"source":{"type":"api","via":"user"},"actionType":null,"actionSourceId":null,"fromMailbox":null,"state":"published","customer":{"id":203786875,"firstName":"noitasrevnoC","lastName":"tseT","email":"test@example.com","phone":null,"type":"customer","emails":["test@example.com"],"photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/02.png","customerPersonType":true},"body":"this
+        is a test note.","to":[],"cc":[],"bcc":[],"attachments":null,"savedReplyId":null,"createdByCustomer":false}],"customFields":[]}}'
     http_version: 
-  recorded_at: Fri, 13 May 2016 10:52:16 GMT
+  recorded_at: Wed, 05 Sep 2018 13:45:26 GMT
 - request:
     method: get
-    uri: https://api.helpscout.net/v1/mailboxes/74251/conversations.json
+    uri: https://api.helpscout.net/v1/conversations/656937392.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - excon/0.49.0
+      - excon/0.62.0
       Authorization:
-      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
+      - Basic YTIwZjRhZWViN2I3N2MzNzk4MWI2MTE1MzA3NmFjZTVjODg4OTNkYjpY
   response:
     status:
       code: 200
@@ -246,37 +95,104 @@ http_interactions:
       - "*"
       Content-Type:
       - application/json; charset=utf-8
+      Correlation-ID:
+      - 1e5ec0b0-2c92-4d79-9372-bd8411225f8b#7301988
       Date:
-      - Fri, 13 May 2016 10:52:19 GMT
+      - Wed, 05 Sep 2018 13:48:32 GMT
       Server:
       - nginx
       Strict-Transport-Security:
       - max-age=31536000; includeSubdomains;
-      Vary:
-      - Accept-Encoding
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
+      X-RateLimit-Interval-burst:
+      - '5'
+      X-RateLimit-Interval-minute:
+      - '60'
+      X-RateLimit-Limit-burst:
+      - '12'
+      X-RateLimit-Limit-minute:
+      - '200'
+      X-RateLimit-Remaining-burst:
+      - '12'
+      X-RateLimit-Remaining-minute:
+      - '199'
       X-XSS-Protection:
       - 1; mode=block
       Content-Length:
-      - '4728'
+      - '2415'
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
-      string: '{"page":1,"pages":1,"count":5,"items":[{"id":202112521,"type":"email","folderId":890431,"isDraft":false,"number":3,"owner":null,"mailbox":{"id":74251,"name":"Support"},"customer":{"id":81767317,"firstName":"Help","lastName":"Scout","email":"help@helpscout.net","phone":"855-435-7726","type":"customer","emails":["help@helpscout.net"]},"threadCount":1,"status":"active","subject":"We''re
-        here for you","preview":"Ahoy, Chakrit! We''re so happy that you''re here.
-        Our goal is to make sure that you love using Help Scout day in and day out.             Ahoy,
-        Chakrit! We''re so happy that you''re here. Here are a few k","createdBy":{"id":81767317,"firstName":"Help","lastName":"Scout","email":"help@helpscout.net","phone":"855-435-7726","type":"customer","emails":["help@helpscout.net"]},"createdAt":"2016-05-12T09:53:25Z","userModifiedAt":"2016-05-12T09:53:25Z","closedAt":null,"closedBy":null,"source":{"type":"email","via":"customer"},"createdByType":"customer","cc":null,"bcc":null,"tags":[],"draft":false,"spam":false},{"id":202112426,"type":"email","folderId":890437,"isDraft":false,"number":2,"owner":{"id":120780,"firstName":"Chakrit","lastName":"Wichian","email":"helpscout@chakrit.net","phone":null,"type":"user"},"mailbox":{"id":74251,"name":"Support"},"customer":{"id":81767317,"firstName":"Help","lastName":"Scout","email":"help@helpscout.net","phone":"855-435-7726","type":"customer","emails":["help@helpscout.net"]},"threadCount":0,"status":"active","subject":"A
-        few more basics","preview":"Awesome job making it this far, Chakrit!  One
-        thing you''ll love about Help Scout is that it can be used almost entirely
-        via keyboard. Included are over 75+ keyboard shortcuts, most of which should
-        be ","createdBy":{"id":81767317,"firstName":"Help","lastName":"Scout","email":"help@helpscout.net","phone":"855-435-7726","type":"customer","emails":["help@helpscout.net"]},"createdAt":"2016-05-12T09:53:06Z","userModifiedAt":"2016-05-12T09:53:06Z","closedAt":null,"closedBy":null,"source":{"type":"web","via":"customer"},"createdByType":"customer","cc":null,"bcc":null,"tags":["samples"],"draft":false,"spam":false},{"id":202112424,"type":"email","folderId":890431,"isDraft":false,"number":1,"owner":null,"mailbox":{"id":74251,"name":"Support"},"customer":{"id":81767317,"firstName":"Help","lastName":"Scout","email":"help@helpscout.net","phone":"855-435-7726","type":"customer","emails":["help@helpscout.net"]},"threadCount":0,"status":"active","subject":"Learning
-        the basics","preview":"Hey Chakrit,  Above this message is what we call the
-        Conversation Toolbar. From there you can take all sorts of actions on a conversation:
-        reply, add a note, assign to someone and more. Hover your mou","createdBy":{"id":81767317,"firstName":"Help","lastName":"Scout","email":"help@helpscout.net","phone":"855-435-7726","type":"customer","emails":["help@helpscout.net"]},"createdAt":"2016-05-12T09:53:06Z","userModifiedAt":"2016-05-12T09:53:06Z","closedAt":null,"closedBy":null,"source":{"type":"web","via":"customer"},"createdByType":"customer","cc":null,"bcc":null,"tags":["samples"],"draft":false,"spam":false}]}'
+      encoding: ASCII-8BIT
+      string: '{"item":{"id":656937392,"type":"email","folderId":2306054,"isDraft":false,"number":157,"owner":null,"mailbox":{"id":158814,"name":"Support"},"customer":{"id":203786875,"firstName":"noitasrevnoC","lastName":"tseT","email":"test@example.com","phone":null,"type":"customer","emails":["test@example.com"],"photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/02.png","customerPersonType":true},"threadCount":2,"status":"active","subject":"ConversationTest.test_create","preview":"this
+        is a  test message.","createdBy":{"id":308775,"firstName":"chakrit","lastName":"wichian","email":"helpscouttest@chakrit.net","phone":null,"type":"user","photoUrl":null},"createdAt":"2018-09-05T13:41:43Z","modifiedAt":"2018-09-05T13:41:43Z","closedAt":null,"closedBy":null,"source":{"type":"api","via":"user"},"cc":[],"bcc":[],"tags":null,"threads":[{"id":1812692475,"type":"message","assignedTo":null,"status":"active","createdAt":"2018-09-05T13:41:43Z","openedAt":null,"createdBy":{"id":308775,"firstName":"chakrit","lastName":"wichian","email":"helpscouttest@chakrit.net","phone":null,"type":"user","photoUrl":null},"source":{"type":"api","via":"user"},"actionType":null,"actionSourceId":null,"fromMailbox":null,"state":"published","customer":{"id":203786875,"firstName":"noitasrevnoC","lastName":"tseT","email":"test@example.com","phone":null,"type":"customer","emails":["test@example.com"],"photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/02.png","customerPersonType":true},"body":"this
+        is a \n<strong>test</strong> message.","to":[],"cc":[],"bcc":[],"attachments":null,"savedReplyId":null,"createdByCustomer":false},{"id":1812692474,"type":"note","assignedTo":null,"status":"active","createdAt":"2018-09-05T13:41:43Z","openedAt":null,"createdBy":{"id":308775,"firstName":"chakrit","lastName":"wichian","email":"helpscouttest@chakrit.net","phone":null,"type":"user","photoUrl":null},"source":{"type":"api","via":"user"},"actionType":null,"actionSourceId":null,"fromMailbox":null,"state":"published","customer":{"id":203786875,"firstName":"noitasrevnoC","lastName":"tseT","email":"test@example.com","phone":null,"type":"customer","emails":["test@example.com"],"photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/02.png","customerPersonType":true},"body":"this
+        is a test note.","to":[],"cc":[],"bcc":[],"attachments":null,"savedReplyId":null,"createdByCustomer":false}],"customFields":[]}}'
     http_version: 
-  recorded_at: Fri, 13 May 2016 10:52:18 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Wed, 05 Sep 2018 13:48:32 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v1/mailboxes/158814/conversations.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.62.0
+      Authorization:
+      - Basic YTIwZjRhZWViN2I3N2MzNzk4MWI2MTE1MzA3NmFjZTVjODg4OTNkYjpY
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Correlation-ID:
+      - 1e5ec0b0-2c92-4d79-9372-bd8411225f8b#7302024
+      Date:
+      - Wed, 05 Sep 2018 13:48:33 GMT
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains;
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-RateLimit-Interval-burst:
+      - '5'
+      X-RateLimit-Interval-minute:
+      - '60'
+      X-RateLimit-Limit-burst:
+      - '12'
+      X-RateLimit-Limit-minute:
+      - '200'
+      X-RateLimit-Remaining-burst:
+      - '12'
+      X-RateLimit-Remaining-minute:
+      - '197'
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '2255'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwYWdlIjoxLCJwYWdlcyI6MSwiY291bnQiOjIsIml0ZW1zIjpbeyJpZCI6NjU2OTM3MzkyLCJ0eXBlIjoiZW1haWwiLCJmb2xkZXJJZCI6MjMwNjA1NCwiaXNEcmFmdCI6ZmFsc2UsIm51bWJlciI6MTU3LCJvd25lciI6bnVsbCwibWFpbGJveCI6eyJpZCI6MTU4ODE0LCJuYW1lIjoiU3VwcG9ydCJ9LCJjdXN0b21lciI6eyJpZCI6MjAzNzg2ODc1LCJmaXJzdE5hbWUiOiJub2l0YXNyZXZub0MiLCJsYXN0TmFtZSI6InRzZVQiLCJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJwaG9uZSI6bnVsbCwidHlwZSI6ImN1c3RvbWVyIiwiZW1haWxzIjpbInRlc3RAZXhhbXBsZS5jb20iXSwicGhvdG9VcmwiOiJodHRwczovL2QzM3Y0MzM5amhsOGswLmNsb3VkZnJvbnQubmV0L2N1c3RvbWVyLWF2YXRhci8wMi5wbmciLCJjdXN0b21lclBlcnNvblR5cGUiOnRydWV9LCJ0aHJlYWRDb3VudCI6Miwic3RhdHVzIjoiYWN0aXZlIiwic3ViamVjdCI6IkNvbnZlcnNhdGlvblRlc3QudGVzdF9jcmVhdGUiLCJwcmV2aWV3IjoidGhpcyBpcyBhICB0ZXN0IG1lc3NhZ2UuIiwiY3JlYXRlZEJ5Ijp7ImlkIjozMDg3NzUsImZpcnN0TmFtZSI6ImNoYWtyaXQiLCJsYXN0TmFtZSI6IndpY2hpYW4iLCJlbWFpbCI6ImhlbHBzY291dHRlc3RAY2hha3JpdC5uZXQiLCJwaG9uZSI6bnVsbCwidHlwZSI6InVzZXIiLCJwaG90b1VybCI6bnVsbH0sImNyZWF0ZWRBdCI6IjIwMTgtMDktMDVUMTM6NDE6NDNaIiwidXNlck1vZGlmaWVkQXQiOiIyMDE4LTA5LTA1VDEzOjQxOjQzWiIsImNsb3NlZEF0IjpudWxsLCJjbG9zZWRCeSI6bnVsbCwic291cmNlIjp7InR5cGUiOiJhcGkiLCJ2aWEiOiJ1c2VyIn0sImNyZWF0ZWRCeVR5cGUiOiJ1c2VyIiwiY2MiOltdLCJiY2MiOltdLCJ0YWdzIjpbXSwiZHJhZnQiOmZhbHNlLCJsb2NrZWQiOmZhbHNlLCJzcGFtIjpmYWxzZX0seyJpZCI6NjU2OTIwODg4LCJ0eXBlIjoiZW1haWwiLCJmb2xkZXJJZCI6MjMwNjA2MCwiaXNEcmFmdCI6ZmFsc2UsIm51bWJlciI6MTUxLCJvd25lciI6eyJpZCI6MzA4Nzc1LCJmaXJzdE5hbWUiOiJjaGFrcml0IiwibGFzdE5hbWUiOiJ3aWNoaWFuIiwiZW1haWwiOiJoZWxwc2NvdXR0ZXN0QGNoYWtyaXQubmV0IiwicGhvbmUiOm51bGwsInR5cGUiOiJ1c2VyIiwicGhvdG9VcmwiOm51bGx9LCJtYWlsYm94Ijp7ImlkIjoxNTg4MTQsIm5hbWUiOiJTdXBwb3J0In0sImN1c3RvbWVyIjp7ImlkIjoyMDM3ODMxMDUsImZpcnN0TmFtZSI6IkhlbHAiLCJsYXN0TmFtZSI6IlNjb3V0IiwiZW1haWwiOiJoZWxwQGhlbHBzY291dC5jb20iLCJwaG9uZSI6bnVsbCwidHlwZSI6ImN1c3RvbWVyIiwiZW1haWxzIjpbImhlbHBAaGVscHNjb3V0LmNvbSJdLCJwaG90b1VybCI6Imh0dHBzOi8vZDMzdjQzMzlqaGw4azAuY2xvdWRmcm9udC5uZXQvY3VzdG9tZXItYXZhdGFyLzA0LnBuZyIsImN1c3RvbWVyUGVyc29uVHlwZSI6dHJ1ZX0sInRocmVhZENvdW50IjowLCJzdGF0dXMiOiJhY3RpdmUiLCJzdWJqZWN0IjoiSW50cm9kdWN0aW9uIHRvIE5vdGlmaWNhdGlvbnMiLCJwcmV2aWV3IjoiSGV5IGNoYWtyaXQsICBFbmpveWluZyBIZWxwIFNjb3V0IHNvIGZhcj8gTGV04oCZcyB0YWxrIGFib3V0IGhvdyB5b3UgY2FuIGtlZXAgYSBmaW5nZXIgb24gdGhlIHB1bHNlIG9mIHlvdXIgYWNjb3VudCwgdGhhbmtzIHRvIHRoZSBtYWdpYyBvZiBOb3RpZmljYXRpb25zLiAgVGhlcmUgYXJlIHRocmVlIHdheXMgSGVscCBTY291dCBjYW4gbm90aWZ5IHkiLCJjcmVhdGVkQnkiOnsiaWQiOjIwMzc4MzEwNSwiZmlyc3ROYW1lIjoiSGVscCIsImxhc3ROYW1lIjoiU2NvdXQiLCJlbWFpbCI6ImhlbHBAaGVscHNjb3V0LmNvbSIsInBob25lIjpudWxsLCJ0eXBlIjoiY3VzdG9tZXIiLCJlbWFpbHMiOlsiaGVscEBoZWxwc2NvdXQuY29tIl0sInBob3RvVXJsIjoiaHR0cHM6Ly9kMzN2NDMzOWpobDhrMC5jbG91ZGZyb250Lm5ldC9jdXN0b21lci1hdmF0YXIvMDQucG5nIiwiY3VzdG9tZXJQZXJzb25UeXBlIjp0cnVlfSwiY3JlYXRlZEF0IjoiMjAxOC0wOS0wNVQxMzoyMToxMloiLCJ1c2VyTW9kaWZpZWRBdCI6IjIwMTgtMDktMDVUMTM6MjE6MTJaIiwiY2xvc2VkQXQiOm51bGwsImNsb3NlZEJ5IjpudWxsLCJzb3VyY2UiOnsidHlwZSI6IndlYiIsInZpYSI6ImN1c3RvbWVyIn0sImNyZWF0ZWRCeVR5cGUiOiJjdXN0b21lciIsImNjIjpbXSwiYmNjIjpbXSwidGFncyI6WyJzYW1wbGVzIl0sImRyYWZ0IjpmYWxzZSwibG9ja2VkIjpmYWxzZSwic3BhbSI6ZmFsc2V9XX0=
+    http_version: 
+  recorded_at: Wed, 05 Sep 2018 13:48:33 GMT
+recorded_with: VCR 4.0.0

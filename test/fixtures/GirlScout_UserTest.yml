@@ -2,15 +2,77 @@
 http_interactions:
 - request:
     method: get
+    uri: https://api.helpscout.net/v1/users/308775.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.62.0
+      Authorization:
+      - Basic YTIwZjRhZWViN2I3N2MzNzk4MWI2MTE1MzA3NmFjZTVjODg4OTNkYjpY
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Correlation-ID:
+      - fd284b05-5216-418a-966c-99d852880139#7104124
+      Date:
+      - Wed, 05 Sep 2018 14:03:37 GMT
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains;
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-RateLimit-Interval-burst:
+      - '5'
+      X-RateLimit-Interval-minute:
+      - '60'
+      X-RateLimit-Limit-burst:
+      - '12'
+      X-RateLimit-Limit-minute:
+      - '200'
+      X-RateLimit-Remaining-burst:
+      - '12'
+      X-RateLimit-Remaining-minute:
+      - '191'
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '263'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"item":{"id":308775,"firstName":"chakrit","lastName":"wichian","fullName":"chakrit
+        wichian","email":"helpscouttest@chakrit.net","role":"owner","timezone":"UTC","photoUrl":null,"createdAt":"2018-09-05T13:20:45Z","modifiedAt":"2018-09-05T13:20:46Z","type":"user"}}'
+    http_version: 
+  recorded_at: Wed, 05 Sep 2018 14:03:37 GMT
+- request:
+    method: get
     uri: https://api.helpscout.net/v1/users/me.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - excon/0.49.0
+      - excon/0.62.0
       Authorization:
-      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
+      - Basic YTIwZjRhZWViN2I3N2MzNzk4MWI2MTE1MzA3NmFjZTVjODg4OTNkYjpY
   response:
     status:
       code: 200
@@ -26,41 +88,53 @@ http_interactions:
       - "*"
       Content-Type:
       - application/json; charset=utf-8
+      Correlation-ID:
+      - ec333497-1c5f-4277-90dd-89a05a8b7e4d#7230272
       Date:
-      - Fri, 13 May 2016 10:07:31 GMT
+      - Wed, 05 Sep 2018 14:03:38 GMT
       Server:
       - nginx
       Strict-Transport-Security:
       - max-age=31536000; includeSubdomains;
-      Vary:
-      - Accept-Encoding
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
+      X-RateLimit-Interval-burst:
+      - '5'
+      X-RateLimit-Interval-minute:
+      - '60'
+      X-RateLimit-Limit-burst:
+      - '12'
+      X-RateLimit-Limit-minute:
+      - '200'
+      X-RateLimit-Remaining-burst:
+      - '12'
+      X-RateLimit-Remaining-minute:
+      - '190'
       X-XSS-Protection:
       - 1; mode=block
       Content-Length:
-      - '286'
+      - '281'
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
-      string: '{"item":{"id":120780,"firstName":"Chakrit","lastName":"Wichian","fullName":"Chakrit
-        Wichian","email":"helpscout@chakrit.net","role":"owner","timezone":"Asia/Bangkok","photoUrl":null,"type":"user","companyId":46155,"createdAt":"2016-05-12T09:52:30Z","modifiedAt":"2016-05-13T10:01:10Z"}}'
+      encoding: ASCII-8BIT
+      string: '{"item":{"id":308775,"firstName":"chakrit","lastName":"wichian","fullName":"chakrit
+        wichian","email":"helpscouttest@chakrit.net","role":"owner","timezone":"UTC","photoUrl":null,"type":"user","companyId":87143,"createdAt":"2018-09-05T13:20:45Z","modifiedAt":"2018-09-05T13:20:46Z"}}'
     http_version: 
-  recorded_at: Fri, 13 May 2016 10:07:30 GMT
+  recorded_at: Wed, 05 Sep 2018 14:03:39 GMT
 - request:
     method: get
-    uri: https://api.helpscout.net/v1/users/120780.json
+    uri: https://api.helpscout.net/v1/mailboxes/158814/users.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - excon/0.49.0
+      - excon/0.62.0
       Authorization:
-      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
+      - Basic YTIwZjRhZWViN2I3N2MzNzk4MWI2MTE1MzA3NmFjZTVjODg4OTNkYjpY
   response:
     status:
       code: 200
@@ -76,30 +150,42 @@ http_interactions:
       - "*"
       Content-Type:
       - application/json; charset=utf-8
+      Correlation-ID:
+      - fd284b05-5216-418a-966c-99d852880139#7104186
       Date:
-      - Fri, 13 May 2016 10:07:32 GMT
+      - Wed, 05 Sep 2018 14:03:40 GMT
       Server:
       - nginx
       Strict-Transport-Security:
       - max-age=31536000; includeSubdomains;
-      Vary:
-      - Accept-Encoding
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
+      X-RateLimit-Interval-burst:
+      - '5'
+      X-RateLimit-Interval-minute:
+      - '60'
+      X-RateLimit-Limit-burst:
+      - '12'
+      X-RateLimit-Limit-minute:
+      - '200'
+      X-RateLimit-Remaining-burst:
+      - '12'
+      X-RateLimit-Remaining-minute:
+      - '188'
       X-XSS-Protection:
       - 1; mode=block
       Content-Length:
-      - '268'
+      - '295'
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
-      string: '{"item":{"id":120780,"firstName":"Chakrit","lastName":"Wichian","fullName":"Chakrit
-        Wichian","email":"helpscout@chakrit.net","role":"owner","timezone":"Asia/Bangkok","photoUrl":null,"createdAt":"2016-05-12T09:52:30Z","modifiedAt":"2016-05-13T10:01:10Z","type":"user"}}'
+      encoding: ASCII-8BIT
+      string: '{"page":1,"pages":1,"count":1,"items":[{"id":308775,"firstName":"chakrit","lastName":"wichian","fullName":"chakrit
+        wichian","email":"helpscouttest@chakrit.net","role":"owner","timezone":"UTC","photoUrl":null,"createdAt":"2018-09-05T13:20:45Z","modifiedAt":"2018-09-05T13:20:46Z","type":"user"}]}'
     http_version: 
-  recorded_at: Fri, 13 May 2016 10:07:31 GMT
+  recorded_at: Wed, 05 Sep 2018 14:03:40 GMT
 - request:
     method: get
     uri: https://api.helpscout.net/v1/users.json
@@ -108,9 +194,9 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - excon/0.49.0
+      - excon/0.62.0
       Authorization:
-      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
+      - Basic YTIwZjRhZWViN2I3N2MzNzk4MWI2MTE1MzA3NmFjZTVjODg4OTNkYjpY
   response:
     status:
       code: 200
@@ -126,78 +212,40 @@ http_interactions:
       - "*"
       Content-Type:
       - application/json; charset=utf-8
+      Correlation-ID:
+      - fd284b05-5216-418a-966c-99d852880139#7104400
       Date:
-      - Fri, 13 May 2016 10:07:34 GMT
+      - Wed, 05 Sep 2018 14:03:47 GMT
       Server:
       - nginx
       Strict-Transport-Security:
       - max-age=31536000; includeSubdomains;
-      Vary:
-      - Accept-Encoding
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
+      X-RateLimit-Interval-burst:
+      - '5'
+      X-RateLimit-Interval-minute:
+      - '60'
+      X-RateLimit-Limit-burst:
+      - '12'
+      X-RateLimit-Limit-minute:
+      - '200'
+      X-RateLimit-Remaining-burst:
+      - '12'
+      X-RateLimit-Remaining-minute:
+      - '199'
       X-XSS-Protection:
       - 1; mode=block
       Content-Length:
-      - '300'
+      - '295'
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
-      string: '{"page":1,"pages":1,"count":1,"items":[{"id":120780,"firstName":"Chakrit","lastName":"Wichian","fullName":"Chakrit
-        Wichian","email":"helpscout@chakrit.net","role":"owner","timezone":"Asia/Bangkok","photoUrl":null,"createdAt":"2016-05-12T09:52:30Z","modifiedAt":"2016-05-13T10:01:10Z","type":"user"}]}'
+      encoding: ASCII-8BIT
+      string: '{"page":1,"pages":1,"count":1,"items":[{"id":308775,"firstName":"chakrit","lastName":"wichian","fullName":"chakrit
+        wichian","email":"helpscouttest@chakrit.net","role":"owner","timezone":"UTC","photoUrl":null,"createdAt":"2018-09-05T13:20:45Z","modifiedAt":"2018-09-05T13:20:46Z","type":"user"}]}'
     http_version: 
-  recorded_at: Fri, 13 May 2016 10:07:33 GMT
-- request:
-    method: get
-    uri: https://api.helpscout.net/v1/mailboxes/74251/users.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - excon/0.49.0
-      Authorization:
-      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
-  response:
-    status:
-      code: 200
-      message: 
-    headers:
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - Origin, X-Requested-With, Content-Type, Accept, Authorization
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE
-      Access-Control-Allow-Origin:
-      - "*"
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 13 May 2016 10:07:36 GMT
-      Server:
-      - nginx
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains;
-      Vary:
-      - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-XSS-Protection:
-      - 1; mode=block
-      Content-Length:
-      - '300'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"page":1,"pages":1,"count":1,"items":[{"id":120780,"firstName":"Chakrit","lastName":"Wichian","fullName":"Chakrit
-        Wichian","email":"helpscout@chakrit.net","role":"owner","timezone":"Asia/Bangkok","photoUrl":null,"createdAt":"2016-05-12T09:52:30Z","modifiedAt":"2016-05-13T10:01:10Z","type":"user"}]}'
-    http_version: 
-  recorded_at: Fri, 13 May 2016 10:07:35 GMT
-recorded_with: VCR 3.0.1
+  recorded_at: Wed, 05 Sep 2018 14:03:47 GMT
+recorded_with: VCR 4.0.0

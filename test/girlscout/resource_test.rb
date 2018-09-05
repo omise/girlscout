@@ -24,7 +24,7 @@ module GirlScout
     # Since HelpScout doesn't provide an echo API for testing,
     # actual serialization tests are done as part of endpoint tests.
     def test_get_methods_result
-      assert_equal 120_780, @resource.get['item']['id']
+      assert_equal USER_ID, @resource.get['item']['id']
     end
   end
 end

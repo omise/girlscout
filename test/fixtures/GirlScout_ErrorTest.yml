@@ -2,18 +2,18 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.helpscout.net/v1/conversations/40100.json
+    uri: https://api.helpscout.net/v1/conversations/656937392.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - excon/0.51.0
+      - excon/0.62.0
       Authorization:
-      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
+      - Basic YTIwZjRhZWViN2I3N2MzNzk4MWI2MTE1MzA3NmFjZTVjODg4OTNkYjpY
   response:
     status:
-      code: 401
+      code: 200
       message: 
     headers:
       Access-Control-Allow-Credentials:
@@ -26,21 +26,45 @@ http_interactions:
       - "*"
       Content-Type:
       - application/json; charset=utf-8
+      Correlation-ID:
+      - 1e5ec0b0-2c92-4d79-9372-bd8411225f8b#7314033
       Date:
-      - Fri, 05 Aug 2016 07:46:58 GMT
+      - Wed, 05 Sep 2018 14:00:03 GMT
       Server:
       - nginx
-      WWW-Authenticate:
-      - Basic realm="Helpscout"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains;
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-RateLimit-Interval-burst:
+      - '5'
+      X-RateLimit-Interval-minute:
+      - '60'
+      X-RateLimit-Limit-burst:
+      - '12'
+      X-RateLimit-Limit-minute:
+      - '200'
+      X-RateLimit-Remaining-burst:
+      - '12'
+      X-RateLimit-Remaining-minute:
+      - '199'
+      X-XSS-Protection:
+      - 1; mode=block
       Content-Length:
-      - '70'
+      - '3567'
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
-      string: '{"code":401,"error":"Authentication was not provided or was invalid."}'
+      encoding: ASCII-8BIT
+      string: '{"item":{"id":656937392,"type":"email","folderId":2306059,"isDraft":false,"number":157,"owner":null,"mailbox":{"id":158814,"name":"Support"},"customer":{"id":203786875,"firstName":"noitasrevnoC","lastName":"tseT","email":"test@example.com","phone":null,"type":"customer","emails":["test@example.com"],"photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/02.png","customerPersonType":true},"threadCount":2,"status":"closed","subject":"ConversationTest.test_create","preview":"test
+        attachment","createdBy":{"id":308775,"firstName":"chakrit","lastName":"wichian","email":"helpscouttest@chakrit.net","phone":null,"type":"user","photoUrl":null},"createdAt":"2018-09-05T13:41:43Z","modifiedAt":"2018-09-05T13:52:01Z","closedAt":"2018-09-05T13:52:01Z","closedBy":{"id":308775,"firstName":"chakrit","lastName":"wichian","email":"helpscouttest@chakrit.net","phone":null,"type":"user","photoUrl":null},"source":{"type":"api","via":"user"},"cc":[],"bcc":[],"tags":null,"threads":[{"id":1812719663,"type":"message","assignedTo":null,"status":"closed","createdAt":"2018-09-05T13:52:01Z","openedAt":null,"createdBy":{"id":308775,"firstName":"chakrit","lastName":"wichian","email":"helpscouttest@chakrit.net","phone":null,"type":"user","photoUrl":null},"source":{"type":"web","via":"user"},"actionType":"originalCreator","actionSourceId":308775,"fromMailbox":null,"state":"published","customer":{"id":203786875,"firstName":"noitasrevnoC","lastName":"tseT","email":"test@example.com","phone":null,"type":"customer","emails":["test@example.com"],"photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/02.png","customerPersonType":true},"body":"test
+        attachment","to":[],"cc":[],"bcc":[],"attachments":[{"id":146283244,"mimeType":"text/plain","fileName":"-.txt","size":132,"width":0,"height":0,"url":"https://secure.helpscout.net/file/146283244/79a99c940b90478923f193b7fb7e992f2461a429/-.txt","hash":"79a99c940b90478923f193b7fb7e992f2461a429"}],"savedReplyId":0,"createdByCustomer":false},{"id":1812692475,"type":"message","assignedTo":null,"status":"active","createdAt":"2018-09-05T13:41:43Z","openedAt":null,"createdBy":{"id":308775,"firstName":"chakrit","lastName":"wichian","email":"helpscouttest@chakrit.net","phone":null,"type":"user","photoUrl":null},"source":{"type":"api","via":"user"},"actionType":null,"actionSourceId":null,"fromMailbox":null,"state":"published","customer":{"id":203786875,"firstName":"noitasrevnoC","lastName":"tseT","email":"test@example.com","phone":null,"type":"customer","emails":["test@example.com"],"photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/02.png","customerPersonType":true},"body":"this
+        is a \n<strong>test</strong> message.","to":[],"cc":[],"bcc":[],"attachments":null,"savedReplyId":null,"createdByCustomer":false},{"id":1812692474,"type":"note","assignedTo":null,"status":"active","createdAt":"2018-09-05T13:41:43Z","openedAt":null,"createdBy":{"id":308775,"firstName":"chakrit","lastName":"wichian","email":"helpscouttest@chakrit.net","phone":null,"type":"user","photoUrl":null},"source":{"type":"api","via":"user"},"actionType":null,"actionSourceId":null,"fromMailbox":null,"state":"published","customer":{"id":203786875,"firstName":"noitasrevnoC","lastName":"tseT","email":"test@example.com","phone":null,"type":"customer","emails":["test@example.com"],"photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/02.png","customerPersonType":true},"body":"this
+        is a test note.","to":[],"cc":[],"bcc":[],"attachments":null,"savedReplyId":null,"createdByCustomer":false}],"customFields":[]}}'
     http_version: 
-  recorded_at: Fri, 05 Aug 2016 07:46:58 GMT
+  recorded_at: Wed, 05 Sep 2018 14:00:03 GMT
 - request:
     method: get
     uri: https://api.helpscout.net/v1/conversations/40400.json
@@ -49,9 +73,9 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - excon/0.51.0
+      - excon/0.62.0
       Authorization:
-      - Basic NzRjNjA4YjYxMTkyZGQ3ODA3NmZjOTdhZjgyYmJlODA4NDE1MzU1ZTpY
+      - Basic YTIwZjRhZWViN2I3N2MzNzk4MWI2MTE1MzA3NmFjZTVjODg4OTNkYjpY
   response:
     status:
       code: 404
@@ -67,17 +91,74 @@ http_interactions:
       - "*"
       Content-Type:
       - application/json; charset=utf-8
+      Correlation-ID:
+      - fd284b05-5216-418a-966c-99d852880139#7100476
       Date:
-      - Fri, 05 Aug 2016 08:08:57 GMT
+      - Wed, 05 Sep 2018 14:00:43 GMT
       Server:
       - nginx
+      X-RateLimit-Interval-burst:
+      - '5'
+      X-RateLimit-Interval-minute:
+      - '60'
+      X-RateLimit-Limit-burst:
+      - '12'
+      X-RateLimit-Limit-minute:
+      - '200'
+      X-RateLimit-Remaining-burst:
+      - '12'
+      X-RateLimit-Remaining-minute:
+      - '196'
       Content-Length:
       - '60'
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"code":404,"error":"The requested resource was not found."}'
     http_version: 
-  recorded_at: Fri, 05 Aug 2016 08:08:57 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Wed, 05 Sep 2018 14:00:43 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v1/conversations/40100.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.62.0
+      Authorization:
+      - Basic d3Jvbmc6WA==
+  response:
+    status:
+      code: 401
+      message: 
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Correlation-ID:
+      - ec333497-1c5f-4277-90dd-89a05a8b7e4d#7228689
+      Date:
+      - Wed, 05 Sep 2018 14:01:56 GMT
+      Server:
+      - nginx
+      WWW-Authenticate:
+      - Basic realm="Helpscout"
+      Content-Length:
+      - '70'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"code":401,"error":"Authentication was not provided or was invalid."}'
+    http_version: 
+  recorded_at: Wed, 05 Sep 2018 14:01:56 GMT
+recorded_with: VCR 4.0.0

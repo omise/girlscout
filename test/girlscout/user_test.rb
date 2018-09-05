@@ -22,14 +22,14 @@ module GirlScout
       user = User.find(USER_ID)
       assert_instance_of User, user
       assert_equal USER_ID, user.id
-      assert_equal 'Chakrit', user.first_name
+      assert_equal 'chakrit', user.first_name
     end
 
     def test_me
       me = User.me
       assert_instance_of User, me
       assert_equal USER_ID, me.id
-      assert_equal 'Chakrit', me.first_name
+      assert_equal 'chakrit', me.first_name
     end
 
     def test_as_json

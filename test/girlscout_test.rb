@@ -4,12 +4,12 @@ module GirlScout
   require 'json'
 
   class GirlScoutTest < Minitest::Test
-    MAILBOX_ID      = 74_251
-    USER_ID         = 120_780
-    CUSTOMER_ID     = 81_767_317
-    THREAD_ID       = 529_102_367
-    ATTACHMENT_ID   = 41_031_124
-    CONVERSATION_ID = 202_112_521
+    MAILBOX_ID      = 158_814
+    USER_ID         = 308_775
+    CUSTOMER_ID     = 203_786_875
+    CONVERSATION_ID = 656_937_392
+    THREAD_ID       = 1_812_692_475
+    ATTACHMENT_ID   = 146_283_244
 
     def setup
       super

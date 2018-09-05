@@ -4,9 +4,6 @@ require 'support'
 
 module GirlScout
   class CustomerTest < GirlScoutTest
-    MAILBOX_ID  = 74_251
-    CUSTOMER_ID = 81_767_317
-
     def test_all_via_mailbox
       Mailbox.resource = nil
       customers = Mailbox.new(id: MAILBOX_ID).customers
@@ -26,7 +23,7 @@ module GirlScout
       customer = Customer.find(CUSTOMER_ID)
       assert_instance_of Customer, customer
       assert_equal CUSTOMER_ID, customer.id
-      assert_equal 'Help Scout', customer.full_name
+      assert_equal 'noitasrevnoC tseT', customer.full_name
     end
 
     def test_as_json

@@ -15,7 +15,7 @@ module GirlScout
       conversation = find_conversation
       assert_instance_of Conversation, conversation
       assert_equal CONVERSATION_ID, conversation.id
-      assert_equal "We're here for you", conversation.subject
+      assert_equal 'ConversationTest.test_create', conversation.subject
     end
 
     def test_create_payload
@@ -49,7 +49,7 @@ module GirlScout
 
     def test_threads
       threads = find_conversation.threads
-      assert_equal 1, threads.length
+      assert_equal 2, threads.length
       assert_instance_of Thread, threads[0]
       assert_equal THREAD_ID, threads[0].id
     end

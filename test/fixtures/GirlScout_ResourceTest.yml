@@ -8,9 +8,9 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - excon/0.49.0
+      - excon/0.62.0
       Authorization:
-      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
+      - Basic YTIwZjRhZWViN2I3N2MzNzk4MWI2MTE1MzA3NmFjZTVjODg4OTNkYjpY
   response:
     status:
       code: 200
@@ -26,152 +26,40 @@ http_interactions:
       - "*"
       Content-Type:
       - application/json; charset=utf-8
+      Correlation-ID:
+      - fd284b05-5216-418a-966c-99d852880139#7092977
       Date:
-      - Fri, 13 May 2016 09:55:00 GMT
+      - Wed, 05 Sep 2018 13:54:24 GMT
       Server:
       - nginx
       Strict-Transport-Security:
       - max-age=31536000; includeSubdomains;
-      Vary:
-      - Accept-Encoding
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
+      X-RateLimit-Interval-burst:
+      - '5'
+      X-RateLimit-Interval-minute:
+      - '60'
+      X-RateLimit-Limit-burst:
+      - '12'
+      X-RateLimit-Limit-minute:
+      - '200'
+      X-RateLimit-Remaining-burst:
+      - '12'
+      X-RateLimit-Remaining-minute:
+      - '198'
       X-XSS-Protection:
       - 1; mode=block
       Content-Length:
-      - '286'
+      - '281'
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
-      string: '{"item":{"id":120780,"firstName":"Chakrit","lastName":"Wichian","fullName":"Chakrit
-        Wichian","email":"helpscout@chakrit.net","role":"owner","timezone":"Asia/Bangkok","photoUrl":null,"type":"user","companyId":46155,"createdAt":"2016-05-12T09:52:30Z","modifiedAt":"2016-05-12T22:00:50Z"}}'
+      encoding: ASCII-8BIT
+      string: '{"item":{"id":308775,"firstName":"chakrit","lastName":"wichian","fullName":"chakrit
+        wichian","email":"helpscouttest@chakrit.net","role":"owner","timezone":"UTC","photoUrl":null,"type":"user","companyId":87143,"createdAt":"2018-09-05T13:20:45Z","modifiedAt":"2018-09-05T13:20:46Z"}}'
     http_version: 
-  recorded_at: Fri, 13 May 2016 09:55:00 GMT
-- request:
-    method: put
-    uri: https://api.helpscout.net/v1/users/me.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - excon/0.49.0
-      Authorization:
-      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
-  response:
-    status:
-      code: 404
-      message: 
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 13 May 2016 09:55:02 GMT
-      Server:
-      - nginx
-      Content-Length:
-      - '80'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"code":404,"error":"The specified resource was not found: ''/v1/users/me.json''"}'
-    http_version: 
-  recorded_at: Fri, 13 May 2016 09:55:01 GMT
-- request:
-    method: post
-    uri: https://api.helpscout.net/v1/users/me.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - excon/0.49.0
-      Authorization:
-      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
-  response:
-    status:
-      code: 404
-      message: 
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 13 May 2016 09:55:04 GMT
-      Server:
-      - nginx
-      Content-Length:
-      - '80'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"code":404,"error":"The specified resource was not found: ''/v1/users/me.json''"}'
-    http_version: 
-  recorded_at: Fri, 13 May 2016 09:55:03 GMT
-- request:
-    method: patch
-    uri: https://api.helpscout.net/v1/users/me.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - excon/0.49.0
-      Authorization:
-      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
-  response:
-    status:
-      code: 404
-      message: 
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 13 May 2016 09:55:05 GMT
-      Server:
-      - nginx
-      Content-Length:
-      - '80'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"code":404,"error":"The specified resource was not found: ''/v1/users/me.json''"}'
-    http_version: 
-  recorded_at: Fri, 13 May 2016 09:55:05 GMT
-- request:
-    method: delete
-    uri: https://api.helpscout.net/v1/users/me.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - excon/0.49.0
-      Authorization:
-      - Basic MmRiYjY4Y2FjNjY4M2Y3NTI4OTk2YzBiNjEzY2E3MWI2ODc2OTcwZjpY
-  response:
-    status:
-      code: 404
-      message: 
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 13 May 2016 09:55:07 GMT
-      Server:
-      - nginx
-      Content-Length:
-      - '80'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"code":404,"error":"The specified resource was not found: ''/v1/users/me.json''"}'
-    http_version: 
-  recorded_at: Fri, 13 May 2016 09:55:06 GMT
-recorded_with: VCR 3.0.1
+  recorded_at: Wed, 05 Sep 2018 13:54:24 GMT
+recorded_with: VCR 4.0.0

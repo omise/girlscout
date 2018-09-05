@@ -4,8 +4,8 @@ require 'support'
 
 module GirlScout
   class SearchTest < GirlScoutTest
-    CONVERSATION_QUERY = "We're here for you"
-    CUSTOMER_QUERY     = 'Help Scout'
+    CONVERSATION_QUERY = 'ConversationTest.test_create'
+    CUSTOMER_QUERY     = 'noitasrevnoC tseT'
 
     def test_conversations_params
       query = spy_on(Search) do |spy|
@@ -22,7 +22,7 @@ module GirlScout
       assert conversations.length
       assert_instance_of Conversation, conversations[0]
       assert_equal CONVERSATION_ID, conversations[0].id
-      assert_equal "We're here for you", conversations[0].subject
+      assert_equal CONVERSATION_QUERY, conversations[0].subject
     end
 
     def test_customers_params
@@ -39,7 +39,7 @@ module GirlScout
       assert customers.length
       assert_instance_of Customer, customers[0]
       assert_equal CUSTOMER_ID, customers[0].id
-      assert_equal 'Help Scout', customers[0].full_name
+      assert_equal CUSTOMER_QUERY, customers[0].full_name
     end
   end
 end
