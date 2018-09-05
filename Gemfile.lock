@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    girlscout (0.3.3)
+    girlscout (0.4.0)
       excon (~> 0.62)
       json (>= 2.1)
 
