@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'support'
 
 module GirlScout
@@ -22,21 +24,21 @@ module GirlScout
         spy.post_payload
       end
 
-      assert_equal "ConversationTest.test_create", payload["subject"]
-      assert_equal true, payload["reload"]
-      assert_equal "customer", payload["customer"]["type"]
-      assert_equal MAILBOX_ID, payload["mailbox"]["id"]
+      assert_equal 'ConversationTest.test_create', payload['subject']
+      assert_equal true, payload['reload']
+      assert_equal 'customer', payload['customer']['type']
+      assert_equal MAILBOX_ID, payload['mailbox']['id']
 
-      thread = payload["threads"][1]
-      assert_equal "this is a <strong>test</strong> message.", thread["body"]
-      assert_equal USER_ID, thread["createdBy"]["id"]
+      thread = payload['threads'][1]
+      assert_equal 'this is a <strong>test</strong> message.', thread['body']
+      assert_equal USER_ID, thread['createdBy']['id']
     end
 
     def test_create
       conversation = Conversation.create(build_conversation)
-      assert_equal "ConversationTest.test_create", conversation.subject
-      assert_equal "test@example.com", conversation.customer.email
-      assert_equal "this is a test note.", conversation.threads[1].body
+      assert_equal 'ConversationTest.test_create', conversation.subject
+      assert_equal 'test@example.com', conversation.customer.email
+      assert_equal 'this is a test note.', conversation.threads[1].body
     end
 
     def test_mailbox
@@ -60,10 +62,10 @@ module GirlScout
 
     def test_as_json
       json = build_conversation.as_json
-      assert_instance_of Hash, json["customer"]
-      assert_equal "customer", json["customer"]["type"], '"type" required for customer field.'
-      assert_instance_of Hash, json["threads"][1]
-      assert_instance_of Hash, json["mailbox"]
+      assert_instance_of Hash, json['customer']
+      assert_equal 'customer', json['customer']['type'], '"type" required for customer field.'
+      assert_instance_of Hash, json['threads'][1]
+      assert_instance_of Hash, json['mailbox']
     end
 
     private
@@ -77,26 +79,26 @@ module GirlScout
       mailbox = Mailbox.new(id: MAILBOX_ID)
 
       customer = Customer.new(
-        first_name: "noitasrevnoC",
-        last_name: "tseT",
-        email: "test@example.com"
+        first_name: 'noitasrevnoC',
+        last_name: 'tseT',
+        email: 'test@example.com'
       )
 
       note_thread = Thread.new(
-        type: "note",
+        type: 'note',
         created_by: user,
-        body: "this is a test note."
+        body: 'this is a test note.'
       )
 
       message_thread = Thread.new(
-        type: "message",
+        type: 'message',
         created_by: user,
-        body: "this is a <strong>test</strong> message."
+        body: 'this is a <strong>test</strong> message.'
       )
 
       Conversation.new(
         type: :email,
-        subject: "ConversationTest.test_create",
+        subject: 'ConversationTest.test_create',
         mailbox: mailbox,
         customer: customer,
         threads: [note_thread, message_thread]

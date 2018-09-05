@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module GirlScout
   module Concerns
     module HasAttributes
@@ -21,7 +23,7 @@ module GirlScout
         @attributes.key?(attr_key(key))
       end
 
-      def respond_to?(method_name, include_all=false)
+      def respond_to_missing?(method_name, include_all = false)
         key?(method_name) || super
       end
 
@@ -35,12 +37,11 @@ module GirlScout
       protected
 
       def normalize_attributes(attr)
-        attr = attr || @attributes
+        attr ||= @attributes
         attr = attr.attributes if attr.respond_to?(:attributes)
 
-        attr.inject({}) do |hash,(k,v)|
+        attr.each_with_object({}) do |(k, v), hash|
           hash[attr_key(k)] = v
-          hash
         end
       end
 
@@ -51,4 +52,3 @@ module GirlScout
     end
   end
 end
-

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'support'
 
 module GirlScout
@@ -20,24 +22,24 @@ module GirlScout
       user = User.find(USER_ID)
       assert_instance_of User, user
       assert_equal USER_ID, user.id
-      assert_equal "Chakrit", user.first_name
+      assert_equal 'Chakrit', user.first_name
     end
 
     def test_me
       me = User.me
       assert_instance_of User, me
       assert_equal USER_ID, me.id
-      assert_equal "Chakrit", me.first_name
+      assert_equal 'Chakrit', me.first_name
     end
 
     def test_as_json
       json = User.me.as_json
-      assert_equal "user", json["type"], '"type" field is required."'
-      assert_equal USER_ID, json["id"]
+      assert_equal 'user', json['type'], '"type" field is required."'
+      assert_equal USER_ID, json['id']
 
       json = User.new(id: 123).as_json
-      assert_equal "user", json["type"], '"type" field is required."'
-      assert_equal 123, json["id"]
+      assert_equal 'user', json['type'], '"type" field is required."'
+      assert_equal 123, json['id']
     end
   end
 end

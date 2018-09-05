@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'support'
 
 module GirlScout
   class SearchTest < GirlScoutTest
     CONVERSATION_QUERY = "We're here for you"
-    CUSTOMER_QUERY     = "Help Scout"
+    CUSTOMER_QUERY     = 'Help Scout'
 
     def test_conversations_params
       query = spy_on(Search) do |spy|
@@ -37,7 +39,7 @@ module GirlScout
       assert customers.length
       assert_instance_of Customer, customers[0]
       assert_equal CUSTOMER_ID, customers[0].id
-      assert_equal "Help Scout", customers[0].full_name
+      assert_equal 'Help Scout', customers[0].full_name
     end
   end
 end

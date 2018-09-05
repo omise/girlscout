@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 module GirlScout
   class List < GirlScout::Object
     include Enumerable
 
     attr_accessor :item_class
-    alias_method :size, :count
-    alias_method :length, :count
+    alias size count
+    alias length count
 
     def initialize(attr, item_class)
       super(attr)
@@ -12,7 +14,7 @@ module GirlScout
     end
 
     def items
-      @items ||= (@attributes["items"] || []).map do |attr|
+      @items ||= (@attributes['items'] || []).map do |attr|
         @item_class.new(attr)
       end
     end

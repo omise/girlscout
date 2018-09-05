@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module GirlScout
   class User < GirlScout::Object
     endpoint '/users'
@@ -8,17 +10,17 @@ module GirlScout
       end
 
       def find(id)
-        User.new(resource["/#{id}"].get["item"])
+        User.new(resource["/#{id}"].get['item'])
       end
 
       def me
-        find("me")
+        find('me')
       end
     end
 
     def as_json
       json = super
-      json["type"] = "user"
+      json['type'] = 'user'
       json
     end
   end

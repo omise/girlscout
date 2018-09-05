@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module GirlScout
   class Mailbox < GirlScout::Object
     endpoint '/mailboxes'
@@ -8,7 +10,7 @@ module GirlScout
       end
 
       def find(id)
-        Mailbox.new(resource["/#{id}"].get["item"])
+        Mailbox.new(resource["/#{id}"].get['item'])
       end
     end
 

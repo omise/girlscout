@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'support'
 
 module GirlScout
@@ -8,7 +10,7 @@ module GirlScout
       refute_nil folders.nil?
       assert folders.length
       assert_instance_of Folder, folders[0]
-      assert_equal "Unassigned", folders[0].name
+      assert_equal 'Unassigned', folders[0].name
     end
   end
 end

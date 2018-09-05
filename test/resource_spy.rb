@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module GirlScout
   class ResourceSpy
     attr_accessor :parent_resource
@@ -9,7 +11,7 @@ module GirlScout
 
     def [](path)
       @parent_resource = @parent_resource[path]
-      @url = "#{@url}#{path}" if defined? @url and @url
+      @url = "#{@url}#{path}" if defined? @url && @url
       self
     end
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'support'
 
 module GirlScout
@@ -15,7 +17,7 @@ module GirlScout
       mailbox = Mailbox.find(MAILBOX_ID)
       assert_instance_of Mailbox, mailbox
       assert_equal MAILBOX_ID, mailbox.id
-      assert_equal "Support", mailbox.name
+      assert_equal 'Support', mailbox.name
     end
   end
 end

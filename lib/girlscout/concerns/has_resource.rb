@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module GirlScout
   module Concerns
     module HasResource
@@ -33,4 +35,3 @@ module GirlScout
     end
   end
 end
-

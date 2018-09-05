@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'support'
 
 module GirlScout
@@ -12,7 +14,7 @@ module GirlScout
 
     def test_api_prefix
       assert Config.api_prefix == GirlScout::DEFAULT_API_PREFIX,
-        'should defaults to defined constant'
+             'should defaults to defined constant'
     end
 
     def test_reset!

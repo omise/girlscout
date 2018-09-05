@@ -1,4 +1,6 @@
-lib = File.expand_path('../lib', __FILE__)
+# frozen_string_literal: true
+
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
@@ -13,7 +15,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.files         = `git ls-files -z lib`.split("\x0")
-  s.require_paths = ["lib"]
+  s.require_paths = ['lib']
 
   s.add_runtime_dependency 'excon', '~>0.62'
   s.add_runtime_dependency 'json', '>=2.1'
@@ -22,9 +24,9 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'guard', '~>2.14'
   s.add_development_dependency 'guard-minitest', '~>2.4'
   s.add_development_dependency 'minitest', '~>5.11'
-  s.add_development_dependency 'rubocop', '~>0.58'
   s.add_development_dependency 'overcommit', '~>0.46'
   s.add_development_dependency 'pry', '~>0.11'
   s.add_development_dependency 'rake', '~>12.3'
+  s.add_development_dependency 'rubocop', '~>0.58'
   s.add_development_dependency 'vcr', '~>4.0'
 end

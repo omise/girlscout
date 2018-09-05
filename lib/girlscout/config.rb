@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module GirlScout
   DEFAULT_API_PREFIX = 'https://api.helpscout.net/v1'
 

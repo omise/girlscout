@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module GirlScout
   class Search < GirlScout::Object
     endpoint '/search'
