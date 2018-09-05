@@ -10,8 +10,10 @@ module GirlScout
     end
 
     def [](path)
+      @url = nil unless defined? @url
+
       @parent_resource = @parent_resource[path]
-      @url = "#{@url}#{path}" if defined? @url && @url
+      @url = "#{@url}#{path}" if @url
       self
     end
 

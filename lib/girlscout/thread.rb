@@ -3,11 +3,14 @@
 module GirlScout
   class Thread < GirlScout::Object
     def attachments
-      @attachments ||= (self['attachments'] || []).map { |attr| Attachment.new(attr) }
+      @attachments ||= (self['attachments'] || []).map do |attr|
+        Attachment.new(attr)
+      end
     end
 
     def created_by
-      return @created_by if defined? @created_by && @created_by
+      @created_by = nil unless defined? @created_by
+      return @created_by if @created_by
 
       attr = @attributes['createdBy']
       creator_type = begin
