@@ -4,6 +4,7 @@ require 'excon'
 
 require 'girlscout/resource'
 require 'girlscout/config'
+require 'girlscout/token'
 
 require 'girlscout/concerns/has_attributes'
 require 'girlscout/concerns/has_resource'
