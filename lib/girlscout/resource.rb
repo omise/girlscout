@@ -10,10 +10,6 @@ module GirlScout
       @url = url
     end
 
-    def url
-      "#{@url}.json"
-    end
-
     def [](path)
       Resource.new(url: "#{@url}#{path}")
     end
@@ -21,11 +17,11 @@ module GirlScout
     METHODS.each do |method|
       define_method(method) do |payload: nil, query: nil|
         options = { method: method }
-        if payload
-          options[:body] = JSON.generate(payload)
-          options[:headers] ||= {}
-          options[:headers]['Content-Type'] = 'application/json'
-        end
+        options[:headers] = {
+          'Content-Type': 'application/json',
+          'Authorization': "Bearer #{Token.access_token}"
+        }
+        options[:body] = JSON.generate(payload) if payload
         options[:query] = query if query
 
         request(options)
@@ -33,11 +29,8 @@ module GirlScout
     end
 
     def request(options = {})
-      auth = { user: Config.api_key, password: 'X' }
-      response = Excon.new(url, auth).request(options)
-      if response.status >= 400 && response.status < 600
-        raise GirlScout::Error, JSON.parse(response.body)
-      end
+      response = Excon.new(@url).request(options)
+      raise GirlScout::Error, JSON.parse(response.body) if response.status >= 400
 
       JSON.parse(response.body)
     end
