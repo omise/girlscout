@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'excon', '~>0.62'
   s.add_runtime_dependency 'json', '>=2.1'
 
-  s.add_development_dependency 'bundler', '~>1.16'
+  s.add_development_dependency 'bundler', '~>2.0'
   s.add_development_dependency 'guard', '~>2.14'
   s.add_development_dependency 'guard-minitest', '~>2.4'
   s.add_development_dependency 'minitest', '~>5.11'
