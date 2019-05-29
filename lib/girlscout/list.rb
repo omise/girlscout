@@ -14,7 +14,7 @@ module GirlScout
     end
 
     def items
-      @items ||= (@attributes['items'] || []).map do |attr|
+      @items ||= (embedded_items || []).map do |attr|
         @item_class.new(attr)
       end
     end
@@ -25,6 +25,12 @@ module GirlScout
 
     def each(&block)
       items.each(&block)
+    end
+
+    private
+
+    def embedded_items
+      @embedded_items ||= @attributes['Embedded'].values[0]
     end
   end
 end

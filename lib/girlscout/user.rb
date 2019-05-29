@@ -10,7 +10,7 @@ module GirlScout
       end
 
       def find(id)
-        User.new(resource["/#{id}"].get['item'])
+        User.new(resource["/#{id}"].get)
       end
 
       def me

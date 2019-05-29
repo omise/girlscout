@@ -6,6 +6,8 @@ module GirlScout
   class Resource
     METHODS = %i[get put post patch delete].freeze
 
+    attr_accessor :url
+
     def initialize(url: '')
       @url = url
     end
