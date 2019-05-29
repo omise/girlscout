@@ -3,7 +3,7 @@
 module GirlScout
   class Thread < GirlScout::Object
     def attachments
-      @attachments ||= (self['attachments'] || []).map do |attr|
+      @attachments ||= (self['Embedded']['attachments'] || []).map do |attr|
         Attachment.new(attr)
       end
     end
@@ -23,7 +23,7 @@ module GirlScout
 
     def as_json
       json = super
-      json['createdBy'] = created_by.as_json if key?('created_by')
+      json['created_by'] = created_by.as_json if key?('created_by')
       json
     end
   end

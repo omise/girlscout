@@ -22,8 +22,8 @@ module GirlScout
 
       json = thread.as_json
       assert_equal thread.id, json['id']
-      assert_equal 'user', json['createdBy']['type']
-      assert_equal user.id, json['createdBy']['id']
+      assert_equal 'user', json['created_by']['type']
+      assert_equal user.id, json['created_by']['id']
     end
 
     private

@@ -17,7 +17,7 @@ module GirlScout
       mailbox = Mailbox.find(MAILBOX_ID)
       assert_instance_of Mailbox, mailbox
       assert_equal MAILBOX_ID, mailbox.id
-      assert_equal 'Support', mailbox.name
+      assert_equal 'Demo Mailbox', mailbox.name
     end
   end
 end
