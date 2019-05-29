@@ -18,11 +18,11 @@ module GirlScout
       define_method(method) do |payload: nil, query: nil|
         options = { method: method }
         options[:headers] = {
-          'Content-Type': 'application/json',
-          'Authorization': "Bearer #{Token.access_token}"
+          'Content-Type' => 'application/json; charset=UTF-8',
+          'Authorization' => "Bearer #{Token.retrieve}"
         }
         options[:body] = JSON.generate(payload) if payload
-        options[:query] = query if query
+        options[:query] = URI.encode_www_form(query) if query
 
         request(options)
       end
@@ -30,7 +30,9 @@ module GirlScout
 
     def request(options = {})
       response = Excon.new(@url).request(options)
-      raise GirlScout::Error, JSON.parse(response.body) if response.status >= 400
+      if response.status >= 400
+        raise GirlScout::Error, JSON.parse(response.body)
+      end
 
       JSON.parse(response.body)
     end

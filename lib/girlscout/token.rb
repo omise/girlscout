@@ -2,14 +2,20 @@
 
 module GirlScout
   class Token
+    @expires_at = Time.now
+
     class << self
-      def access_token
-        expired? ? request_token : @token
+      def retrieve
+        expired? ? request : @token
+      end
+
+      def expired?
+        @expires_at.to_i <= Time.now.to_i
       end
 
       private
 
-      def request_token
+      def request
         response = Excon.post(url, body: credential, headers: headers)
         raise GirlScout::Error, JSON.parse(response.body) if response.status >= 400
 
@@ -17,10 +23,6 @@ module GirlScout
         @token = response['access_token']
         @expires_at = Time.now + response['expires_in']
         @token
-      end
-
-      def expired?
-        @expires_at.to_i <= Time.now.to_i
       end
 
       def credential
@@ -32,7 +34,7 @@ module GirlScout
       end
 
       def headers
-        { 'Content-Type': 'application/x-www-form-urlencoded' }
+        { 'Content-Type' => 'application/x-www-form-urlencoded' }
       end
 
       def url
