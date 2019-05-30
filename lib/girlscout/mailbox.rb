@@ -19,35 +19,21 @@ module GirlScout
     end
 
     def conversations
-      @conversations ||= List.new(conversation_resource.get(query: { mailbox: id }), Conversation)
+      @conversations ||= Search.conversations(mailbox: id)
     end
 
     def users
-      @users ||= List.new(user_resource.get(query: { mailbox: id }), User)
+      @user_resource ||= Search.users(mailbox: id)
     end
 
     def customers
-      @customers ||= List.new(customer_resource.get, Customer)
+      @customers ||= Search.customers(mailbox: id)
     end
 
-    protected
+    private
 
     def folder_resource
       @folder_resource ||= resource["/#{id}/folders"]
-    end
-
-    def customer_resource
-      @customer_resource ||= resource["/#{id}/customers"]
-    end
-
-    # FIXME: Hack for API v2 by rebuild the resource.
-    def conversation_resource
-      @conversation_resource ||= Resource.new(url: "#{Config.api_prefix}/conversations")
-    end
-
-    # FIXME: Hack for API v2 by rebuild the resource.
-    def user_resource
-      @user_resource ||= Resource.new(url: "#{Config.api_prefix}/users")
     end
   end
 end
