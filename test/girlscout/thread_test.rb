@@ -11,19 +11,11 @@ module GirlScout
       assert_equal ATTACHMENT_ID, attachments[0].id
     end
 
-    def test_created_by
-      assert_instance_of User, find_thread.created_by
-      assert_equal USER_ID, find_thread.created_by.id
-    end
-
     def test_as_json
-      user = User.new(id: 123)
-      thread = Thread.new(id: 456, created_by: user)
+      thread = Thread.new(id: 456)
 
       json = thread.as_json
       assert_equal thread.id, json['id']
-      assert_equal 'user', json['created_by']['type']
-      assert_equal user.id, json['created_by']['id']
     end
 
     private

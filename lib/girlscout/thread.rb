@@ -8,22 +8,13 @@ module GirlScout
       end
     end
 
-    def created_by
-      @created_by = nil unless defined? @created_by
-      return @created_by if @created_by
-
-      attr = @attributes['createdBy']
-      creator_type = begin
-                       "GirlScout::#{attr['type'].capitalize}".constantize
-                     rescue StandardError
-                       User
-                     end
-      @created_by ||= creator_type.new(attr)
+    def customer
+      @customer ||= Customer.new(self['customer'] || {})
     end
 
     def as_json
       json = super
-      json['created_by'] = created_by.as_json if key?('created_by')
+      json['customer'] = customer.as_json if key?('customer')
       json
     end
   end
