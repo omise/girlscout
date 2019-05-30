@@ -2,11 +2,13 @@
 
 module GirlScout
   class Search < GirlScout::Object
-    endpoint '/search'
-
     class << self
       def conversations(query)
         search(Conversation, query)
+      end
+
+      def users(query)
+        search(User, query)
       end
 
       def customers(query)
@@ -16,8 +18,8 @@ module GirlScout
       private
 
       def search(klass, query)
-        result = resource[klass.resource_path].get(query: { query: query })
-        List.new(result, klass)
+        resource.url = klass.resource.url
+        List.new(resource.get(query: query), klass)
       end
     end
   end
