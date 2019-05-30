@@ -6,7 +6,7 @@ module GirlScout
 
     def initialize(attr = {})
       @attributes = normalize_attributes(attr)
-      super @attributes['error']
+      super @attributes['message']
     end
   end
 end

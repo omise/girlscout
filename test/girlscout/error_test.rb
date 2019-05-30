@@ -9,7 +9,7 @@ module GirlScout
 
       instance = GirlScout::Error.new(attributes)
       assert_equal 'world', instance.hello
-      assert_equal '123', instance.message
+      assert_equal '123', instance.error
     end
 
     def test_initialize_normalize_keys
@@ -24,8 +24,8 @@ module GirlScout
     def test_to_string
       message = 'Authentication was not provided or was invalid.'
       attributes = {
-        code:  401,
-        error: message
+        code: 401,
+        message: message
       }
 
       instance = GirlScout::Error.new(attributes)

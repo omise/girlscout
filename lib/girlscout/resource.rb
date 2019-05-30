@@ -30,13 +30,25 @@ module GirlScout
       end
     end
 
+    private
+
     def request(options = {})
       response = Excon.new(@url).request(options)
-      if response.status >= 400
-        raise GirlScout::Error, JSON.parse(response.body)
+      case response.status
+      when 200
+        JSON.parse(response.body)
+      when 201
+        response.headers['Resource-ID']
+      else
+        raise GirlScout::Error, message: error_message(response.body), code: response.status
       end
+    end
 
-      JSON.parse(response.body)
+    def error_message(body)
+      body = JSON.parse(body)
+      body['message'] || body['error_description']
+    rescue JSON::ParserError
+      body
     end
   end
 end
