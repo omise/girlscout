@@ -2,15 +2,20 @@
 
 module GirlScout
   class Token
-    @expires_at = Time.now
-
     class << self
+      attr_reader :expires_at
+
       def retrieve
         expired? ? request : @token
       end
 
       def expired?
         @expires_at.to_i <= Time.now.to_i
+      end
+
+      def reset!
+        @expires_at = nil
+        @token = nil
       end
 
       private
