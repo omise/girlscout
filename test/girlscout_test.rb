@@ -4,6 +4,8 @@ module GirlScout
   require 'json'
 
   class GirlScoutTest < Minitest::Test
+    CLIENT_ID = 'ec62c7106042406e80686fca3a80bec1'
+    CLIENT_SECRET = '9d51b66663914cf9a082470ac078c0f5'
 
     MAILBOX_ID      = 185_191
     USER_ID         = 382_693
@@ -14,8 +16,8 @@ module GirlScout
 
     def setup
       super
-      Config.client_id = TEST_CLIENT_ID
-      Config.client_secret = TEST_CLIENT_SECRET
+      Config.client_id = CLIENT_ID
+      Config.client_secret = CLIENT_SECRET
     end
 
     def run

@@ -31,7 +31,6 @@ module GirlScout
     private
 
     def list
-      # url = "#{DEFAULT_API_PREFIX}/mailboxes/#{MAILBOX_ID}/conversations"
       url = "#{DEFAULT_API_PREFIX}/mailboxes"
       List.new(Resource.new(url: url).get, Mailbox)
     end

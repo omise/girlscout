@@ -1,14 +1,12 @@
 # GIRLSCOUT
 
 **BETA** This software is half-finished beta-quality software. Until 1.0 is released, use
-at your own risk!
-
-This is a gem for talking to the [HelpScout Help Desk API][0].
+at your own risk! This is a gem for talking to the [HelpScout Mailbox API v2][0].
 
 # REQUIREMENTS
 
 You will need a valid [HelpScout account][1] setup for the API key in order to use this
-gem. This gem has been developed and tested on Ruby 2.2.3p173
+gem. This gem has been developed and tested on Ruby 2.5.1
 
 # INSTALLATION
 
@@ -26,29 +24,84 @@ $ gem install girlscout
 
 # USAGE
 
-### Configuration
+## Configuration
 
 Before starting out, obtain your **HelpScout API Key** from the HelpScout dashboard and
-configure your `api_key` in the application:
+configure your `client_id` and `client_secret` in the application:
 
 ```ruby
 require 'girlscout'
 
-GirlScout::Config.api_key = 'put your helpscout API key here'
+GirlScout::Config.client_id = 'your helpscout application id'
+GirlScout::Config.client_secret = 'your helpscout application secret here'
 ```
 
-### Accesses
+## Accesses
 
-GirlScout provides AR-style accessor methods on model classes, use them to retrieve data
-from HelpScout:
+GirlScout provides AR-style accessor methods on model classes, use them to retrieve data from HelpScout:
 
+### Mailbox
 ```ruby
-mailboxes = GirlScout::Mailbox.all
+mailboxes = GirlScout::Mailbox.list
 puts mailboxes.first.name
 # => "Support"
 
+mailbox = GirlScout::Mailbox.find(6789)
+puts mailbox.name
+# => "Support"
+```
+
+### Customer
+```ruby
+customer = GirlScout::Customer.find(2468)
+puts customer.name
+# => "Chakrit"
+
+customers = GirlScout::Customer.list
+puts customers.first.name
+# => "Chakrit"
+
+customers = GirlScout::Customer.list(mailbox_id: 6789)
+puts customers.first.name
+# => "Chakrit"
+```
+
+### User
+```ruby
+me = GirlScout::User.me
+puts me.first_name
+# => "Phureewat"
+
+user = GirlScout::User.find(12345)
+puts user.first.first_name
+# => "Phureewat"
+
+users = GirlScout::User.list
+puts users.first.first_name
+# => "Phureewat"
+
+users = GirlScout::User.list(email: 'abc@omise.co')
+puts users.first.first_name
+# => "Phureewat"
+```
+
+
+### Conversation
+```ruby
 conversation = GirlScout::Conversation.find(12345)
 puts conversation.id
+# => 12345
+
+conversations = GirlScout::Conversation.list
+puts conversations.first.id
+# => 12345
+
+conversations = GirlScout::Conversation.list(status: :active)
+puts conversations.first.id
+# => 12345
+
+conversations = GirlScout::Conversation.list(mailbox_id: 6789)
+puts conversations.first.id
 # => 12345
 ```
 
@@ -61,20 +114,21 @@ mailbox = GirlScout::Mailbox.new(id: 123)
 customer = GirlScout::Customer.new(email: "customer@example.com")
 
 thread = GirlScout::Thread.new({
-  type: "message",
-  created_by: user,
+  type: "customer",
   body: "You may reply to this email directly for support!"
 })
 
 conversation = GirlScout::Conversation.new(
   type: :email,
   subject: "Thanks for registering at Awesome SaaS company XYZ!",
-  mailbox: mailbox,
+  status: :active,
+  mailbox_id: mailbox.id,
   customer: customer,
   threads: [thread]
 )
 
-conversation = GirlScout::Conversation.create(conversation)
+id = GirlScout::Conversation.create(conversation)
+conversation = GirlScout::Conversation.find(id)
 ```
 
 # LICENSE
@@ -82,8 +136,7 @@ conversation = GirlScout::Conversation.create(conversation)
 MIT
 
 
-[0]: http://developer.helpscout.net/help-desk-api/
+[0]: https://developer.helpscout.com/mailbox-api/
 [1]: http://www.helpscout.net
 [2]: http://bundler.io
 [3]: https://rubygems.org
-

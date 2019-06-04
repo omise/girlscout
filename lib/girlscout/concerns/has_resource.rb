@@ -25,6 +25,7 @@ module GirlScout
 
       def build_resource
         return self.class.resource if self.class.respond_to?(:resource)
+
         Resource.new(url: resource_url)
       end
     end

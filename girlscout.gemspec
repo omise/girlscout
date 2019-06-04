@@ -7,11 +7,10 @@ require 'girlscout/version'
 Gem::Specification.new do |s|
   s.name        = 'girlscout'
   s.version     = GirlScout::VERSION
-  s.date        = '2015-12-16'
-  s.summary     = 'Integrate your support tooling with HelpScout API.'
-  s.description = 'Provides integration with HelpScout REST API.'
-  s.authors     = ['Chakrit Wichian', 'Phureewat Aphibansri']
-  s.email       = 'phureewat@omise.co'
+  s.date        = '2019-07-05'
+  s.summary     = 'Integrate your support tooling with HelpScout API v2'
+  s.description = 'Provides integration with HelpScout REST API v2'
+  s.authors     = ['Phureewat Aphibansri <phureewat@omise.co>', 'Chakrit Wichian <chakrit@omise.co>']
   s.homepage    = 'https://github.com/omise/girlscout'
   s.license     = 'MIT'
 
@@ -30,6 +29,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'pry', '~>0.11'
   s.add_development_dependency 'rake', '~>12.3'
   s.add_development_dependency 'rubocop', '~>0.58'
-  s.add_development_dependency 'timecop', '~>0.9'
-  s.add_development_dependency 'vcr', '~>4.0'
+  s.add_development_dependency 'vcr', '~>5.0'
 end
