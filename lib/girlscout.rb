@@ -2,6 +2,7 @@
 
 require 'excon'
 
+require 'girlscout/version'
 require 'girlscout/resource'
 require 'girlscout/config'
 require 'girlscout/token'
