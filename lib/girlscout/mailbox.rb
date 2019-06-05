@@ -5,35 +5,17 @@ module GirlScout
     endpoint '/mailboxes'
 
     class << self
-      def all
-        List.new(resource.get, Mailbox)
-      end
-
       def find(id)
         Mailbox.new(resource["/#{id}"].get)
+      end
+
+      def list
+        List.new(resource.get, Mailbox)
       end
     end
 
     def folders
-      @folders ||= List.new(folder_resource.get, Folder)
-    end
-
-    def conversations
-      @conversations ||= Search.conversations(mailbox: id)
-    end
-
-    def users
-      @user_resource ||= Search.users(mailbox: id)
-    end
-
-    def customers
-      @customers ||= Search.customers(mailbox: id)
-    end
-
-    private
-
-    def folder_resource
-      @folder_resource ||= resource["/#{id}/folders"]
+      @folders ||= List.new(resource["/#{id}/folders"].get, Folder)
     end
   end
 end

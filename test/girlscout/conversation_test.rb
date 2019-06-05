@@ -4,8 +4,21 @@ require 'support'
 
 module GirlScout
   class ConversationTest < GirlScoutTest
-    def test_all_via_mailbox
-      conversations = Mailbox.new(id: MAILBOX_ID).conversations
+    def test_list
+      conversations = Conversation.list
+      assert conversations.length
+      assert_instance_of Conversation, conversations[0]
+    end
+
+    def test_list_via_mailbox
+      conversations = Conversation.list(mailbox_id: MAILBOX_ID)
+      assert conversations.length
+      assert_instance_of Conversation, conversations[0]
+      assert conversations[0].id
+    end
+
+    def test_list_via_status
+      conversations = Conversation.list(status: :active)
       assert conversations.length
       assert_instance_of Conversation, conversations[0]
       assert conversations[0].id
@@ -32,7 +45,9 @@ module GirlScout
     end
 
     def test_create
-      conversation = Conversation.create(build_conversation)
+      new_id = Conversation.create(build_conversation)
+      conversation = Conversation.find(new_id)
+
       assert_equal 'Test Conversation', conversation.subject
       assert_equal 'test@example.com', conversation.customer.email
       assert_equal 'this is a test note.', conversation.threads[1].body

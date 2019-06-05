@@ -39,7 +39,6 @@ module GirlScout
 
       refute_nil error
       assert_equal 401, error.code
-      assert_equal 'Authentication was not provided or was invalid.', error.message
     end
 
     def test_not_found_error
@@ -49,7 +48,6 @@ module GirlScout
 
       refute_nil error
       assert_equal 404, error.code
-      assert_equal 'The requested resource was not found.', error.message
     end
 
     private

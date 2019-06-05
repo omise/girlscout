@@ -4,17 +4,17 @@ require 'support'
 
 module GirlScout
   class CustomerTest < GirlScoutTest
-    def test_all_via_mailbox
-      customers = Mailbox.new(id: MAILBOX_ID).customers
+    def test_list
+      customers = Customer.list
+      assert customers.length
+      assert_instance_of Customer, customers[0]
+    end
+
+    def test_list_via_mailbox
+      customers = Customer.list(mailbox_id: MAILBOX_ID)
       assert customers.length
       assert_instance_of Customer, customers[0]
       assert_equal CUSTOMER_ID, customers[0].id
-    end
-
-    def test_all
-      customers = Customer.all
-      assert customers.length
-      assert_instance_of Customer, customers[0]
     end
 
     def test_find

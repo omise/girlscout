@@ -9,20 +9,18 @@ module GirlScout
         Conversation.new(resource["/#{id}"].get)
       end
 
+      def list(query = {})
+        List.new(resource.get(query: query), Conversation)
+      end
+
       def create(attributes)
         attributes = attributes.as_json if attributes.respond_to?(:as_json)
-        find(resource.post(payload: attributes))
+        resource.post(payload: attributes)
       end
     end
 
     def customer
-      @customer ||= begin
-        if key?('customer')
-          Customer.new(self['customer'] || {})
-        else
-          Customer.new(self['primary_customer'] || {})
-        end
-      end
+      @customer ||= Customer.new(self['customer'] || self['primary_customer'] || {})
     end
 
     def threads
@@ -37,7 +35,7 @@ module GirlScout
     end
 
     def mailbox
-      @threads ||= begin
+      @mailbox ||= begin
         if self['mailbox'].is_a?(Hash)
           Mailbox.new(self['mailbox'] || {})
         else

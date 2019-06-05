@@ -11,11 +11,19 @@ module GirlScout
       assert_equal USER_ID, users[0].id
     end
 
-    def test_all
-      users = User.all
+    def test_list
+      users = User.list
       assert users.length
       assert_instance_of User, users[0]
       assert_equal USER_ID, users[0].id
+    end
+
+    def test_list_query
+      users = User.list(email: 'a.phureewat@gmail.com')
+
+      assert users.length
+      assert_instance_of User, users[0]
+      assert_equal 'Phureewat', users[0].first_name
     end
 
     def test_find

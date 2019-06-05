@@ -4,8 +4,8 @@ require 'support'
 
 module GirlScout
   class MailboxTest < GirlScoutTest
-    def test_all
-      mailboxes = Mailbox.all
+    def test_list
+      mailboxes = Mailbox.list
 
       refute_nil mailboxes
       assert mailboxes.length
