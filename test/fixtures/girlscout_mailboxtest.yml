@@ -1,0 +1,171 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.helpscout.net/v2/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: client_id=ec62c7106042406e80686fca3a80bec1&client_secret=9d51b66663914cf9a082470ac078c0f5&grant_type=client_credentials
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      cache-control:
+      - no-store
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 05 Jun 2019 10:23:11 GMT
+      pragma:
+      - no-cache
+      Content-Length:
+      - '92'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"176cb5b079e84e9ca8d8479ff744c729","expires_in":7200}
+
+'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2019 10:23:11 GMT
+- request:
+    method: post
+    uri: https://api.helpscout.net/v2/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: client_id=ec62c7106042406e80686fca3a80bec1&client_secret=9d51b66663914cf9a082470ac078c0f5&grant_type=client_credentials
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      cache-control:
+      - no-store
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 05 Jun 2019 10:23:12 GMT
+      pragma:
+      - no-cache
+      Content-Length:
+      - '92'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"1fe56b5879094a66a359488de519cca6","expires_in":7200}
+
+'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2019 10:23:12 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v2/mailboxes/185191
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/json; charset=UTF-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/hal+json;charset=UTF-8
+      Correlation-ID:
+      - d48eb0d4-12dd-4181-9b4b-75d29145fd98#55743667
+      Date:
+      - Wed, 05 Jun 2019 10:23:13 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit-minute:
+      - '400'
+      X-RateLimit-Remaining-minute:
+      - '397'
+      X-XSS-Protection:
+      - 1; mode=block
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":185191,"name":"GirlScout Development","slug":"3e9ee0d6af2b89e5","email":"kenneth.ro.m1.919.92@gmail.com","createdAt":"2019-05-30T11:42:09Z","updatedAt":"2019-05-30T14:03:35Z","_links":{"fields":{"href":"https://api.helpscout.net/v2/mailboxes/185191/fields/"},"folders":{"href":"https://api.helpscout.net/v2/mailboxes/185191/folders/"},"self":{"href":"https://api.helpscout.net/v2/mailboxes/185191"}}}'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2019 10:23:13 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v2/mailboxes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/json; charset=UTF-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/hal+json;charset=UTF-8
+      Correlation-ID:
+      - ec159308-58f3-42b7-827a-2788227a7d8c#35615458
+      Date:
+      - Wed, 05 Jun 2019 10:23:14 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit-minute:
+      - '400'
+      X-RateLimit-Remaining-minute:
+      - '396'
+      X-XSS-Protection:
+      - 1; mode=block
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"_embedded":{"mailboxes":[{"id":185191,"name":"GirlScout Development","slug":"3e9ee0d6af2b89e5","email":"kenneth.ro.m1.919.92@gmail.com","createdAt":"2019-05-30T11:42:09Z","updatedAt":"2019-05-30T14:03:35Z","_links":{"fields":{"href":"https://api.helpscout.net/v2/mailboxes/185191/fields/"},"folders":{"href":"https://api.helpscout.net/v2/mailboxes/185191/folders/"},"self":{"href":"https://api.helpscout.net/v2/mailboxes/185191"}}}]},"_links":{"first":{"href":"https://api.helpscout.net/v2/mailboxes/?page=1"},"last":{"href":"https://api.helpscout.net/v2/mailboxes/?page=1"},"page":{"href":"https://api.helpscout.net/v2/mailboxes/"},"self":{"href":"https://api.helpscout.net/v2/mailboxes/"}},"page":{"size":50,"totalElements":1,"totalPages":1,"number":1}}'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2019 10:23:15 GMT
+recorded_with: VCR 5.0.0
