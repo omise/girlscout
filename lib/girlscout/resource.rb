@@ -10,6 +10,7 @@ module GirlScout
 
     def initialize(url: '')
       @url = url
+      @access_token = AccessToken.refresh
     end
 
     def [](path)
@@ -21,7 +22,7 @@ module GirlScout
         options = { method: method }
         options[:headers] = {
           'Content-Type' => 'application/json; charset=UTF-8',
-          'Authorization' => "Bearer #{Token.retrieve}"
+          'Authorization' => "Bearer #{access_token}"
         }
         options[:body] = JSON.generate(payload) if payload
         options[:query] = URI.encode_www_form(query) if query
@@ -31,6 +32,11 @@ module GirlScout
     end
 
     private
+
+    def access_token
+      @access_token = AccessToken.refresh if @access_token&.expired?
+      @access_token
+    end
 
     def request(options = {})
       response = Excon.new(@url).request(options)
