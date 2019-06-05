@@ -9,7 +9,6 @@ require 'pry'
 require 'find'
 require 'excon'
 require 'vcr'
-require 'timecop'
 require 'girlscout'
 
 require 'minitest'
@@ -24,7 +23,14 @@ Minitest::Reporters.use! [
 
 VCR.configure do |c|
   c.cassette_library_dir = FIXTURES_PATH
-  c.default_cassette_options = { record: :new_episodes }
+  c.default_cassette_options = {
+    record: :new_episodes,
+    match_requests_on: %i[uri method query body]
+  }
+  c.before_record do |i|
+    i.response.body.force_encoding('UTF-8')
+    i.request.headers.delete('Authorization')
+  end
   c.hook_into :excon
 end
 
