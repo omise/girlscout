@@ -34,11 +34,14 @@ module GirlScout
 
     def test_auth_error
       error = capture do
-        Conversation.find('40100')
+        with_invalid_token do
+          Conversation.find('40100')
+        end
       end
 
       refute_nil error
       assert_equal 401, error.code
+      assert_equal 'The access token is invalid or has expired', error.to_s
     end
 
     def test_not_found_error
@@ -57,6 +60,13 @@ module GirlScout
       nil
     rescue GirlScout::Error => e
       e
+    end
+
+    def with_invalid_token
+      invalid_token = AccessToken.new(access_token: 'invalid', expires_in: 7200)
+      AccessToken.stub(:refresh, invalid_token) do
+        yield
+      end
     end
   end
 end
