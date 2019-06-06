@@ -4,8 +4,16 @@ require 'support'
 
 module GirlScout
   class UserTest < GirlScoutTest
-    def test_all_via_mailbox
-      users = Mailbox.new(id: MAILBOX_ID).users
+    def test_list_query
+      users = User.list(email: 'a.phureewat@gmail.com')
+
+      assert users.length
+      assert_instance_of User, users[0]
+      assert_equal 'Phureewat', users[0].first_name
+    end
+
+    def test_list_via_mailbox
+      users = User.list(mailbox_id: MAILBOX_ID)
       assert users.length
       assert_instance_of User, users[0]
       assert_equal USER_ID, users[0].id
@@ -16,14 +24,6 @@ module GirlScout
       assert users.length
       assert_instance_of User, users[0]
       assert_equal USER_ID, users[0].id
-    end
-
-    def test_list_query
-      users = User.list(email: 'a.phureewat@gmail.com')
-
-      assert users.length
-      assert_instance_of User, users[0]
-      assert_equal 'Phureewat', users[0].first_name
     end
 
     def test_find
