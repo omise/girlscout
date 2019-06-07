@@ -25,14 +25,14 @@ module GirlScout
     end
 
     def test_indexable
-      assert_instance_of Object, list[0], 'not indexable'
+      assert_instance_of Mailbox, list[0], 'not indexable'
     end
 
     private
 
     def list
-      url = "#{DEFAULT_API_PREFIX}/mailboxes/#{MAILBOX_ID}/conversations"
-      List.new(Resource.new(url: url).get, Object)
+      url = "#{DEFAULT_API_PREFIX}/mailboxes"
+      List.new(Resource.new(url: url).get, Mailbox)
     end
   end
 end

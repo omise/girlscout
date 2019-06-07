@@ -1,0 +1,318 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.helpscout.net/v2/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: client_id=ec62c7106042406e80686fca3a80bec1&client_secret=9d51b66663914cf9a082470ac078c0f5&grant_type=client_credentials
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      cache-control:
+      - no-store
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 06 Jun 2019 05:05:06 GMT
+      pragma:
+      - no-cache
+      Content-Length:
+      - '92'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"d71ed061c8904b8ca48077b96f78d779","expires_in":7200}
+
+'
+    http_version: 
+  recorded_at: Thu, 06 Jun 2019 05:05:06 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v2/users?mailbox_id=185191
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/json; charset=UTF-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/hal+json;charset=UTF-8
+      Correlation-ID:
+      - 99666b7a-fe2c-4f66-84bf-37a43d9b15d7#7009219
+      Date:
+      - Thu, 06 Jun 2019 05:05:07 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit-minute:
+      - '400'
+      X-RateLimit-Remaining-minute:
+      - '399'
+      X-XSS-Protection:
+      - 1; mode=block
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"_embedded":{"users":[{"id":382693,"firstName":"Phureewat","lastName":"Aphibansri","email":"a.phureewat@gmail.com","role":"owner","timezone":"Asia/Bangkok","createdAt":"2019-05-29T06:48:39Z","updatedAt":"2019-06-05T10:14:49Z","type":"user","_links":{"self":{"href":"https://api.helpscout.net/v2/users/382693"}}}]},"_links":{"first":{"href":"https://api.helpscout.net/v2/users/?page=1"},"last":{"href":"https://api.helpscout.net/v2/users/?page=1"},"page":{"href":"https://api.helpscout.net/v2/users/"},"self":{"href":"https://api.helpscout.net/v2/users/"}},"page":{"size":50,"totalElements":1,"totalPages":1,"number":1}}'
+    http_version: 
+  recorded_at: Thu, 06 Jun 2019 05:05:07 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v2/users/me
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/json; charset=UTF-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/hal+json;charset=UTF-8
+      Correlation-ID:
+      - ec159308-58f3-42b7-827a-2788227a7d8c#36594210
+      Date:
+      - Thu, 06 Jun 2019 05:05:08 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit-minute:
+      - '400'
+      X-RateLimit-Remaining-minute:
+      - '398'
+      X-XSS-Protection:
+      - 1; mode=block
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":382693,"firstName":"Phureewat","lastName":"Aphibansri","email":"a.phureewat@gmail.com","role":"owner","timezone":"Asia/Bangkok","createdAt":"2019-05-29T06:48:39Z","updatedAt":"2019-06-06T05:05:07Z","type":"user","companyId":96696,"_links":{"self":{"href":"https://api.helpscout.net/v2/users/382693"}}}'
+    http_version: 
+  recorded_at: Thu, 06 Jun 2019 05:05:08 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v2/users/382693
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/json; charset=UTF-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/hal+json;charset=UTF-8
+      Correlation-ID:
+      - ec159308-58f3-42b7-827a-2788227a7d8c#36594251
+      Date:
+      - Thu, 06 Jun 2019 05:05:09 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit-minute:
+      - '400'
+      X-RateLimit-Remaining-minute:
+      - '397'
+      X-XSS-Protection:
+      - 1; mode=block
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":382693,"firstName":"Phureewat","lastName":"Aphibansri","email":"a.phureewat@gmail.com","role":"owner","timezone":"Asia/Bangkok","createdAt":"2019-05-29T06:48:39Z","updatedAt":"2019-06-06T05:05:08Z","type":"user","_links":{"self":{"href":"https://api.helpscout.net/v2/users/382693"}}}'
+    http_version: 
+  recorded_at: Thu, 06 Jun 2019 05:05:10 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v2/users?email=a.phureewat%40gmail.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/json; charset=UTF-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/hal+json;charset=UTF-8
+      Correlation-ID:
+      - ec159308-58f3-42b7-827a-2788227a7d8c#36594285
+      Date:
+      - Thu, 06 Jun 2019 05:05:11 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit-minute:
+      - '400'
+      X-RateLimit-Remaining-minute:
+      - '396'
+      X-XSS-Protection:
+      - 1; mode=block
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"_embedded":{"users":[{"id":382693,"firstName":"Phureewat","lastName":"Aphibansri","email":"a.phureewat@gmail.com","role":"owner","timezone":"Asia/Bangkok","createdAt":"2019-05-29T06:48:39Z","updatedAt":"2019-06-06T05:05:08Z","type":"user","_links":{"self":{"href":"https://api.helpscout.net/v2/users/382693"}}}]},"_links":{"first":{"href":"https://api.helpscout.net/v2/users?email=a.phureewat@gmail.com&page=1"},"last":{"href":"https://api.helpscout.net/v2/users?email=a.phureewat@gmail.com&page=1"},"page":{"href":"https://api.helpscout.net/v2/users?email=a.phureewat@gmail.com"},"self":{"href":"https://api.helpscout.net/v2/users?email=a.phureewat@gmail.com"}},"page":{"size":50,"totalElements":1,"totalPages":1,"number":1}}'
+    http_version: 
+  recorded_at: Thu, 06 Jun 2019 05:05:11 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v2/users?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/json; charset=UTF-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/hal+json;charset=UTF-8
+      Correlation-ID:
+      - 99666b7a-fe2c-4f66-84bf-37a43d9b15d7#7009339
+      Date:
+      - Thu, 06 Jun 2019 05:05:12 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit-minute:
+      - '400'
+      X-RateLimit-Remaining-minute:
+      - '395'
+      X-XSS-Protection:
+      - 1; mode=block
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"_embedded":{"users":[{"id":382693,"firstName":"Phureewat","lastName":"Aphibansri","email":"a.phureewat@gmail.com","role":"owner","timezone":"Asia/Bangkok","createdAt":"2019-05-29T06:48:39Z","updatedAt":"2019-06-06T05:05:08Z","type":"user","_links":{"self":{"href":"https://api.helpscout.net/v2/users/382693"}}}]},"_links":{"first":{"href":"https://api.helpscout.net/v2/users/?page=1"},"last":{"href":"https://api.helpscout.net/v2/users/?page=1"},"page":{"href":"https://api.helpscout.net/v2/users/"},"self":{"href":"https://api.helpscout.net/v2/users/"}},"page":{"size":50,"totalElements":1,"totalPages":1,"number":1}}'
+    http_version: 
+  recorded_at: Thu, 06 Jun 2019 05:05:12 GMT
+- request:
+    method: post
+    uri: https://api.helpscout.net/v2/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: client_id=ec62c7106042406e80686fca3a80bec1&client_secret=9d51b66663914cf9a082470ac078c0f5&grant_type=client_credentials
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      cache-control:
+      - no-store
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 06 Jun 2019 05:06:51 GMT
+      pragma:
+      - no-cache
+      Content-Length:
+      - '92'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"ee942e6e8f3d4546887c94a7b7884f50","expires_in":7200}
+
+'
+    http_version: 
+  recorded_at: Thu, 06 Jun 2019 05:06:51 GMT
+recorded_with: VCR 5.0.0

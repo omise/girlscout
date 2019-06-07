@@ -1,0 +1,222 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.helpscout.net/v2/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: client_id=ec62c7106042406e80686fca3a80bec1&client_secret=9d51b66663914cf9a082470ac078c0f5&grant_type=client_credentials
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      cache-control:
+      - no-store
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 06 Jun 2019 05:55:51 GMT
+      pragma:
+      - no-cache
+      Content-Length:
+      - '92'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"6b693c857a3c46fea26875bcf7c3a4f0","expires_in":7200}
+
+'
+    http_version: 
+  recorded_at: Thu, 06 Jun 2019 05:55:52 GMT
+- request:
+    method: post
+    uri: https://api.helpscout.net/v2/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: client_id=ec62c7106042406e80686fca3a80bec1&client_secret=9d51b66663914cf9a082470ac078c0f5&grant_type=client_credentials
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      cache-control:
+      - no-store
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 06 Jun 2019 05:55:53 GMT
+      pragma:
+      - no-cache
+      Content-Length:
+      - '92'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"bb5a1f3061ed4d8ba491254765f1103f","expires_in":7200}
+
+'
+    http_version: 
+  recorded_at: Thu, 06 Jun 2019 05:55:53 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v2/conversations/40400
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/json; charset=UTF-8
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Correlation-ID:
+      - ec159308-58f3-42b7-827a-2788227a7d8c#36630033
+      Date:
+      - Thu, 06 Jun 2019 05:55:54 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit-minute:
+      - '400'
+      X-RateLimit-Remaining-minute:
+      - '398'
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 06 Jun 2019 05:55:54 GMT
+- request:
+    method: post
+    uri: https://api.helpscout.net/v2/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: client_id=abc&client_secret=9d51b66663914cf9a082470ac078c0f5&grant_type=client_credentials
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 400
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      cache-control:
+      - no-store
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 06 Jun 2019 05:55:55 GMT
+      pragma:
+      - no-cache
+      Content-Length:
+      - '79'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"error_description":"Invalid client authentication","error":"invalid_client"}
+
+'
+    http_version: 
+  recorded_at: Thu, 06 Jun 2019 05:55:55 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v2/conversations/40100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/json; charset=UTF-8
+  response:
+    status:
+      code: 401
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 06 Jun 2019 07:18:13 GMT
+      WWW-Authenticate:
+      - Bearer realm="service" error="invalid_token" error_description="The access
+        token is invalid or has expired"
+      Content-Length:
+      - '91'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"error_description":"The access token is invalid or has expired","error":"invalid_token"}
+
+'
+    http_version: 
+  recorded_at: Thu, 06 Jun 2019 07:18:14 GMT
+- request:
+    method: ''
+    uri: https://api.helpscout.net/v2/conversations/40400
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: 
+    headers:
+      Content-Length:
+      - '0'
+      Connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 06 Jun 2019 08:22:52 GMT
+recorded_with: VCR 5.0.0

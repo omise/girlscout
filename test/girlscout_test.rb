@@ -4,20 +4,24 @@ module GirlScout
   require 'json'
 
   class GirlScoutTest < Minitest::Test
-    MAILBOX_ID      = 158_814
-    USER_ID         = 308_775
-    CUSTOMER_ID     = 203_786_875
-    CONVERSATION_ID = 656_937_392
-    THREAD_ID       = 1_812_692_475
-    ATTACHMENT_ID   = 146_283_244
+    CLIENT_ID = 'ec62c7106042406e80686fca3a80bec1'
+    CLIENT_SECRET = '9d51b66663914cf9a082470ac078c0f5'
+
+    MAILBOX_ID      = 185_191
+    USER_ID         = 382_693
+    CUSTOMER_ID     = 259_533_163
+    CONVERSATION_ID = 866_372_793
+    THREAD_ID       = 2_422_566_376
+    ATTACHMENT_ID   = 196_819_958
 
     def setup
       super
-      Config.api_key = TEST_KEY
+      Config.client_id = CLIENT_ID
+      Config.client_secret = CLIENT_SECRET
     end
 
     def run
-      VCR.use_cassette(self.class.name.gsub(/::/, '_')) do
+      VCR.use_cassette(self.class.name.gsub(/::/, '_').downcase) do
         super
       end
     end

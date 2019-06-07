@@ -13,23 +13,19 @@ module GirlScout
         @resource ||= build_resource
       end
 
-      def resource_path
-        return self.class.resource_path if self.class.respond_to?(:resource_path)
-        @path
-      end
-
       def resource_url
-        "#{GirlScout::Config.api_prefix}#{@path}"
+        "#{GirlScout::Config.api_prefix}#{@endpoint}"
       end
 
       def endpoint(path)
-        @path = path
+        @endpoint = path
       end
 
       private
 
       def build_resource
         return self.class.resource if self.class.respond_to?(:resource)
+
         Resource.new(url: resource_url)
       end
     end

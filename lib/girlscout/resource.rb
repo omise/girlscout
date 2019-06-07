@@ -6,12 +6,11 @@ module GirlScout
   class Resource
     METHODS = %i[get put post patch delete].freeze
 
+    attr_accessor :url
+
     def initialize(url: '')
       @url = url
-    end
-
-    def url
-      "#{@url}.json"
+      @access_token = AccessToken.refresh
     end
 
     def [](path)
@@ -21,25 +20,41 @@ module GirlScout
     METHODS.each do |method|
       define_method(method) do |payload: nil, query: nil|
         options = { method: method }
-        if payload
-          options[:body] = JSON.generate(payload)
-          options[:headers] ||= {}
-          options[:headers]['Content-Type'] = 'application/json'
-        end
-        options[:query] = query if query
+        options[:headers] = {
+          'Content-Type' => 'application/json; charset=UTF-8',
+          'Authorization' => "Bearer #{access_token}"
+        }
+        options[:body] = JSON.generate(payload) if payload
+        options[:query] = URI.encode_www_form(query) if query
 
         request(options)
       end
     end
 
-    def request(options = {})
-      auth = { user: Config.api_key, password: 'X' }
-      response = Excon.new(url, auth).request(options)
-      if response.status >= 400 && response.status < 600
-        raise GirlScout::Error, JSON.parse(response.body)
-      end
+    private
 
-      JSON.parse(response.body)
+    def access_token
+      @access_token = AccessToken.refresh if @access_token&.expired?
+      @access_token
+    end
+
+    def request(options = {})
+      response = Excon.new(@url).request(options)
+      case response.status
+      when 200
+        JSON.parse(response.body)
+      when 201
+        response.headers['Resource-ID']
+      else
+        raise GirlScout::Error, message: error_message(response.body), code: response.status
+      end
+    end
+
+    def error_message(body)
+      body = JSON.parse(body)
+      body['message'] || body['error_description']
+    rescue JSON::ParserError
+      body
     end
   end
 end

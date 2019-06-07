@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.helpscout.net/v2/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: client_id=ec62c7106042406e80686fca3a80bec1&client_secret=9d51b66663914cf9a082470ac078c0f5&grant_type=client_credentials
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message:
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      cache-control:
+      - no-store
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 06 Jun 2019 05:05:13 GMT
+      pragma:
+      - no-cache
+      Content-Length:
+      - '92'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"1353acbb94384019942cc59c33ccc5f1","expires_in":7200}
+
+'
+    http_version:
+  recorded_at: Thu, 06 Jun 2019 05:05:13 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v2/mailboxes/185191/folders
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/json; charset=UTF-8
+  response:
+    status:
+      code: 200
+      message:
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/hal+json;charset=UTF-8
+      Correlation-ID:
+      - 99666b7a-fe2c-4f66-84bf-37a43d9b15d7#6020971
+      Date:
+      - Wed, 05 Jun 2019 10:23:39 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit-minute:
+      - '400'
+      X-RateLimit-Remaining-minute:
+      - '385'
+      X-XSS-Protection:
+      - 1; mode=block
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"_embedded":{"folders":[{"id":2986322,"name":"Unassigned","type":"open","userId":0,"totalCount":15,"activeCount":15,"updatedAt":"2019-06-05T10:18:52Z"},{"id":2986328,"name":"Mine","type":"mytickets","userId":382693,"totalCount":1,"activeCount":1,"updatedAt":"2019-05-30T11:43:32Z"},{"id":2986323,"name":"Needs
+        Attention","type":"needs_attn","userId":0,"totalCount":0,"activeCount":0,"updatedAt":"2019-05-30T11:42:09Z"},{"id":2986324,"name":"Drafts","type":"drafts","userId":0,"totalCount":1,"activeCount":1,"updatedAt":"2019-06-05T10:18:52Z"},{"id":2986325,"name":"Assigned","type":"assigned","userId":0,"totalCount":0,"activeCount":0,"updatedAt":"2019-05-30T11:42:09Z"},{"id":2986327,"name":"Closed","type":"closed","userId":0,"totalCount":0,"activeCount":0,"updatedAt":"2019-05-30T11:42:09Z"},{"id":2986326,"name":"Spam","type":"spam","userId":0,"totalCount":0,"activeCount":0,"updatedAt":"2019-05-30T11:42:09Z"}]},"_links":{"self":{"href":"https://api.helpscout.net/v2/mailboxes/185191/folders/"}},"page":{"size":50,"totalElements":7,"totalPages":1,"number":1}}'
+    http_version:
+  recorded_at: Wed, 05 Jun 2019 10:23:39 GMT
+recorded_with: VCR 5.0.0

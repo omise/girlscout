@@ -9,7 +9,7 @@ module GirlScout
 
       instance = GirlScout::Error.new(attributes)
       assert_equal 'world', instance.hello
-      assert_equal '123', instance.message
+      assert_equal '123', instance.error
     end
 
     def test_initialize_normalize_keys
@@ -24,8 +24,8 @@ module GirlScout
     def test_to_string
       message = 'Authentication was not provided or was invalid.'
       attributes = {
-        code:  401,
-        error: message
+        code: 401,
+        message: message
       }
 
       instance = GirlScout::Error.new(attributes)
@@ -34,12 +34,14 @@ module GirlScout
 
     def test_auth_error
       error = capture do
-        Conversation.find('40100')
+        with_invalid_token do
+          Conversation.find('40100')
+        end
       end
 
       refute_nil error
       assert_equal 401, error.code
-      assert_equal 'Authentication was not provided or was invalid.', error.message
+      assert_equal 'The access token is invalid or has expired', error.to_s
     end
 
     def test_not_found_error
@@ -49,7 +51,6 @@ module GirlScout
 
       refute_nil error
       assert_equal 404, error.code
-      assert_equal 'The requested resource was not found.', error.message
     end
 
     private
@@ -59,6 +60,13 @@ module GirlScout
       nil
     rescue GirlScout::Error => e
       e
+    end
+
+    def with_invalid_token
+      invalid_token = AccessToken.new(access_token: 'invalid', expires_in: 7200)
+      AccessToken.stub(:refresh, invalid_token) do
+        yield
+      end
     end
   end
 end

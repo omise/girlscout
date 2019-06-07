@@ -1,0 +1,284 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.helpscout.net/v2/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: client_id=ec62c7106042406e80686fca3a80bec1&client_secret=9d51b66663914cf9a082470ac078c0f5&grant_type=client_credentials
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      cache-control:
+      - no-store
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 05 Jun 2019 10:23:04 GMT
+      pragma:
+      - no-cache
+      Content-Length:
+      - '92'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"61d0a3d4bc2747c4b77d01ea67e86205","expires_in":7200}
+
+'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2019 10:23:04 GMT
+- request:
+    method: post
+    uri: https://api.helpscout.net/v2/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: client_id=ec62c7106042406e80686fca3a80bec1&client_secret=9d51b66663914cf9a082470ac078c0f5&grant_type=client_credentials
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      cache-control:
+      - no-store
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 05 Jun 2019 10:23:05 GMT
+      pragma:
+      - no-cache
+      Content-Length:
+      - '92'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"e24446a921974fec8a3c377bf0ca90f3","expires_in":7200}
+
+'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2019 10:23:05 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v2/conversations/866372793
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/json; charset=UTF-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/hal+json;charset=UTF-8
+      Correlation-ID:
+      - c134d022-ecd9-4668-a1f0-5ec26c2b1f78#6107841
+      Date:
+      - Wed, 05 Jun 2019 10:23:06 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit-minute:
+      - '400'
+      X-RateLimit-Remaining-minute:
+      - '399'
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1431'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":866372793,"number":152,"threads":3,"type":"email","folderId":2986322,"status":"active","state":"published","subject":"Software
+        Clown #1: be more careful when you know less","preview":"I can imagine when
+        you want some attribute to be only readable, or be writable and readable,
+        but not when you want an attribute to be writable and not readable.","mailboxId":185191,"createdBy":{"id":382693,"type":"user","first":"Phureewat","last":"Aphibansri","email":"a.phureewat@gmail.com"},"createdAt":"2019-05-30T14:05:25Z","closedBy":0,"userUpdatedAt":"2019-05-30T14:14:06Z","customerWaitingSince":{"time":"2019-05-30T14:14:06Z","friendly":"5
+        days ago"},"source":{"type":"web","via":"user"},"tags":[],"cc":[],"bcc":[],"primaryCustomer":{"id":259532077,"type":"customer","first":"","last":"","photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/03.png","email":"kenneth.ro.m1.919.92@gmail.com"},"customFields":[],"_links":{"closedBy":{"href":"https://api.helpscout.net/v2/users/0"},"createdByUser":{"href":"https://api.helpscout.net/v2/users/382693"},"mailbox":{"href":"https://api.helpscout.net/v2/mailboxes/185191"},"primaryCustomer":{"href":"https://api.helpscout.net/v2/customers/259532077"},"self":{"href":"https://api.helpscout.net/v2/conversations/866372793"},"threads":{"href":"https://api.helpscout.net/v2/conversations/866372793/threads/"},"web":{"href":"https://secure.helpscout.net/conversation/866372793/152"}}}'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2019 10:23:06 GMT
+- request:
+    method: post
+    uri: https://api.helpscout.net/v2/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: client_id=ec62c7106042406e80686fca3a80bec1&client_secret=9d51b66663914cf9a082470ac078c0f5&grant_type=client_credentials
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      cache-control:
+      - no-store
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 05 Jun 2019 10:23:07 GMT
+      pragma:
+      - no-cache
+      Content-Length:
+      - '92'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"5e4e1b141618404aaaab7c0b34598227","expires_in":7200}
+
+'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2019 10:23:07 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v2/conversations/866372793/threads/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/json; charset=UTF-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/hal+json;charset=UTF-8
+      Correlation-ID:
+      - 99666b7a-fe2c-4f66-84bf-37a43d9b15d7#6020622
+      Date:
+      - Wed, 05 Jun 2019 10:23:08 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit-minute:
+      - '400'
+      X-RateLimit-Remaining-minute:
+      - '398'
+      X-XSS-Protection:
+      - 1; mode=block
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"_embedded":{"threads":[{"id":2422566376,"type":"message","status":"active","state":"published","action":{"type":"original-author"},"body":"I
+        can imagine when you want some attribute to be only readable, or be writable
+        and readable, but not when you want an attribute to be writable and not readable.<br
+        />","source":{"type":"web","via":"user"},"customer":{"id":259532077,"first":"","last":"","photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/03.png","email":"kenneth.ro.m1.919.92@gmail.com"},"createdBy":{"id":382693,"type":"user","first":"Phureewat","last":"Aphibansri","email":"a.phureewat@gmail.com"},"assignedTo":{"id":1,"first":"Help","last":"Scout","email":"none@nowhere.com"},"savedReplyId":0,"to":[],"cc":[],"bcc":[],"createdAt":"2019-05-30T14:14:06Z","_embedded":{"attachments":[{"id":196819958,"filename":"hello.txt","mimeType":"text/plain","width":0,"height":0,"size":12,"_links":{"data":{"href":"https://api.helpscout.net/v2/conversations/866372793/attachments/196819958/data"},"self":{"href":"https://api.helpscout.net/v2/conversations/866372793/attachments/196819958"},"web":{"href":"https://secure.helpscout.net/file/196819958/3da50d826ba36d735824279d447c3e3a5fcdfa67/hello.txt"}}}]},"_links":{"assignedTo":{"href":"https://api.helpscout.net/v2/users/1"},"createdByUser":{"href":"https://api.helpscout.net/v2/users/382693"},"customer":{"href":"https://api.helpscout.net/v2/customers/259532077"}}},{"id":2422542625,"type":"message","status":"active","state":"published","action":{"type":"original-author"},"body":"Hyphenated
+        Enterprises LLC, 1953 Massachusetts Ave #400646, Cambridge, MA 02140 ","source":{"type":"web","via":"user"},"customer":{"id":259532077,"first":"","last":"","photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/03.png","email":"kenneth.ro.m1.919.92@gmail.com"},"createdBy":{"id":382693,"type":"user","first":"Phureewat","last":"Aphibansri","email":"a.phureewat@gmail.com"},"assignedTo":{"id":1,"first":"Help","last":"Scout","email":"none@nowhere.com"},"savedReplyId":0,"to":[],"cc":[],"bcc":[],"createdAt":"2019-05-30T14:05:46Z","_embedded":{"attachments":[]},"_links":{"assignedTo":{"href":"https://api.helpscout.net/v2/users/1"},"createdByUser":{"href":"https://api.helpscout.net/v2/users/382693"},"customer":{"href":"https://api.helpscout.net/v2/customers/259532077"}}},{"id":2422535463,"type":"message","status":"active","state":"published","action":{"type":"original-author"},"body":"Hi,<br
+        /><br />Before we move on to the first story, a brief explanation: unlike
+        many newsletters, when you subscribe to Software Clown you start all the way
+        at the beginning. This email, for example, was originally written in July
+        2016. That means you get to avoid all of my mistakes, not just the recent
+        ones.<br /><br />So if I use present tense in an email, I am talking about
+        the period when I wrote the email, not necessarily when you are reading it.<br
+        /><br />You know how Donald Rumsfeld talked about the “known unknowns” and
+        the “unknown unknowns”? The latter are far more dangerous, it’s true, but
+        the former can break your software too. And since you do know about them in
+        advance it’s more embarrassing when things go wrong. Let me tell you about
+        the time I learned that the hard way. <br />It was back in 2004, my first
+        month at a new job. I’d been assigned my first non-trivial project. The leased
+        line between our customer’s servers and our data center was running low on
+        bandwidth. My task was to implement a proxy that would run on both sides of
+        the line and compress queries and responses.<br />The team I was on coded
+        in C++, which I didn’t really know, but it was a simple task with plenty of
+        reusable library code to build on. I took some existing code, threw in a standard
+        compression library, and soon I had the proxy implemented. I tested it manually
+        with some queries and it seemed to work, so I handed it over to ops to deploy
+        to production.<br />Now, the company I worked for had a rather small and specialized
+        customer base, but the customers were huge companies and they paid a lot of
+        money. I believe that at the time we had no more than ten customers, and this
+        particular customer was the biggest. If my proxy broke then that customer’s
+        very large, very public website would stop working. And this customer was
+        probably responsible for at least 15% of our revenue, maybe as much as 30%.<br
+        /><br />But I didn’t really think about that too much, I just went home feeling
+        pretty good about my work.<br />Luckily the proxy did actually work, for a
+        while anyway. Early in the morning it crashed, sometime around 4AM. The ops
+        people on the night shift noted the problem and turned off the monitoring
+        alert. Once it was up again the proxy worked just fine… until once again it
+        crashed at 4AM the next day. And the day after that it also crashed at the
+        same time. At this point ops disabled the proxy and told me to fix the problem.<br
+        /><br />I had no clue what was going on. So I finally did the smart thing
+        and asked a much more experienced colleague for help. Jim skimmed the code
+        and in about a minute he’d found the bug, and he even knew why it crashed
+        only at 4AM.<br />When incoming messages came in I had to put them somewhere,
+        so I’d created a buffer in memory. C++ has two ways of getting memory:<br
+        /><br /><ol><li>Stack variables which get automatically allocated on function
+        start and deallocated when a function returns.</li><li>Memory from the heap
+        which has to be manually allocated with <tt>new</tt> or <tt>malloc</tt>.</li></ol>I
+        didn’t want to bother managing memory so I’d just used the stack. Unfortunately
+        the stack is much smaller than the 1MB I thought I had available in my buffer.<br
+        />Most queries were small, like my test queries, so they fit in the stack
+        and all was well. But, Jim explained to me, at 4AM every night our customer
+        would send a series of much larger batch queries. The data was more than the
+        stack could contain, and the resulting stack overflow crashed the process.
+        And indeed, switching to heap allocation fixed the problem.<br /><br />So
+        what did I do wrong, and how can you do better?<br />I <em>knew</em> how I
+        ignorant I was: I didn’t know the programming language, the libraries, the
+        operational environment or the traffic patterns. And yet when writing code
+        that could break our most important customer I had only bothered to do some
+        quick manual tests. The software only failed at 4AM, it’s true, but that was
+        just luck: if normal traffic had only slightly larger queries the proxy would’ve
+        started crashing much more frequently. So, don’t do what I did.<br />If you’re
+        writing important code in a situation with a lot of known unknowns you should
+        try to both learn more and test more.<br /><ul><li><strong>Reduce your ignorance
+        by asking questions.</strong> I had no idea we had larger batch queries running
+        through the system.</li><li><strong>Get a colleague to review your code, ideally
+        someone who knows all the things you don’t.</strong> My colleague Jim found
+        the problem in my code almost immediately.</li><li><strong>Stress test your
+        code with some more realistic data.</strong> If I’d sent some large queries
+        I would’ve caught the probably in advance.</li><li><strong>Use <a href=\"https://el2.convertkit-mail.com/c/r8uw5qop9ri9uogvn/p8hoke6b9hwdop7/aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj1qdndmRGRnZzkzRQ==\">property-based
+        testing</a>.</strong> Property-based testing tools will automatically generate
+        test cases for you, which means you don’t have to come up with edge cases
+        on your own.</li></ul>And next time you’re about to deploy some critical code
+        to production, remember this story and learn from my mistakes.<br />PS: What
+        did you think of my story? Got a story of your own? Hit reply and let me know!<br
+        />","source":{"type":"web","via":"user"},"customer":{"id":259532077,"first":"","last":"","photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/03.png","email":"kenneth.ro.m1.919.92@gmail.com"},"createdBy":{"id":382693,"type":"user","first":"Phureewat","last":"Aphibansri","email":"a.phureewat@gmail.com"},"assignedTo":{"id":1,"first":"Help","last":"Scout","email":"none@nowhere.com"},"savedReplyId":0,"to":[],"cc":[],"bcc":[],"createdAt":"2019-05-30T14:05:25Z","_embedded":{"attachments":[{"id":196817108,"filename":"hello.txt","mimeType":"text/plain","width":0,"height":0,"size":12,"_links":{"data":{"href":"https://api.helpscout.net/v2/conversations/866372793/attachments/196817108/data"},"self":{"href":"https://api.helpscout.net/v2/conversations/866372793/attachments/196817108"},"web":{"href":"https://secure.helpscout.net/file/196817108/3da50d826ba36d735824279d447c3e3a5fcdfa67/hello.txt"}}}]},"_links":{"assignedTo":{"href":"https://api.helpscout.net/v2/users/1"},"createdByUser":{"href":"https://api.helpscout.net/v2/users/382693"},"customer":{"href":"https://api.helpscout.net/v2/customers/259532077"}}}]},"_links":{"first":{"href":"https://api.helpscout.net/v2/conversations/866372793/threads/?page=1"},"last":{"href":"https://api.helpscout.net/v2/conversations/866372793/threads/?page=1"},"page":{"href":"https://api.helpscout.net/v2/conversations/866372793/threads/"},"self":{"href":"https://api.helpscout.net/v2/conversations/866372793/threads/"}},"page":{"size":50,"totalElements":3,"totalPages":1,"number":1}}'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2019 10:23:08 GMT
+recorded_with: VCR 5.0.0

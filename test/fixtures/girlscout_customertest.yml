@@ -1,0 +1,228 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.helpscout.net/v2/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: client_id=ec62c7106042406e80686fca3a80bec1&client_secret=9d51b66663914cf9a082470ac078c0f5&grant_type=client_credentials
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      cache-control:
+      - no-store
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 05 Jun 2019 10:14:45 GMT
+      pragma:
+      - no-cache
+      Content-Length:
+      - '92'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"70697e5b624f45798bcb533e092ec897","expires_in":7200}
+
+'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2019 10:14:45 GMT
+- request:
+    method: post
+    uri: https://api.helpscout.net/v2/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: client_id=ec62c7106042406e80686fca3a80bec1&client_secret=9d51b66663914cf9a082470ac078c0f5&grant_type=client_credentials
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      cache-control:
+      - no-store
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 05 Jun 2019 10:14:46 GMT
+      pragma:
+      - no-cache
+      Content-Length:
+      - '92'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"b098b3bdf630465392108e3cd1076402","expires_in":7200}
+
+'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2019 10:14:46 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v2/customers/259533163
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/json; charset=UTF-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/hal+json;charset=UTF-8
+      Correlation-ID:
+      - 99666b7a-fe2c-4f66-84bf-37a43d9b15d7#6013549
+      Date:
+      - Wed, 05 Jun 2019 10:14:48 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit-minute:
+      - '400'
+      X-RateLimit-Remaining-minute:
+      - '399'
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '959'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":259533163,"firstName":"Girl","lastName":"Scout","gender":"Unknown","photoType":"default","photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/05.png","createdAt":"2019-05-30T14:07:58Z","updatedAt":"2019-06-05T07:58:51Z","background":"","_embedded":{"emails":[{"id":349140906,"value":"test@example.com","type":"other"}],"websites":[],"chats":[],"phones":[],"social_profiles":[]},"_links":{"address":{"href":"https://api.helpscout.net/v2/customers/259533163/address/"},"chats":{"href":"https://api.helpscout.net/v2/customers/259533163/chats/"},"emails":{"href":"https://api.helpscout.net/v2/customers/259533163/emails/"},"phones":{"href":"https://api.helpscout.net/v2/customers/259533163/phones/"},"self":{"href":"https://api.helpscout.net/v2/customers/259533163"},"social-profiles":{"href":"https://api.helpscout.net/v2/customers/259533163/social-profiles/"},"websites":{"href":"https://api.helpscout.net/v2/customers/259533163/websites/"}}}'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2019 10:14:48 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v2/customers?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/json; charset=UTF-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/hal+json;charset=UTF-8
+      Correlation-ID:
+      - ec159308-58f3-42b7-827a-2788227a7d8c#35608080
+      Date:
+      - Wed, 05 Jun 2019 10:14:49 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit-minute:
+      - '400'
+      X-RateLimit-Remaining-minute:
+      - '398'
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '3639'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"_embedded":{"customers":[{"id":259533163,"firstName":"Girl","lastName":"Scout","gender":"Unknown","photoType":"default","photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/05.png","createdAt":"2019-05-30T14:07:58Z","updatedAt":"2019-06-05T07:58:51Z","background":"","_embedded":{"emails":[{"id":349140906,"value":"test@example.com","type":"other"}],"websites":[],"chats":[],"phones":[],"social_profiles":[]},"_links":{"address":{"href":"https://api.helpscout.net/v2/customers/259533163/address/"},"chats":{"href":"https://api.helpscout.net/v2/customers/259533163/chats/"},"emails":{"href":"https://api.helpscout.net/v2/customers/259533163/emails/"},"phones":{"href":"https://api.helpscout.net/v2/customers/259533163/phones/"},"self":{"href":"https://api.helpscout.net/v2/customers/259533163"},"social-profiles":{"href":"https://api.helpscout.net/v2/customers/259533163/social-profiles/"},"websites":{"href":"https://api.helpscout.net/v2/customers/259533163/websites/"}}},{"id":259532077,"firstName":"","lastName":"","gender":"Unknown","photoType":"default","photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/03.png","createdAt":"2019-05-30T14:04:01Z","updatedAt":"2019-05-30T14:05:27Z","background":"","_embedded":{"emails":[{"id":349139503,"value":"kenneth.ro.m1.919.92@gmail.com","type":"work"}],"websites":[],"chats":[],"phones":[],"social_profiles":[]},"_links":{"address":{"href":"https://api.helpscout.net/v2/customers/259532077/address/"},"chats":{"href":"https://api.helpscout.net/v2/customers/259532077/chats/"},"emails":{"href":"https://api.helpscout.net/v2/customers/259532077/emails/"},"phones":{"href":"https://api.helpscout.net/v2/customers/259532077/phones/"},"self":{"href":"https://api.helpscout.net/v2/customers/259532077"},"social-profiles":{"href":"https://api.helpscout.net/v2/customers/259532077/social-profiles/"},"websites":{"href":"https://api.helpscout.net/v2/customers/259532077/websites/"}}},{"id":259503366,"firstName":"Help","lastName":"Scout","gender":"Unknown","location":"Boston,
+        MA","photoType":"default","photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/03.png","createdAt":"2019-05-30T11:42:09Z","updatedAt":"2019-05-30T11:42:09Z","background":"","_embedded":{"emails":[{"id":349102191,"value":"help@helpscout.com","type":"work"}],"websites":[{"id":349102194,"value":"https://status.helpscout.com/"},{"id":349102195,"value":"https://www.helpscout.com"}],"chats":[],"phones":[],"social_profiles":[{"id":349102192,"value":"https://twitter.com/helpscout","type":"twitter"},{"id":349102193,"value":"https://twitter.com/HelpScoutDev","type":"twitter"}],"address":{"city":"Boston","lines":["100
+        City Hall Plaza","5th Floor"],"state":"MA","postalCode":"02108","country":"US"}},"_links":{"address":{"href":"https://api.helpscout.net/v2/customers/259503366/address/"},"chats":{"href":"https://api.helpscout.net/v2/customers/259503366/chats/"},"emails":{"href":"https://api.helpscout.net/v2/customers/259503366/emails/"},"phones":{"href":"https://api.helpscout.net/v2/customers/259503366/phones/"},"self":{"href":"https://api.helpscout.net/v2/customers/259503366"},"social-profiles":{"href":"https://api.helpscout.net/v2/customers/259503366/social-profiles/"},"websites":{"href":"https://api.helpscout.net/v2/customers/259503366/websites/"}}}]},"_links":{"first":{"href":"https://api.helpscout.net/v2/customers/?page=1"},"last":{"href":"https://api.helpscout.net/v2/customers/?page=1"},"page":{"href":"https://api.helpscout.net/v2/customers/"},"self":{"href":"https://api.helpscout.net/v2/customers/"}},"page":{"size":50,"totalElements":3,"totalPages":1,"number":1}}'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2019 10:14:49 GMT
+- request:
+    method: get
+    uri: https://api.helpscout.net/v2/customers?mailbox_id=185191
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/json; charset=UTF-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/hal+json;charset=UTF-8
+      Correlation-ID:
+      - ec159308-58f3-42b7-827a-2788227a7d8c#35608285
+      Date:
+      - Wed, 05 Jun 2019 10:15:03 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit-minute:
+      - '400'
+      X-RateLimit-Remaining-minute:
+      - '399'
+      X-XSS-Protection:
+      - 1; mode=block
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"_embedded":{"customers":[{"id":259533163,"firstName":"Girl","lastName":"Scout","gender":"Unknown","photoType":"default","photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/05.png","createdAt":"2019-05-30T14:07:58Z","updatedAt":"2019-06-05T07:58:51Z","background":"","_embedded":{"emails":[{"id":349140906,"value":"test@example.com","type":"other"}],"websites":[],"chats":[],"phones":[],"social_profiles":[]},"_links":{"address":{"href":"https://api.helpscout.net/v2/customers/259533163/address/"},"chats":{"href":"https://api.helpscout.net/v2/customers/259533163/chats/"},"emails":{"href":"https://api.helpscout.net/v2/customers/259533163/emails/"},"phones":{"href":"https://api.helpscout.net/v2/customers/259533163/phones/"},"self":{"href":"https://api.helpscout.net/v2/customers/259533163"},"social-profiles":{"href":"https://api.helpscout.net/v2/customers/259533163/social-profiles/"},"websites":{"href":"https://api.helpscout.net/v2/customers/259533163/websites/"}}},{"id":259532077,"firstName":"","lastName":"","gender":"Unknown","photoType":"default","photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/03.png","createdAt":"2019-05-30T14:04:01Z","updatedAt":"2019-05-30T14:05:27Z","background":"","_embedded":{"emails":[{"id":349139503,"value":"kenneth.ro.m1.919.92@gmail.com","type":"work"}],"websites":[],"chats":[],"phones":[],"social_profiles":[]},"_links":{"address":{"href":"https://api.helpscout.net/v2/customers/259532077/address/"},"chats":{"href":"https://api.helpscout.net/v2/customers/259532077/chats/"},"emails":{"href":"https://api.helpscout.net/v2/customers/259532077/emails/"},"phones":{"href":"https://api.helpscout.net/v2/customers/259532077/phones/"},"self":{"href":"https://api.helpscout.net/v2/customers/259532077"},"social-profiles":{"href":"https://api.helpscout.net/v2/customers/259532077/social-profiles/"},"websites":{"href":"https://api.helpscout.net/v2/customers/259532077/websites/"}}},{"id":259503366,"firstName":"Help","lastName":"Scout","gender":"Unknown","location":"Boston,
+        MA","photoType":"default","photoUrl":"https://d33v4339jhl8k0.cloudfront.net/customer-avatar/03.png","createdAt":"2019-05-30T11:42:09Z","updatedAt":"2019-05-30T11:42:09Z","background":"","_embedded":{"emails":[{"id":349102191,"value":"help@helpscout.com","type":"work"}],"websites":[{"id":349102195,"value":"https://www.helpscout.com"},{"id":349102194,"value":"https://status.helpscout.com/"}],"chats":[],"phones":[],"social_profiles":[{"id":349102193,"value":"https://twitter.com/HelpScoutDev","type":"twitter"},{"id":349102192,"value":"https://twitter.com/helpscout","type":"twitter"}],"address":{"city":"Boston","lines":["100
+        City Hall Plaza","5th Floor"],"state":"MA","postalCode":"02108","country":"US"}},"_links":{"address":{"href":"https://api.helpscout.net/v2/customers/259503366/address/"},"chats":{"href":"https://api.helpscout.net/v2/customers/259503366/chats/"},"emails":{"href":"https://api.helpscout.net/v2/customers/259503366/emails/"},"phones":{"href":"https://api.helpscout.net/v2/customers/259503366/phones/"},"self":{"href":"https://api.helpscout.net/v2/customers/259503366"},"social-profiles":{"href":"https://api.helpscout.net/v2/customers/259503366/social-profiles/"},"websites":{"href":"https://api.helpscout.net/v2/customers/259503366/websites/"}}}]},"_links":{"first":{"href":"https://api.helpscout.net/v2/customers/?page=1"},"last":{"href":"https://api.helpscout.net/v2/customers/?page=1"},"page":{"href":"https://api.helpscout.net/v2/customers/"},"self":{"href":"https://api.helpscout.net/v2/customers/"}},"page":{"size":50,"totalElements":3,"totalPages":1,"number":1}}'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2019 10:15:03 GMT
+recorded_with: VCR 5.0.0

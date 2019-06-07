@@ -8,8 +8,9 @@ module GirlScout
       # don't setup the keys!
     end
 
-    def test_api_key
-      assert Config.api_key.nil?, 'should defaults to nil'
+    def test_client_credentials
+      assert Config.client_id.nil?, 'should defaults to nil'
+      assert Config.client_secret.nil?, 'should defaults to nil'
     end
 
     def test_api_prefix
@@ -18,11 +19,13 @@ module GirlScout
     end
 
     def test_reset!
-      Config.api_key = 'asdf'
+      Config.client_id = 'asdf'
+      Config.client_secret = 'asdf'
       Config.api_prefix = 'zxcv'
       Config.reset!
 
-      assert Config.api_key != 'asdf', 'should resets api_key'
+      assert Config.client_id != 'asdf', 'should resets client_id'
+      assert Config.client_secret != 'asdf', 'should resets client_secret'
       assert Config.api_prefix != 'zxcv', 'should resets api_prefix'
     end
   end

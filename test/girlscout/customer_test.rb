@@ -4,31 +4,31 @@ require 'support'
 
 module GirlScout
   class CustomerTest < GirlScoutTest
-    def test_all_via_mailbox
-      Mailbox.resource = nil
-      customers = Mailbox.new(id: MAILBOX_ID).customers
+    def test_list
+      customers = Customer.list
       assert customers.length
       assert_instance_of Customer, customers[0]
-      assert_equal CUSTOMER_ID, customers[0].id
     end
 
-    def test_all
-      customers = Customer.all
+    def test_list_via_mailbox
+      customers = Customer.list(mailbox_id: MAILBOX_ID)
       assert customers.length
       assert_instance_of Customer, customers[0]
       assert_equal CUSTOMER_ID, customers[0].id
     end
 
     def test_find
-      customer = Customer.find(CUSTOMER_ID)
+      customer = find_customer
       assert_instance_of Customer, customer
       assert_equal CUSTOMER_ID, customer.id
-      assert_equal 'noitasrevnoC tseT', customer.full_name
+      assert customer.first_name
+      assert customer.last_name
     end
 
-    def test_as_json
-      json = Customer.find(CUSTOMER_ID).as_json
-      assert_equal 'customer', json['type'], '"type" field is required'
+    private
+
+    def find_customer
+      Customer.find(CUSTOMER_ID)
     end
   end
 end

@@ -5,19 +5,13 @@ module GirlScout
     endpoint '/customers'
 
     class << self
-      def all
-        List.new(resource.get, Customer)
-      end
-
       def find(id)
-        Customer.new(resource["/#{id}"].get['item'])
+        Customer.new(resource["/#{id}"].get)
       end
-    end
 
-    def as_json
-      json = super
-      json['type'] = 'customer'
-      json
+      def list(query = {})
+        List.new(resource.get(query: query), Customer)
+      end
     end
   end
 end
