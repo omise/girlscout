@@ -1,7 +1,9 @@
 # GIRLSCOUT
 
 **BETA** This software is half-finished beta-quality software. Until 1.0 is released, use
-at your own risk! This is a gem for talking to the [HelpScout Mailbox API v2][0].
+at your own risk!
+
+This is a gem for talking to the [HelpScout Mailbox API v2][0].
 
 # REQUIREMENTS
 
