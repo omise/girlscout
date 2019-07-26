@@ -30,7 +30,7 @@ module GirlScout
     private
 
     def embedded_items
-      @embedded_items ||= @attributes['Embedded'].values[0]
+      @embedded_items ||= @attributes['Embedded']&.values&.first
     end
   end
 end
