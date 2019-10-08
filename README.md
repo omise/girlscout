@@ -111,13 +111,13 @@ To create a new conversation, build the models and use the `create` method on th
 class:
 
 ```ruby
-user = GirlScout::User.me
 mailbox = GirlScout::Mailbox.new(id: 123)
 customer = GirlScout::Customer.new(email: "customer@example.com")
 
 thread = GirlScout::Thread.new({
   type: "customer",
-  body: "You may reply to this email directly for support!"
+  customer: customer,
+  text: "You may reply to this email directly for support!"
 })
 
 conversation = GirlScout::Conversation.new(
