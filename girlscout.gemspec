@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files -z lib`.split("\x0")
   s.require_paths = ['lib']
 
-  s.add_runtime_dependency 'excon', '~>0.71'
+  s.add_runtime_dependency 'excon', '~>0.85'
   s.add_runtime_dependency 'json', '>=1.8'
 
   s.add_development_dependency 'bundler', '~>2.0'
