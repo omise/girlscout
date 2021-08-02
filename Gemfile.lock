@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    girlscout (0.5.3)
-      excon (~> 0.85)
+    girlscout (0.5.1)
+      excon (~> 0.71)
       json (>= 1.8)
 
 GEM
@@ -13,7 +13,7 @@ GEM
     builder (3.2.4)
     childprocess (3.0.0)
     coderay (1.1.2)
-    excon (0.85.0)
+    excon (0.71.1)
     ffi (1.12.1)
     formatador (0.2.5)
     guard (2.16.1)
@@ -31,7 +31,7 @@ GEM
       minitest (>= 3.0)
     iniparse (1.4.4)
     jaro_winkler (1.5.4)
-    json (2.5.1)
+    json (2.3.0)
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -91,4 +91,4 @@ DEPENDENCIES
   vcr (~> 5.0)
 
 BUNDLED WITH
-   2.2.25
+   2.0.2
