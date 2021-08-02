@@ -1,5 +1,7 @@
 # GIRLSCOUT
 
+[![Ruby](https://github.com/omise/girlscout/actions/workflows/ruby.yml/badge.svg)](https://github.com/omise/girlscout/actions/workflows/ruby.yml)
+
 **BETA** This software is half-finished beta-quality software. Until 1.0 is released, use
 at your own risk!
 
