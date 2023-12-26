@@ -1,18 +1,17 @@
-# GIRLSCOUT
+# GirlScout
 
 [![Ruby](https://github.com/omise/girlscout/actions/workflows/ruby.yml/badge.svg)](https://github.com/omise/girlscout/actions/workflows/ruby.yml)
 
-**BETA** This software is half-finished beta-quality software. Until 1.0 is released, use
+**BETA** GirlScout is half-finished beta-quality software. Until 1.0 is released, use
 at your own risk!
 
 This is a gem for talking to the [HelpScout Mailbox API v2][0].
 
-# REQUIREMENTS
+# Requirements
 
-You will need a valid [HelpScout account][1] setup for the API key in order to use this
-gem. This gem has been developed and tested on Ruby 2.5.1
+To use this gem, you will need a valid [HelpScout account][1] setup for the API key. This gem has been developed and tested on Ruby 2.5.1.
 
-# INSTALLATION
+# Installation
 
 Using [bundler][2]:
 
@@ -26,7 +25,7 @@ Or manually via [rubygems][3]:
 $ gem install girlscout
 ```
 
-# USAGE
+# Usage
 
 ## Configuration
 
@@ -42,7 +41,7 @@ GirlScout::Config.client_secret = 'your helpscout application secret here'
 
 ## Accesses
 
-GirlScout provides AR-style accessor methods on model classes, use them to retrieve data from HelpScout:
+GirlScout provides AR-style accessor methods for model classes; use them to retrieve data from HelpScout:
 
 ### Mailbox
 ```ruby
@@ -135,7 +134,7 @@ id = GirlScout::Conversation.create(conversation)
 conversation = GirlScout::Conversation.find(id)
 ```
 
-# LICENSE
+# License
 
 MIT
 
